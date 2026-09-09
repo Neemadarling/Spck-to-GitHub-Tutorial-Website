@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Complete beginner guide for moving a website from SPCK Editor to GitHub Pages using a phone.">
+
+    <title>SPCK to GitHub | Neema Charo Tutorial</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Neema<span>Charo</span>
+        </a>
+
+        <button class="menu-button"
+                onclick="toggleMenu()">
+
+            ☰
+
+        </button>
+
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="tutorials.html">
+                    Tutorials
+                </a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">
+                    Portfolio
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <p class="section-label">
+            COMPLETE GUIDE
+        </p>
+
+        <h1>
+            SPCK → GitHub
+        </h1>
+
+        <p>
+            Publish your website online using your phone.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="section">
+
+    <div class="container tutorial-content">
+
+
+        <div class="lesson-intro reveal">
+
+            <div class="big-lesson-icon">
+                🚀
+            </div>
+
+            <h2>
+                From Your Phone to the Internet
+            </h2>
+
+            <p>
+                You created your website in SPCK.
+                Now it is time to publish it.
+            </p>
+
+            <p>
+                This guide explains the basic workflow for
+                taking a static HTML, CSS and JavaScript website
+                from your phone and publishing it with GitHub Pages.
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= ROADMAP ================= -->
+
+        <div class="publish-roadmap reveal">
+
+            <div class="roadmap-item">
+                <span>01</span>
+                Create website
+            </div>
+
+            <div class="roadmap-arrow">
+                ↓
+            </div>
+
+            <div class="roadmap-item">
+                <span>02</span>
+                Test in SPCK
+            </div>
+
+            <div class="roadmap-arrow">
+                ↓
+            </div>
+
+            <div class="roadmap-item">
+                <span>03</span>
+                Create GitHub repository
+            </div>
+
+            <div class="roadmap-arrow">
+                ↓
+            </div>
+
+            <div class="roadmap-item">
+                <span>04</span>
+                Upload files
+            </div>
+
+            <div class="roadmap-arrow">
+                ↓
+            </div>
+
+            <div class="roadmap-item">
+                <span>05</span>
+                Enable GitHub Pages
+            </div>
+
+            <div class="roadmap-arrow">
+                ↓
+            </div>
+
+            <div class="roadmap-item">
+                <span>06</span>
+                Open your website
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= STEP 1 ================= -->
+
+        <article class="publish-step reveal">
+
+            <div class="publish-icon">
+                📱
+            </div>
+
+            <div>
+
+                <p class="step-label">
+                    STEP 01
+                </p>
+
+                <h2>
+                    Finish Your Website in SPCK
+                </h2>
+
+                <p>
+                    Before publishing, make sure your website
+                    works correctly inside SPCK.
+                </p>
+
+                <p>
+                    Save all your files.
+                </p>
+
+                <div class="file-tree">
+
+                    <strong>
+                        Example:
+                    </strong>
+
+                    <pre><code>MyWebsite/
+│
+├── index.html
+├── about.html
+├── tutorials.html
+├── spck.html
+├── html-tutorial.html
+├── css-tutorial.html
+├── javascript-tutorial.html
+├── github.html
+├── spck-to-github.html
+├── style.css
+└── script.js</code></pre>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= STEP 2 ================= -->
+
+        <article class="publish-step reveal">
+
+            <div class="publish-icon">
+                🔍
+            </div>
+
+            <div>
+
+                <p class="step-label">
+                    STEP 02
+                </p>
+
+                <h2>
+                    Test Every Page
+                </h2>
+
+                <p>
+                    Preview your website in SPCK before
+                    uploading it.
+                </p>
+
+                <p>
+                    Check your navigation links carefully.
+                </p>
+
+                <div class="check-list">
+
+                    <div>
+                        ✓ Home opens
+                    </div>
+
+                    <div>
+                        ✓ About opens
+                    </div>
+
+                    <div>
+                        ✓ Tutorials opens
+                    </div>
+
+                    <div>
+                        ✓ SPCK lesson opens
+                    </div>
+
+                    <div>
+                        ✓ HTML lesson opens
+                    </div>
+
+                    <div>
+                        ✓ CSS lesson opens
+                    </div>
+
+                    <div>
+                        ✓ JavaScript lesson opens
+                    </div>
+
+                    <div>
+                        ✓ GitHub lesson opens
+                    </div>
+
+                    <div>
+                        ✓ CSS styling appears
+                    </div>
+
+                    <div>
+                        ✓ Mobile menu works
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= STEP 3 ================= -->
+
+        <article class="publish-step reveal">
+
+            <div class="publish-icon">
+                🐙
+            </div>
+
+            <div>
+
+                <p class="step-label">
+                    STEP 03
+                </p>
+
+                <h2>
+                    Open GitHub
+                </h2>
+
+                <p>
+                    Open your phone browser and visit:
+                </p>
+
+                <pre><code>https://github.com/</code></pre>
+
+                <p>
+                    Sign in to your GitHub account.
+                </p>
+
+                <div class="tip-box">
+
+                    💡 If you do not have a GitHub account,
+                    create one before continuing.
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= STEP 4 ================= -->
+
+        <article class="publish-step reveal">
+
+            <div class="publish-icon">
+                📦
+            </div>
+
+            <div>
+
+                <p class="step-label">
+                    STEP 04
+                </p>
+
+                <h2>
+                    Create a New Repository
+                </h2>
+
+                <p>
+                    From your GitHub account, choose the option
+                    to create a new repository.
+                </p>
+
+                <p>
+                    Give your project a simple name, for example:
+                </p>
+
+                <pre><code>neema-charo-website</code></pre>
+
+                <p>
+                    Choose the visibility you want for the project.
+                    If you intend to use GitHub Pages for a public
+                    website, make sure the repository and Pages
+                    configuration meet GitHub's current requirements.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= STEP 5 ================= -->
+
+        <article class="publish-step reveal">
+
+            <div class="publish-icon">
+                📤
+            </div>
+
+            <div>
+
+                <p class="step-label">
+                    STEP 05
+                </p>
+
+                <h2>
+                    Upload Your Website Files
+                </h2>
+
+                <p>
+                    Open your new repository and use GitHub's
+                    web interface to add/upload your website files.
+                </p>
+
+                <p>
+                    Upload the HTML files, CSS file, JavaScript
+                    file and any images or other assets your
+                    website uses.
+                </p>
+
+                <div class="warning-box">
+
+                    ⚠️ <strong>Important:</strong>
+
+                    Do not upload only one HTML page if the other
+                    pages are linked from it. Upload the complete
+                    website project and preserve the correct file
+                    names and folder structure.
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= STEP 6 ================= -->
+
+        <article class="publish-step reveal">
+
+            <div class="publish-icon">
+                💾
+            </div>
+
+            <div>
+
+                <p class="step-label">
+                    STEP 06
+                </p>
+
+                <h2>
+                    Commit Your Changes
+                </h2>
+
+                <p>
+                    After adding your files, GitHub will ask you
+                    to commit the changes.
+                </p>
+
+                <p>
+                    A commit message could be:
+                </p>
+
+                <pre><code>Upload my first website</code></pre>
+
+                <p>
+                    Then save/commit the changes to the repository.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= STEP 7 ================= -->
+
+        <article class="publish-step reveal">
+
+            <div class="publish-icon">
+                ⚙️
+            </div>
+
+            <div>
+
+                <p class="step-label">
+                    STEP 07
+                </p>
+
+                <h2>
+                    Open Repository Settings
+                </h2>
+
+                <p>
+                    Open the settings for your repository.
+                </p>
+
+                <p>
+                    Look for the section related to:
+                </p>
+
+                <pre><code>Pages</code></pre>
+
+                <p>
+                    GitHub's interface can change over time, so
+                    the exact buttons or layout may look different
+                    from one version to another.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= STEP 8 ================= -->
+
+        <article class="publish-step reveal">
+
+            <div class="publish-icon">
+                🌐
+            </div>
+
+            <div>
+
+                <p class="step-label">
+                    STEP 08
+                </p>
+
+                <h2>
+                    Configure GitHub Pages
+                </h2>
+
+                <p>
+                    In the GitHub Pages settings, select the
+                    publishing source available for your repository.
+                </p>
+
+                <p>
+                    For a simple website stored in the repository's
+                    main branch, GitHub commonly provides a workflow
+                    where the Pages source is selected from a branch
+                    and folder.
+                </p>
+
+                <p>
+                    Save the Pages configuration.
+                </p>
+
+                <div class="tip-box">
+
+                    💡 GitHub may take a short time to build and
+                    publish your website after you save the settings.
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= STEP 9 ================= -->
+
+        <article class="publish-step reveal">
+
+            <div class="publish-icon">
+                🔗
+            </div>
+
+            <div>
+
+                <p class="step-label">
+                    STEP 09
+                </p>
+
+                <h2>
+                    Find Your Website Link
+                </h2>
+
+                <p>
+                    Once GitHub Pages has successfully published
+                    the site, GitHub will show the Pages website
+                    address in the repository's Pages area.
+                </p>
+
+                <p>
+                    A typical project-site address looks similar to:
+                </p>
+
+                <pre><code>https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/</code></pre>
+
+                <p>
+                    Replace the username and repository name
+                    with your actual GitHub details.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= STEP 10 ================= -->
+
+        <article class="publish-step reveal">
+
+            <div class="publish-icon">
+                🧪
+            </div>
+
+            <div>
+
+                <p class="step-label">
+                    STEP 10
+                </p>
+
+                <h2>
+                    Test the Live Website
+                </h2>
+
+                <p>
+                    Open the published address in your phone browser.
+                </p>
+
+                <p>
+                    Test:
+                </p>
+
+                <div class="check-list">
+
+                    <div>
+                        ✓ Home page
+                    </div>
+
+                    <div>
+                        ✓ Navigation
+                    </div>
+
+                    <div>
+                        ✓ Buttons
+                    </div>
+
+                    <div>
+                        ✓ Images
+                    </div>
+
+                    <div>
+                        ✓ CSS
+                    </div>
+
+                    <div>
+                        ✓ JavaScript
+                    </div>
+
+                    <div>
+                        ✓ Mobile layout
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= STEP 11 ================= -->
+
+        <article class="publish-step reveal">
+
+            <div class="publish-icon">
+                🔄
+            </div>
+
+            <div>
+
+                <p class="step-label">
+                    STEP 11
+                </p>
+
+                <h2>
+                    Update Your Website Later
+                </h2>
+
+                <p>
+                    You don't have to create a new website every
+                    time you want to make a change.
+                </p>
+
+                <p>
+                    Your normal workflow can be:
+                </p>
+
+                <pre><code>Edit website in SPCK
+        ↓
+Save files
+        ↓
+Preview and test
+        ↓
+Upload the changed files to GitHub
+        ↓
+Commit changes
+        ↓
+GitHub Pages rebuilds
+        ↓
+Refresh your live website</code></pre>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- ================= TROUBLESHOOTING ================= -->
+
+        <div class="troubleshooting reveal">
+
+            <p class="section-label">
+                TROUBLESHOOTING
+            </p>
+
+            <h2>
+                Website Not Working?
+            </h2>
+
+
+            <div class="problem-card">
+
+                <h3>
+                    ❌ I see a 404 page
+                </h3>
+
+                <p>
+                    Check that your main file is named:
+                </p>
+
+                <pre><code>index.html</code></pre>
+
+                <p>
+                    Also check that your GitHub Pages source is
+                    configured correctly.
+                </p>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <h3>
+                    ❌ My CSS is missing
+                </h3>
+
+                <p>
+                    Check that your HTML contains:
+                </p>
+
+                <pre><code>&lt;link rel="stylesheet"
+      href="style.css"&gt;</code></pre>
+
+                <p>
+                    Also make sure <code>style.css</code> was
+                    uploaded to the expected location.
+                </p>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <h3>
+                    ❌ My JavaScript is not working
+                </h3>
+
+                <p>
+                    Check that your HTML contains:
+                </p>
+
+                <pre><code>&lt;script src="script.js"&gt;
+&lt;/script&gt;</code></pre>
+
+                <p>
+                    Also make sure the JavaScript file was uploaded
+                    with the correct name and path.
+                </p>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <h3>
+                    ❌ My links don't open
+                </h3>
+
+                <p>
+                    Check the spelling and capitalization of your
+                    filenames.
+                </p>
+
+                <pre><code>about.html
+
+About.html
+
+ABOUT.html</code></pre>
+
+                <p>
+                    These are not necessarily treated as the same
+                    path on web hosting.
+                </p>
+
+            </div>
+
+
+            <div class="problem-card">
+
+                <h3>
+                    ❌ My image doesn't appear
+                </h3>
+
+                <p>
+                    Check the image path in your HTML.
+                </p>
+
+                <pre><code>&lt;img src="images/photo.jpg"
+     alt="My photo"&gt;</code></pre>
+
+                <p>
+                    Make sure the image exists in the matching
+                    folder in your repository.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= FINAL CHECKLIST ================= -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                FINAL CHECKLIST
+            </p>
+
+            <h2>
+                🎉 My Website Is Live!
+            </h2>
+
+            <ul>
+
+                <li>
+                    ☐ My website works in SPCK
+                </li>
+
+                <li>
+                    ☐ I created my GitHub repository
+                </li>
+
+                <li>
+                    ☐ I uploaded all website files
+                </li>
+
+                <li>
+                    ☐ I committed my changes
+                </li>
+
+                <li>
+                    ☐ I configured GitHub Pages
+                </li>
+
+                <li>
+                    ☐ My index.html is available
+                </li>
+
+                <li>
+                    ☐ I opened my live website
+                </li>
+
+                <li>
+                    ☐ I tested my navigation
+                </li>
+
+                <li>
+                    ☐ I tested my mobile layout
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- ================= MOTIVATION ================= -->
+
+        <div class="next-lesson reveal">
+
+            <p>
+                KEEP BUILDING
+            </p>
+
+            <h2>
+                You Can Create Websites From Your Phone 🚀
+           

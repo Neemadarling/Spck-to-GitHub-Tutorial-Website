@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Learn JavaScript for beginners with Neema Charo Tutorial.">
+
+    <title>JavaScript Tutorial | Neema Charo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Neema<span>Charo</span>
+        </a>
+
+        <button class="menu-button"
+                onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="tutorials.html">Tutorials</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <p class="section-label">
+            LESSON 04
+        </p>
+
+        <h1>
+            JavaScript for Beginners
+        </h1>
+
+        <p>
+            Learn how to make your website interactive.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= LESSON ================= -->
+
+<section class="section">
+
+    <div class="container tutorial-content">
+
+
+        <!-- INTRO -->
+
+        <div class="lesson-intro reveal">
+
+            <div class="big-lesson-icon">
+                ⚡
+            </div>
+
+            <h2>
+                What is JavaScript?
+            </h2>
+
+            <p>
+                JavaScript is a programming language commonly
+                used to add interaction and behavior to websites.
+            </p>
+
+            <p>
+                HTML creates the structure, CSS controls the
+                appearance, and JavaScript can make the page
+                respond to actions.
+            </p>
+
+            <p>
+                For example, JavaScript can control menus,
+                buttons, popups, counters and interactive forms.
+            </p>
+
+        </div>
+
+
+
+        <!-- STEP 1 -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <div>
+
+                <h2>
+                    Create Your JavaScript File
+                </h2>
+
+                <p>
+                    In SPCK create:
+                </p>
+
+                <pre><code>script.js</code></pre>
+
+                <p>
+                    Then connect it to your HTML before the
+                    closing <code>&lt;/body&gt;</code> tag:
+                </p>
+
+                <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- STEP 2 -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <div>
+
+                <h2>
+                    Display a Message
+                </h2>
+
+                <p>
+                    One simple way to test JavaScript is:
+                </p>
+
+                <pre><code>alert("Hello from Neema Charo!");</code></pre>
+
+                <p>
+                    When the page loads, the browser can display
+                    a message.
+                </p>
+
+                <div class="tip-box">
+
+                    💡 <strong>Tip:</strong>
+
+                    Remove or comment out test alerts when you
+                    don't want them appearing every time the
+                    page loads.
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- STEP 3 -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <div>
+
+                <h2>
+                    Variables
+                </h2>
+
+                <p>
+                    Variables allow you to store information.
+                </p>
+
+                <pre><code>let name = "Neema";
+
+let age = 25;
+
+const website = "Neema Charo Tutorial";</code></pre>
+
+                <p>
+                    Use <code>let</code> when a value may need
+                    to change. Use <code>const</code> for a value
+                    that you don't plan to reassign.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- STEP 4 -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                04
+            </div>
+
+            <div>
+
+                <h2>
+                    Functions
+                </h2>
+
+                <p>
+                    A function is a reusable block of code.
+                </p>
+
+                <pre><code>function sayHello() {
+
+    alert("Welcome to my website!");
+
+}</code></pre>
+
+                <p>
+                    You can call the function when you need it:
+                </p>
+
+                <pre><code>sayHello();</code></pre>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- STEP 5 -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                05
+            </div>
+
+            <div>
+
+                <h2>
+                    Button Clicks
+                </h2>
+
+                <p>
+                    HTML:
+                </p>
+
+                <pre><code>&lt;button id="helloButton"&gt;
+    Click Me
+&lt;/button&gt;</code></pre>
+
+                <p>
+                    JavaScript:
+                </p>
+
+                <pre><code>const button =
+    document.getElementById("helloButton");
+
+button.addEventListener("click", function() {
+
+    alert("Hello!");
+
+});</code></pre>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- STEP 6 -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                06
+            </div>
+
+            <div>
+
+                <h2>
+                    Changing HTML with JavaScript
+                </h2>
+
+                <p>
+                    JavaScript can change the content of an
+                    HTML element.
+                </p>
+
+                <pre><code>&lt;h2 id="message"&gt;
+    Original Message
+&lt;/h2&gt;</code></pre>
+
+                <p>
+                    Then:
+                </p>
+
+                <pre><code>document.getElementById("message")
+    .textContent = "New Message!";</code></pre>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- STEP 7 -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                07
+            </div>
+
+            <div>
+
+                <h2>
+                    Show and Hide Elements
+                </h2>
+
+                <p>
+                    JavaScript can change an element's style.
+                </p>
+
+                <pre><code>const box =
+    document.getElementById("box");
+
+box.style.display = "none";</code></pre>
+
+                <p>
+                    To show it again:
+                </p>
+
+                <pre><code>box.style.display = "block";</code></pre>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- STEP 8 -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                08
+            </div>
+
+            <div>
+
+                <h2>
+                    Toggle a Mobile Menu
+                </h2>
+
+                <p>
+                    A common use of JavaScript is opening and
+                    closing a mobile navigation menu.
+                </p>
+
+                <pre><code>function toggleMenu() {
+
+    const menu =
+        document.getElementById("navLinks");
+
+    menu.classList.toggle("active");
+
+}</code></pre>
+
+                <p>
+                    This is the type of interaction used by the
+                    menu button on this tutorial website.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- STEP 9 -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                09
+            </div>
+
+            <div>
+
+                <h2>
+                    Simple Counter
+                </h2>
+
+                <p>
+                    You can create a counter using JavaScript.
+                </p>
+
+                <pre><code>let count = 0;
+
+function increase() {
+
+    count++;
+
+    document.getElementById("counter")
+        .textContent = count;
+
+}</code></pre>
+
+                <p>
+                    Connect the function to a button to allow
+                    visitors to increase the number.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- STEP 10 -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                10
+            </div>
+
+            <div>
+
+                <h2>
+                    JavaScript and Forms
+                </h2>
+
+                <p>
+                    JavaScript can read information entered
+                    into a form and respond to it.
+                </p>
+
+                <pre><code>const nameInput =
+    document.getElementById("name");
+
+console.log(nameInput.value);</code></pre>
+
+                <p>
+                    The value property gives you the information
+                    currently entered in the input.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- STEP 11 -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                11
+            </div>
+
+            <div>
+
+                <h2>
+                    Console
+                </h2>
+
+                <p>
+                    The console is useful when testing JavaScript.
+                </p>
+
+                <pre><code>console.log("My website is working!");</code></pre>
+
+                <p>
+                    On supported browsers, developers can open
+                    the browser's developer tools to inspect
+                    console messages and errors.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- STEP 12 -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                12
+            </div>
+
+            <div>
+
+                <h2>
+                    JavaScript and Animation
+                </h2>
+
+                <p>
+                    JavaScript can add or remove CSS classes,
+                    allowing CSS animations to be triggered
+                    by user actions.
+                </p>
+
+                <pre><code>element.classList.add("show");
+
+element.classList.remove("hide");</code></pre>
+
+                <p>
+                    This is a useful way to combine JavaScript
+                    behavior with CSS animation.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- MINI PROJECT -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                MINI PROJECT
+            </p>
+
+            <h2>
+                Build an Interactive Welcome Button
+            </h2>
+
+            <p>
+                Create this HTML:
+            </p>
+
+            <pre><code>&lt;h2 id="welcome"&gt;
+    Welcome!
+&lt;/h2&gt;
+
+&lt;button id="welcomeButton"&gt;
+    Say Hello
+&lt;/button&gt;</code></pre>
+
+            <p>
+                Then add this JavaScript:
+            </p>
+
+            <pre><code>const button =
+    document.getElementById("welcomeButton");
+
+button.addEventListener("click", function() {
+
+    document.getElementById("welcome")
+        .textContent =
+        "Hello! Welcome to my website.";
+
+});</code></pre>
+
+        </div>
+
+
+
+        <!-- CHALLENGE -->
+
+        <div class="code-challenge reveal">
+
+            <p class="section-label">
+                BEGINNER CHALLENGE
+            </p>
+
+            <h2>
+                Make Your Website Interactive
+            </h2>
+
+            <p>
+                Build a page containing:
+            </p>
+
+            <ul>
+
+                <li>
+                    A heading
+                </li>
+
+                <li>
+                    A button
+                </li>
+
+                <li>
+                    A counter
+                </li>
+
+                <li>
+                    A show/hide section
+                </li>
+
+                <li>
+                    A mobile menu
+                </li>
+
+            </ul>
+
+            <p>
+                Test each feature in SPCK before moving
+                to the next lesson.
+            </p>
+
+        </div>
+
+
+
+        <!-- NEXT LESSON -->
+
+        <div class="next-lesson reveal">
+
+            <p>
+                NEXT LESSON
+            </p>
+
+            <h2>
+                Learn GitHub →
+            </h2>
+
+            <a href="github.html"
+               class="btn primary-btn">
+
+                Start GitHub Tutorial
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h2 class="footer-logo">
+                    Neema<span>Charo</span>
+                </h2>
+
+                <p>
+                    Learn • Create • Publish
+                </p>
+
+                <p>
+                    Website creation tutorials for beginners.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Tutorials
+                </h3>
+
+                <a href="spck.html">
+                    SPCK Editor
+                </a>
+
+                <a href="html-tutorial.html">
+                    HTML
+                </a>
+
+                <a href="css-tutorial.html">
+                    CSS
+                </a>
+
+                <a href="javascript-tutorial.html">
+                    JavaScript
+                </a>
+
+                <a href="github.html">
+                    GitHub
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <a href="tel:0748933452">
+                    📱 0748933452
+                </a>
+
+                <a href="mailto:charoneema6@gmail.com">
+                    📧 charoneema6@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="year"></span>
+                Neema Charo. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/254748933452"
+   class="whatsapp-button"
+   target="_blank">
+
+    💬
+
+</a>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

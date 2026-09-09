@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Learn HTML from beginner level with Neema Charo Tutorial.">
+
+    <title>HTML Tutorial | Neema Charo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Neema<span>Charo</span>
+        </a>
+
+        <button class="menu-button"
+                onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="about.html">About</a>
+            </li>
+
+            <li>
+                <a href="tutorials.html">Tutorials</a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">Portfolio</a>
+            </li>
+
+            <li>
+                <a href="services.html">Services</a>
+            </li>
+
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <p class="section-label">
+            LESSON 02
+        </p>
+
+        <h1>
+            HTML for Beginners
+        </h1>
+
+        <p>
+            Learn how to build the structure of a website.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTENT ================= -->
+
+<section class="section">
+
+    <div class="container tutorial-content">
+
+
+        <!-- INTRO -->
+
+        <div class="lesson-intro reveal">
+
+            <div class="big-lesson-icon">
+                🧱
+            </div>
+
+            <h2>
+                What is HTML?
+            </h2>
+
+            <p>
+                HTML stands for
+                <strong>HyperText Markup Language</strong>.
+            </p>
+
+            <p>
+                HTML is used to create the structure and
+                content of a webpage.
+            </p>
+
+            <p>
+                Think of HTML as the skeleton of a website.
+                CSS will later make the skeleton look beautiful.
+            </p>
+
+        </div>
+
+
+
+        <!-- BASIC STRUCTURE -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                01
+            </div>
+
+            <div>
+
+                <h2>
+                    Basic HTML Structure
+                </h2>
+
+                <p>
+                    A basic HTML document can look like this:
+                </p>
+
+                <pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+
+    &lt;title&gt;My Website&lt;/title&gt;
+
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+
+    &lt;p&gt;
+        Welcome to my website.
+    &lt;/p&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+                <div class="tip-box">
+
+                    💡 <strong>Remember:</strong>
+
+                    Most visible webpage content goes
+                    inside the <code>&lt;body&gt;</code>.
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- HEADINGS -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                02
+            </div>
+
+            <div>
+
+                <h2>
+                    Headings
+                </h2>
+
+                <p>
+                    HTML provides six levels of headings:
+                </p>
+
+                <pre><code>&lt;h1&gt;Main Heading&lt;/h1&gt;
+
+&lt;h2&gt;Second Heading&lt;/h2&gt;
+
+&lt;h3&gt;Third Heading&lt;/h3&gt;
+
+&lt;h4&gt;Fourth Heading&lt;/h4&gt;
+
+&lt;h5&gt;Fifth Heading&lt;/h5&gt;
+
+&lt;h6&gt;Sixth Heading&lt;/h6&gt;</code></pre>
+
+                <p>
+                    Usually, <code>&lt;h1&gt;</code> represents
+                    the main heading of a page.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PARAGRAPHS -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                03
+            </div>
+
+            <div>
+
+                <h2>
+                    Paragraphs
+                </h2>
+
+                <p>
+                    Use the paragraph element to write text:
+                </p>
+
+                <pre><code>&lt;p&gt;
+I am learning how to create websites.
+&lt;/p&gt;</code></pre>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LINKS -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                04
+            </div>
+
+            <div>
+
+                <h2>
+                    Links
+                </h2>
+
+                <p>
+                    Links allow visitors to move from one
+                    page or website to another.
+                </p>
+
+                <pre><code>&lt;a href="https://github.com"&gt;
+Visit GitHub
+&lt;/a&gt;</code></pre>
+
+                <p>
+                    You can also link to another page
+                    inside your own website:
+                </p>
+
+                <pre><code>&lt;a href="about.html"&gt;
+About Me
+&lt;/a&gt;</code></pre>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- IMAGES -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                05
+            </div>
+
+            <div>
+
+                <h2>
+                    Images
+                </h2>
+
+                <p>
+                    Images can be added using the
+                    <code>&lt;img&gt;</code> element.
+                </p>
+
+                <pre><code>&lt;img src="my-photo.jpg"
+     alt="My photo"&gt;</code></pre>
+
+                <div class="tip-box">
+
+                    💡 <strong>Tip:</strong>
+
+                    If the image is inside your project folder,
+                    make sure the file name and path are correct.
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- BUTTONS -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                06
+            </div>
+
+            <div>
+
+                <h2>
+                    Buttons
+                </h2>
+
+                <p>
+                    You can create a button using:
+                </p>
+
+                <pre><code>&lt;button&gt;
+Click Me
+&lt;/button&gt;</code></pre>
+
+                <p>
+                    JavaScript can later be used to make
+                    the button perform an action.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- LISTS -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                07
+            </div>
+
+            <div>
+
+                <h2>
+                    Lists
+                </h2>
+
+                <p>
+                    An unordered list:
+                </p>
+
+                <pre><code>&lt;ul&gt;
+
+    &lt;li&gt;HTML&lt;/li&gt;
+
+    &lt;li&gt;CSS&lt;/li&gt;
+
+    &lt;li&gt;JavaScript&lt;/li&gt;
+
+&lt;/ul&gt;</code></pre>
+
+                <p>
+                    An ordered list:
+                </p>
+
+                <pre><code>&lt;ol&gt;
+
+    &lt;li&gt;Create your files&lt;/li&gt;
+
+    &lt;li&gt;Write your code&lt;/li&gt;
+
+    &lt;li&gt;Preview your website&lt;/li&gt;
+
+&lt;/ol&gt;</code></pre>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- DIV -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                08
+            </div>
+
+            <div>
+
+                <h2>
+                    Divs and Sections
+                </h2>
+
+                <p>
+                    A <code>&lt;div&gt;</code> can be used as
+                    a container for content.
+                </p>
+
+                <pre><code>&lt;div&gt;
+
+    &lt;h2&gt;About Me&lt;/h2&gt;
+
+    &lt;p&gt;
+        Welcome to my website.
+    &lt;/p&gt;
+
+&lt;/div&gt;</code></pre>
+
+                <p>
+                    HTML also provides semantic elements such as
+                    <code>&lt;header&gt;</code>,
+                    <code>&lt;nav&gt;</code>,
+                    <code>&lt;main&gt;</code>,
+                    <code>&lt;section&gt;</code> and
+                    <code>&lt;footer&gt;</code>.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- FORMS -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                09
+            </div>
+
+            <div>
+
+                <h2>
+                    Forms
+                </h2>
+
+                <p>
+                    Forms allow visitors to enter information.
+                </p>
+
+                <pre><code>&lt;form&gt;
+
+    &lt;label&gt;
+        Your Name
+    &lt;/label&gt;
+
+    &lt;input
+        type="text"
+        placeholder="Enter your name"&gt;
+
+    &lt;button type="submit"&gt;
+        Send
+    &lt;/button&gt;
+
+&lt;/form&gt;</code></pre>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- HTML ATTRIBUTES -->
+
+        <article class="tutorial-step reveal">
+
+            <div class="step-number">
+                10
+            </div>
+
+            <div>
+
+                <h2>
+                    HTML Attributes
+                </h2>
+
+                <p>
+                    Attributes provide additional information
+                    about an HTML element.
+                </p>
+
+                <pre><code>&lt;a href="about.html"&gt;
+About
+&lt;/a&gt;
+
+&lt;img
+    src="photo.jpg"
+    alt="My photo"&gt;</code></pre>
+
+                <p>
+                    In the first example,
+                    <code>href</code> tells the browser where
+                    the link should go.
+                </p>
+
+                <p>
+                    In the second example,
+                    <code>src</code> identifies the image and
+                    <code>alt</code> provides alternative text.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PRACTICE PROJECT -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                PRACTICE PROJECT
+            </p>
+
+            <h2>
+                Build Your First HTML Page
+            </h2>
+
+            <p>
+                Create an HTML page containing:
+            </p>
+
+            <ul>
+
+                <li>
+                    Your name as an H1 heading
+                </li>
+
+                <li>
+                    A paragraph about yourself
+                </li>
+
+                <li>
+                    A list of your skills
+                </li>
+
+                <li>
+                    A link to GitHub
+                </li>
+
+                <li>
+                    An image
+                </li>
+
+                <li>
+                    A button
+                </li>
+
+            </ul>
+
+            <p>
+                Save the file as <strong>index.html</strong>
+                and preview it in SPCK.
+            </p>
+
+        </div>
+
+
+
+        <!-- NEXT -->
+
+        <div class="next-lesson reveal">
+
+            <p>
+                NEXT LESSON
+            </p>
+
+            <h2>
+                Learn CSS →
+            </h2>
+
+            <a href="css-tutorial.html"
+               class="btn primary-btn">
+
+                Start CSS Tutorial
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h2 class="footer-logo">
+                    Neema<span>Charo</span>
+                </h2>
+
+                <p>
+                    Learn • Create • Publish
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Learning
+                </h3>
+
+                <a href="tutorials.html">
+                    All Tutorials
+                </a>
+
+                <a href="spck.html">
+                    SPCK Editor
+                </a>
+
+                <a href="css-tutorial.html">
+                    CSS
+                </a>
+
+                <a href="javascript-tutorial.html">
+                    JavaScript
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <a href="tel:0748933452">
+                    📱 0748933452
+                </a>
+
+                <a href="mailto:charoneema6@gmail.com">
+                    📧 charoneema6@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="year"></span>
+                Neema Charo. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a href="https://wa.me/254748933452"
+   class="whatsapp-button"
+   target="_blank">
+
+    💬
+
+</a>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

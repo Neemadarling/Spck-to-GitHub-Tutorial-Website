@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Contact Neema Charo for website design and website learning services.">
+
+    <title>Contact | Neema Charo</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Neema<span>Charo</span>
+        </a>
+
+        <button class="menu-button"
+                onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="tutorials.html">Tutorials</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <p class="section-label">
+            GET IN TOUCH
+        </p>
+
+        <h1>
+            Contact Me
+        </h1>
+
+        <p>
+            Have a question, project or website idea?
+            Let's connect.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+
+        <div class="contact-grid">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info reveal">
+
+                <p class="section-label">
+                    CONTACT DETAILS
+                </p>
+
+                <h2>
+                    Let's Connect
+                </h2>
+
+                <p>
+                    You can contact me directly using phone,
+                    email or WhatsApp.
+                </p>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📱
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Phone
+                        </h3>
+
+                        <a href="tel:0748933452">
+                            0748933452
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📧
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Email
+                        </h3>
+
+                        <a href="mailto:charoneema6@gmail.com">
+                            charoneema6@gmail.com
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        💬
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            WhatsApp
+                        </h3>
+
+                        <a href="https://wa.me/254748933452"
+                           target="_blank">
+
+                            Chat With Me
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form-box reveal">
+
+                <p class="section-label">
+                    SEND A MESSAGE
+                </p>
+
+                <h2>
+                    Tell Me About Your Project
+                </h2>
+
+
+                <form
+                    onsubmit="sendWhatsAppMessage(event)">
+
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your name"
+                        required>
+
+
+                    <label for="email">
+                        Your Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required>
+
+
+                    <label for="message">
+                        Your Message
+                    </label>
+
+                    <textarea
+                        id="message"
+                        rows="6"
+                        placeholder="Tell me about your website idea..."
+                        required></textarea>
+
+
+                    <button
+                        type="submit"
+                        class="btn primary-btn">
+
+                        Send via WhatsApp 💬
+
+                    </button>
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="cta-section">
+
+    <div class="container cta-content reveal">
+
+        <p class="section-label">
+            LEARN WITH ME
+        </p>
+
+        <h2>
+            Want to Learn Website Creation?
+        </h2>
+
+        <p>
+            Explore my tutorials and start building
+            your own website.
+        </p>
+
+        <a href="tutorials.html"
+           class="btn primary-btn">
+
+            Start Learning 🚀
+
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+
+            <div>
+
+                <h2 class="footer-logo">
+                    Neema<span>Charo</span>
+                </h2>
+
+                <p>
+                    Learn • Create • Publish
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Pages
+                </h3>
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="tutorials.html">Tutorials</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="services.html">Services</a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <a href="tel:0748933452">
+                    📱 0748933452
+                </a>
+
+                <a href="mailto:charoneema6@gmail.com">
+                    📧 charoneema6@gmail.com
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © <span id="year"></span>
+                Neema Charo. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<a href="https://wa.me/254748933452"
+   class="whatsapp-button"
+   target="_blank">
+
+    💬
+
+</a>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

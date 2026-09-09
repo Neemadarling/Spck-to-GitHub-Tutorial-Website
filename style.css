@@ -1,0 +1,840 @@
+/* =====================================================
+NEEMA CHARO TUTORIAL
+Main Website Styles
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background: #fffafc;
+color: #29202a;
+line-height: 1.7;
+overflow-x: hidden;
+}
+
+a {
+text-decoration: none;
+color: inherit;
+}
+
+img {
+max-width: 100%;
+display: block;
+}
+
+button,
+input,
+textarea {
+font-family: inherit;
+}
+
+/* ================= COLORS ================= */
+
+:root {
+--primary: #9b3d68;
+--primary-dark: #722747;
+--secondary: #e9a6c3;
+--light-pink: #fff0f6;
+--soft-pink: #fde1ec;
+--dark: #29202a;
+--text: #665b64;
+--white: #ffffff;
+--border: #f0dce5;
+--shadow: 0 15px 40px rgba(110, 43, 73, 0.10);
+}
+
+/* ================= CONTAINER ================= */
+
+.container {
+width: min(1120px, 92%);
+margin: auto;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+position: sticky;
+top: 0;
+z-index: 1000;
+background: rgba(255, 255, 255, 0.96);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+min-height: 75px;
+width: min(1200px, 92%);
+margin: auto;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+}
+
+.logo {
+font-size: 1.55rem;
+font-weight: 800;
+color: var(--dark);
+letter-spacing: -0.5px;
+}
+
+.logo span,
+.footer-logo span {
+color: var(--primary);
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+gap: 27px;
+list-style: none;
+}
+
+.nav-links a {
+font-size: 0.92rem;
+font-weight: 500;
+color: #51464e;
+transition: 0.3s ease;
+position: relative;
+}
+
+.nav-links a::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: -7px;
+width: 0;
+height: 2px;
+background: var(--primary);
+transition: 0.3s;
+}
+
+.nav-links a:hover {
+color: var(--primary);
+}
+
+.nav-links a:hover::after {
+width: 100%;
+}
+
+.menu-button {
+display: none;
+border: none;
+background: var(--light-pink);
+color: var(--primary);
+font-size: 1.5rem;
+width: 45px;
+height: 42px;
+border-radius: 10px;
+cursor: pointer;
+}
+
+/* ================= HERO ================= */
+
+.page-hero {
+padding: 100px 20px 90px;
+text-align: center;
+background:
+radial-gradient(circle at 15% 20%, rgba(233,166,195,.35), transparent 30%),
+radial-gradient(circle at 85% 70%, rgba(155,61,104,.12), transparent 30%),
+linear-gradient(135deg, #fff4f8, #ffffff);
+border-bottom: 1px solid var(--border);
+}
+
+.page-hero h1 {
+font-size: clamp(2.1rem, 6vw, 4rem);
+line-height: 1.15;
+margin: 12px 0 18px;
+color: var(--dark);
+font-weight: 800;
+}
+
+.page-hero p:not(.section-label) {
+color: var(--text);
+max-width: 680px;
+margin: auto;
+font-size: 1.05rem;
+}
+
+/* ================= LABEL ================= */
+
+.section-label {
+color: var(--primary);
+font-size: 0.78rem;
+font-weight: 800;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+/* ================= SECTIONS ================= */
+
+.section {
+padding: 90px 0;
+}
+
+.section-heading {
+max-width: 720px;
+margin: 0 auto 50px;
+text-align: center;
+}
+
+.section-heading h2,
+.about-text h2,
+.lesson-intro h2,
+.tutorial-step h2,
+.practice-box h2,
+.next-lesson h2,
+.portfolio-note h2,
+.contact-info h2,
+.contact-form-box h2 {
+font-size: clamp(1.7rem, 4vw, 2.5rem);
+line-height: 1.25;
+color: var(--dark);
+margin: 10px 0 18px;
+}
+
+.section-heading p:not(.section-label) {
+color: var(--text);
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid {
+display: grid;
+grid-template-columns: 0.9fr 1.1fr;
+gap: 65px;
+align-items: center;
+}
+
+.about-photo {
+background: var(--soft-pink);
+border-radius: 25px;
+padding: 12px;
+box-shadow: var(--shadow);
+transform: rotate(-2deg);
+}
+
+.about-photo img {
+width: 100%;
+aspect-ratio: 1 / 1;
+object-fit: cover;
+border-radius: 18px;
+}
+
+.about-text p {
+color: var(--text);
+margin-bottom: 18px;
+}
+
+.values-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+margin-top: 70px;
+}
+
+/* ================= CARDS ================= */
+
+.feature-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+.feature-card {
+background: var(--white);
+border: 1px solid var(--border);
+border-radius: 20px;
+padding: 32px 27px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.feature-card:hover {
+transform: translateY(-9px);
+box-shadow: var(--shadow);
+}
+
+.feature-icon {
+width: 62px;
+height: 62px;
+display: grid;
+place-items: center;
+background: var(--light-pink);
+border-radius: 16px;
+font-size: 1.8rem;
+margin-bottom: 22px;
+}
+
+.feature-card h3 {
+font-size: 1.15rem;
+margin-bottom: 10px;
+color: var(--dark);
+}
+
+.feature-card p {
+color: var(--text);
+font-size: 0.93rem;
+margin-bottom: 18px;
+}
+
+.feature-card a {
+color: var(--primary);
+font-weight: 700;
+font-size: 0.9rem;
+}
+
+/* ================= TUTORIAL ================= */
+
+.tutorial-content {
+max-width: 900px;
+}
+
+.lesson-intro {
+text-align: center;
+max-width: 750px;
+margin: 0 auto 60px;
+}
+
+.big-lesson-icon {
+width: 90px;
+height: 90px;
+display: grid;
+place-items: center;
+margin: 0 auto 25px;
+background: var(--light-pink);
+border-radius: 25px;
+font-size: 3rem;
+box-shadow: var(--shadow);
+}
+
+.lesson-intro p {
+color: var(--text);
+margin-bottom: 15px;
+}
+
+.tutorial-step {
+display: grid;
+grid-template-columns: 75px 1fr;
+gap: 25px;
+background: var(--white);
+border: 1px solid var(--border);
+border-radius: 20px;
+padding: 32px;
+margin-bottom: 25px;
+box-shadow: 0 8px 25px rgba(0,0,0,0.035);
+}
+
+.step-number {
+width: 58px;
+height: 58px;
+display: grid;
+place-items: center;
+background: var(--primary);
+color: white;
+border-radius: 16px;
+font-weight: 800;
+font-size: 0.9rem;
+}
+
+.tutorial-step p {
+color: var(--text);
+margin-bottom: 15px;
+}
+
+.tutorial-step code {
+background: #f8edf2;
+color: var(--primary-dark);
+padding: 2px 6px;
+border-radius: 5px;
+}
+
+pre {
+background: #241e24;
+color: #f9edf3;
+padding: 22px;
+border-radius: 14px;
+overflow-x: auto;
+margin: 18px 0;
+font-family: Consolas, monospace;
+font-size: 0.88rem;
+line-height: 1.7;
+border-left: 4px solid var(--primary);
+}
+
+pre code {
+background: transparent !important;
+color: inherit !important;
+padding: 0 !important;
+}
+
+.tip-box {
+background: #fff5d9;
+border-left: 4px solid #e2aa24;
+padding: 18px 20px;
+border-radius: 10px;
+color: #66521e;
+margin-top: 20px;
+}
+
+.project-structure,
+.practice-box,
+.code-challenge,
+.next-lesson,
+.portfolio-note {
+margin-top: 35px;
+padding: 35px;
+border-radius: 20px;
+}
+
+.project-structure {
+background: #f7f2f5;
+}
+
+.practice-box {
+background: linear-gradient(135deg, #fff0f6, #ffffff);
+border: 1px solid var(--border);
+}
+
+.code-challenge {
+background: #29202a;
+color: white;
+}
+
+.code-challenge h2 {
+color: white;
+}
+
+.code-challenge p,
+.code-challenge li {
+color: #e8dfe4;
+}
+
+.practice-box ul,
+.code-challenge ul {
+padding-left: 25px;
+color: var(--text);
+}
+
+.practice-box li,
+.code-challenge li {
+margin: 8px 0;
+}
+
+.next-lesson {
+text-align: center;
+background: var(--primary);
+color: white;
+}
+
+.next-lesson h2 {
+color: white;
+}
+
+.next-lesson p:first-child {
+letter-spacing: 2px;
+font-size: 0.75rem;
+font-weight: 800;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+display: inline-block;
+border-radius: 12px;
+padding: 13px 24px;
+font-weight: 700;
+transition: 0.3s ease;
+}
+
+.primary-btn {
+background: var(--primary);
+color: white;
+box-shadow: 0 8px 20px rgba(155,61,104,0.25);
+}
+
+.primary-btn:hover {
+background: var(--primary-dark);
+transform: translateY(-3px);
+}
+
+.next-lesson .primary-btn {
+background: white;
+color: var(--primary);
+margin-top: 10px;
+}
+
+/* ================= CTA ================= */
+
+.cta-section {
+padding: 90px 20px;
+background: linear-gradient(135deg, #7d2c50, #b44d7b);
+color: white;
+}
+
+.cta-content {
+text-align: center;
+max-width: 750px;
+}
+
+.cta-content h2 {
+color: white;
+font-size: clamp(2rem, 5vw, 3rem);
+margin: 12px 0;
+}
+
+.cta-content p:not(.section-label) {
+color: #f9e9f0;
+margin-bottom: 25px;
+}
+
+.cta-content .primary-btn {
+background: white;
+color: var(--primary);
+}
+
+/* ================= CONTACT ================= */
+
+.contact-grid {
+display: grid;
+grid-template-columns: 0.9fr 1.1fr;
+gap: 60px;
+align-items: start;
+}
+
+.contact-info > p:not(.section-label) {
+color: var(--text);
+margin-bottom: 25px;
+}
+
+.contact-card {
+display: flex;
+gap: 17px;
+align-items: center;
+background: white;
+border: 1px solid var(--border);
+padding: 18px;
+border-radius: 15px;
+margin-bottom: 15px;
+transition: 0.3s;
+}
+
+.contact-card:hover {
+transform: translateX(5px);
+box-shadow: var(--shadow);
+}
+
+.contact-icon {
+width: 50px;
+height: 50px;
+display: grid;
+place-items: center;
+background: var(--light-pink);
+border-radius: 13px;
+font-size: 1.3rem;
+}
+
+.contact-card h3 {
+font-size: 0.95rem;
+margin-bottom: 2px;
+}
+
+.contact-card a {
+color: var(--primary);
+font-size: 0.9rem;
+word-break: break-word;
+}
+
+.contact-form-box {
+background: white;
+padding: 35px;
+border-radius: 22px;
+border: 1px solid var(--border);
+box-shadow: var(--shadow);
+}
+
+.contact-form-box form {
+display: flex;
+flex-direction: column;
+}
+
+.contact-form-box label {
+font-size: 0.9rem;
+font-weight: 600;
+margin: 13px 0 7px;
+}
+
+.contact-form-box input,
+.contact-form-box textarea {
+width: 100%;
+border: 1px solid #e4d4dc;
+background: #fffafd;
+border-radius: 11px;
+padding: 14px;
+outline: none;
+font-size: 0.92rem;
+resize: vertical;
+transition: 0.3s;
+}
+
+.contact-form-box input:focus,
+.contact-form-box textarea:focus {
+border-color: var(--primary);
+box-shadow: 0 0 0 3px rgba(155,61,104,0.1);
+}
+
+.contact-form-box button {
+border: none;
+cursor: pointer;
+margin-top: 20px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+background: #241e24;
+color: #cfc3ca;
+padding: 65px 0 20px;
+}
+
+.footer-grid {
+display: grid;
+grid-template-columns: 1.3fr 1fr 1fr;
+gap: 50px;
+}
+
+.footer-logo {
+color: white;
+font-size: 1.5rem;
+margin-bottom: 10px;
+}
+
+.footer h3 {
+color: white;
+font-size: 1rem;
+margin-bottom: 15px;
+}
+
+.footer p {
+font-size: 0.88rem;
+margin-bottom: 8px;
+}
+
+.footer a {
+display: block;
+color: #cfc3ca;
+font-size: 0.87rem;
+margin: 8px 0;
+transition: 0.3s;
+}
+
+.footer a:hover {
+color: #f1a8c5;
+transform: translateX(4px);
+}
+
+.footer-bottom {
+border-top: 1px solid #40363e;
+text-align: center;
+margin-top: 45px;
+padding-top: 20px;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp-button {
+position: fixed;
+right: 20px;
+bottom: 20px;
+width: 58px;
+height: 58px;
+display: grid;
+place-items: center;
+background: #25D366;
+color: white;
+border-radius: 50%;
+font-size: 1.7rem;
+z-index: 999;
+box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+animation: whatsappPulse 2s infinite;
+}
+
+@keyframes whatsappPulse {
+0%, 100% {
+transform: scale(1);
+}
+50% {
+transform: scale(1.08);
+}
+}
+
+/* ================= SCROLL REVEAL ================= */
+
+.reveal {
+opacity: 0;
+transform: translateY(35px);
+transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.show {
+opacity: 1;
+transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+.menu-button {
+    display: block;
+}
+
+.nav-links {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+}
+
+.nav-links.active {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.nav-links li {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links a {
+    display: block;
+    padding: 15px;
+    border-bottom: 1px solid #f4e7ed;
+}
+
+.nav-links a::after {
+    display: none;
+}
+
+.about-grid,
+.contact-grid {
+    grid-template-columns: 1fr;
+}
+
+.about-photo {
+    max-width: 450px;
+    margin: auto;
+}
+
+.feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.values-grid {
+    grid-template-columns: 1fr;
+}
+
+}
+
+@media (max-width: 600px) {
+
+.navbar {
+    min-height: 68px;
+}
+
+.page-hero {
+    padding: 75px 15px 65px;
+}
+
+.section {
+    padding: 65px 0;
+}
+
+.feature-grid {
+    grid-template-columns: 1fr;
+}
+
+.tutorial-step {
+    grid-template-columns: 1fr;
+    padding: 25px;
+}
+
+.step-number {
+    width: 52px;
+    height: 52px;
+}
+
+.project-structure,
+.practice-box,
+.code-challenge,
+.next-lesson {
+    padding: 25px;
+}
+
+.contact-form-box {
+    padding: 25px 20px;
+}
+
+.footer-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+pre {
+    font-size: 0.78rem;
+    padding: 16px;
+}
+
+.whatsapp-button {
+    width: 52px;
+    height: 52px;
+    right: 15px;
+    bottom: 15px;
+}
+
+}
+
+/* ================= REDUCED MOTION ================= */
+
+@media (prefers-reduced-motion: reduce) {
+*,
+*::before,
+*::after {
+scroll-behavior: auto !important;
+animation: none !important;
+transition: none !important;
+}
+
+.reveal {
+    opacity: 1;
+    transform: none;
+}
+
+}
