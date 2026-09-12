@@ -889,5 +889,159 @@ transition: none !important;
         max-width: none;
         min-height: 90vh;
     }
+/* =====================================================
+   CERTIFICATE DESIGN
+   ===================================================== */
 
+.certificate-box {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+    background: #ffffff;
+    border: 8px solid #b23a78;
+    border-radius: 10px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+    overflow: visible;
+}
+
+.certificate-box h1 {
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.certificate-box h2 {
+    margin: 15px 0;
+    font-size: 25px;
+}
+
+.certificate-box p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.certificate-details {
+    margin-top: 25px;
+}
+
+.certificate-details p {
+    margin: 6px 0;
+}
+
+
+/* =====================================================
+   MOBILE CERTIFICATE
+   ===================================================== */
+
+@media screen and (max-width: 600px) {
+
+    .certificate-box {
+        width: 100%;
+        padding: 25px 15px;
+        margin: 15px auto;
+        border-width: 5px;
+    }
+
+    .certificate-box h1 {
+        font-size: 25px;
+    }
+
+    .certificate-box h2 {
+        font-size: 20px;
+    }
+
+    .certificate-box p {
+        font-size: 14px;
+    }
+
+}
+
+
+/* =====================================================
+   PRINT CERTIFICATE - ONE PAGE
+   ===================================================== */
+
+@media print {
+
+    @page {
+        size: A4 landscape;
+        margin: 0;
+    }
+
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background: white;
+    }
+
+    .header,
+    .footer,
+    .menu-button,
+    .nav-links,
+    .whatsapp-button,
+    .certificate-box button,
+    button {
+        display: none !important;
+    }
+
+    .section {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .container {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .certificate-box {
+        width: 100% !important;
+        max-width: none !important;
+        height: 100vh;
+        min-height: 0 !important;
+
+        margin: 0 !important;
+        padding: 35px !important;
+
+        box-sizing: border-box;
+
+        border: 8px solid #b23a78;
+        border-radius: 0;
+
+        box-shadow: none;
+
+        page-break-inside: avoid;
+        break-inside: avoid;
+
+        overflow: hidden;
+    }
+
+    .certificate-box h1 {
+        font-size: 32px;
+        margin: 12px 0;
+    }
+
+    .certificate-box h2 {
+        font-size: 23px;
+        margin: 10px 0;
+    }
+
+    .certificate-box p {
+        font-size: 15px;
+        margin: 7px 0;
+        line-height: 1.4;
+    }
+
+    .certificate-details {
+        margin-top: 18px;
+    }
+
+}
 }
