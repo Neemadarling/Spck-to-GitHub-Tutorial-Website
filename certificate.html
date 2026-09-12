@@ -19,6 +19,157 @@
     <link rel="stylesheet"
           href="style.css">
 
+
+    <!-- ================= CERTIFICATE PRINT STYLE ================= -->
+
+    <style>
+
+        @media print {
+
+            @page {
+                size: A4 landscape;
+                margin: 0;
+            }
+
+
+            html,
+            body {
+                width: 297mm;
+                height: 210mm;
+                margin: 0 !important;
+                padding: 0 !important;
+                background: white !important;
+            }
+
+
+            /* Hide normal website parts */
+
+            header,
+            footer,
+            nav,
+            .menu-button,
+            .nav-links {
+                display: none !important;
+            }
+
+
+            /* Remove normal section spacing */
+
+            .section {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+
+            .container {
+                width: 100% !important;
+                max-width: none !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+
+            /* ================= CERTIFICATE ================= */
+
+            .certificate-box {
+
+                width: 277mm !important;
+
+                height: 190mm !important;
+
+                margin: 10mm auto !important;
+
+                padding: 18mm !important;
+
+                box-sizing: border-box;
+
+                overflow: hidden;
+
+                page-break-inside: avoid;
+
+                break-inside: avoid;
+
+                page-break-after: avoid;
+
+                break-after: avoid;
+
+                background: white !important;
+
+            }
+
+
+            /* Certificate title */
+
+            .certificate-box h1 {
+
+                font-size: 28px !important;
+
+                margin: 8px 0 !important;
+
+            }
+
+
+            .certificate-box h2 {
+
+                font-size: 23px !important;
+
+                margin: 8px 0 !important;
+
+            }
+
+
+            .certificate-box p {
+
+                margin: 7px 0 !important;
+
+                line-height: 1.4 !important;
+
+            }
+
+
+            /* Trophy */
+
+            .certificate-box .feature-icon {
+
+                font-size: 38px !important;
+
+                margin: 5px 0 !important;
+
+            }
+
+
+            /* Details */
+
+            .certificate-details {
+
+                margin-top: 15px !important;
+
+            }
+
+
+            /* Hide print button */
+
+            .certificate-box button {
+
+                display: none !important;
+
+            }
+
+
+            /* Prevent elements from being split */
+
+            .certificate-box * {
+
+                page-break-inside: avoid !important;
+
+                break-inside: avoid !important;
+
+            }
+
+        }
+
+    </style>
+
 </head>
 
 
