@@ -25,7 +25,9 @@
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="header">
 
@@ -53,7 +55,9 @@
 
 
 
-<!-- ================= ADMIN ================= -->
+<!-- =====================================================
+     ADMIN DASHBOARD
+===================================================== -->
 
 <section class="section">
 
@@ -66,25 +70,27 @@
                 NEEMA CHARO ACADEMY
             </p>
 
+
             <h1>
-                Payment Dashboard
+                Admin Payment Dashboard
             </h1>
 
+
             <p>
-                Review student payment submissions.
+                Review and approve student payment submissions.
             </p>
 
         </div>
 
 
 
-        <!-- MESSAGE -->
+        <!-- ADMIN STATUS -->
 
         <div id="adminMessage"
              class="practice-box"
              style="text-align:center;">
 
-            Loading payments...
+            Verifying administrator access...
 
         </div>
 
@@ -103,7 +109,9 @@
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="footer">
 
@@ -126,15 +134,18 @@
 
 
 
-<!-- ================= SUPABASE ================= -->
+<!-- =====================================================
+     SUPABASE
+===================================================== -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
 
 
 <script>
 
 /* =====================================================
-   SUPABASE
+   SUPABASE CONFIGURATION
 ===================================================== */
 
 const SUPABASE_URL =
@@ -154,11 +165,18 @@ const supabaseClient =
 
 
 /* =====================================================
-   ADMIN EMAIL
+   ADMIN ACCOUNT
 ===================================================== */
 
 const ADMIN_EMAIL =
     "charoneema6@gmail.com";
+
+
+/*
+   Your admin UID:
+
+   5278de18-c5fb-4006-ade5-3900849f979c
+*/
 
 
 
@@ -171,7 +189,9 @@ const adminMessage =
 
 
 const paymentsContainer =
-    document.getElementById("paymentsContainer");
+    document.getElementById(
+        "paymentsContainer"
+    );
 
 
 document.getElementById("year").textContent =
@@ -202,24 +222,38 @@ function escapeHTML(value) {
 
 async function checkAdmin() {
 
+
     const {
         data,
         error
     } =
-        await supabaseClient.auth.getUser();
+    await supabaseClient.auth.getUser();
 
+
+
+    /* ==========================================
+       AUTHENTICATION ERROR
+    ========================================== */
 
     if (error) {
 
-        console.error(error);
+        console.error(
+            "Authentication error:",
+            error
+        );
 
-        adminMessage.textContent =
-            "Unable to verify administrator account.";
+        window.location.href =
+            "login.html";
 
         return false;
 
     }
 
+
+
+    /* ==========================================
+       NO USER
+    ========================================== */
 
     const user =
         data.user;
@@ -227,28 +261,23 @@ async function checkAdmin() {
 
     if (!user) {
 
-        adminMessage.innerHTML = `
-
-            Please login first.
-
-            <br><br>
-
-            <a href="login.html"
-               class="btn primary-btn">
-
-                Login
-
-            </a>
-
-        `;
+        window.location.href =
+            "login.html";
 
         return false;
 
     }
 
 
+
+    /* ==========================================
+       CHECK EMAIL
+    ========================================== */
+
     const email =
-        (user.email || "").toLowerCase();
+        (user.email || "")
+        .toLowerCase()
+        .trim();
 
 
     if (
@@ -256,12 +285,41 @@ async function checkAdmin() {
         ADMIN_EMAIL.toLowerCase()
     ) {
 
-        adminMessage.textContent =
-            "Access denied. Administrator account required.";
+        alert(
+            "Access denied.\n\n" +
+            "This page is for the administrator only."
+        );
+
+
+        window.location.href =
+            "dashboard.html";
+
 
         return false;
 
     }
+
+
+
+    /* ==========================================
+       ADMIN VERIFIED
+    ========================================== */
+
+    adminMessage.innerHTML = `
+
+        <h2>
+            👑 Administrator Access
+        </h2>
+
+        <p>
+            Welcome, Neema Charo.
+        </p>
+
+        <p>
+            You are logged in as the administrator.
+        </p>
+
+    `;
 
 
     return true;
@@ -281,24 +339,23 @@ async function loadPayments() {
         await checkAdmin();
 
 
-    if (!isAdmin) return;
+    if (!isAdmin) {
 
+        return;
 
+    }
 
-    adminMessage.textContent =
-        "Loading payment submissions...";
 
 
     paymentsContainer.innerHTML =
         "";
 
 
-
     const {
         data: payments,
         error
     } =
-        await supabaseClient
+    await supabaseClient
         .from("payments")
         .select("*")
         .order(
@@ -310,7 +367,9 @@ async function loadPayments() {
 
 
 
-    /* ================= ERROR ================= */
+    /* ==========================================
+       DATABASE ERROR
+    ========================================== */
 
     if (error) {
 
@@ -322,17 +381,16 @@ async function loadPayments() {
 
         adminMessage.innerHTML = `
 
-            <strong>
-                Unable to load payments.
-            </strong>
+            <h2>
+                ⚠️ Unable to load payments
+            </h2>
 
-            <br><br>
-
-            <small>
+            <p>
                 ${escapeHTML(error.message)}
-            </small>
+            </p>
 
         `;
+
 
         return;
 
@@ -340,15 +398,31 @@ async function loadPayments() {
 
 
 
-    /* ================= EMPTY ================= */
+    /* ==========================================
+       NO PAYMENTS
+    ========================================== */
 
     if (
         !payments ||
         payments.length === 0
     ) {
 
-        adminMessage.textContent =
-            "No payment submissions yet.";
+        adminMessage.innerHTML = `
+
+            <h2>
+                👑 Administrator Access
+            </h2>
+
+            <p>
+                Welcome, Neema Charo.
+            </p>
+
+            <p>
+                No student payment submissions yet.
+            </p>
+
+        `;
+
 
         return;
 
@@ -356,227 +430,272 @@ async function loadPayments() {
 
 
 
-    /* ================= SUCCESS ================= */
+    /* ==========================================
+       PAYMENT COUNT
+    ========================================== */
 
     adminMessage.innerHTML = `
 
-        <strong>
-            Payment submissions: ${payments.length}
-        </strong>
+        <h2>
+            👑 Administrator Dashboard
+        </h2>
+
+        <p>
+            Welcome, Neema Charo.
+        </p>
+
+        <p>
+            <strong>
+                Payment submissions:
+                ${payments.length}
+            </strong>
+        </p>
 
     `;
 
 
 
-    /* ================= CREATE CARDS ================= */
+    /* ==========================================
+       CREATE PAYMENT CARDS
+    ========================================== */
 
-    payments.forEach(function(payment) {
-
-
-        const card =
-            document.createElement("div");
-
-
-        /* IMPORTANT:
-           No "reveal" class here.
-        */
-
-        card.className =
-            "feature-card";
+    payments.forEach(
+        function(payment) {
 
 
-        card.style.marginBottom =
-            "25px";
+            const card =
+                document.createElement("div");
 
 
-        card.style.opacity =
-            "1";
+            card.className =
+                "feature-card";
 
 
-        card.style.visibility =
-            "visible";
+            card.style.marginBottom =
+                "25px";
 
 
-        card.style.display =
-            "block";
+            card.style.opacity =
+                "1";
 
 
+            card.style.visibility =
+                "visible";
 
-        const status =
-            String(
-                payment.status || "pending"
-            ).toLowerCase();
+
+            card.style.display =
+                "block";
 
 
 
-        let actionHTML =
-            "";
+            const status =
+                String(
+                    payment.status ||
+                    "pending"
+                ).toLowerCase();
 
 
 
-        if (
-            status === "pending"
-        ) {
+            let actionHTML =
+                "";
 
-            actionHTML = `
 
-                <button
-                    class="btn primary-btn approve-button">
 
-                    Approve Payment ✅
+            /* =================================
+               PENDING PAYMENT
+            ================================= */
 
-                </button>
+            if (
+                status === "pending"
+            ) {
 
-            `;
+                actionHTML = `
 
-        }
+                    <button
+                        class="btn primary-btn approve-button">
 
-        else {
+                        Approve Payment ✅
 
-            actionHTML = `
+                    </button>
 
-                <p style="
-                    font-weight:700;
-                    margin-top:20px;
-                ">
+                `;
 
-                    Payment already
-                    ${escapeHTML(status)}.
+            }
+
+
+
+            /* =================================
+               APPROVED / OTHER STATUS
+            ================================= */
+
+            else {
+
+                actionHTML = `
+
+                    <p style="
+                        font-weight:700;
+                        margin-top:20px;
+                    ">
+
+                        Payment already
+                        ${escapeHTML(status)}.
+
+                    </p>
+
+                `;
+
+            }
+
+
+
+            card.innerHTML = `
+
+                <div class="feature-icon">
+                    💳
+                </div>
+
+
+                <h3>
+                    ${escapeHTML(
+                        payment.full_name
+                    )}
+                </h3>
+
+
+                <p>
+
+                    <strong>
+                        Phone:
+                    </strong>
+
+                    ${escapeHTML(
+                        payment.phone
+                    )}
 
                 </p>
 
+
+                <p>
+
+                    <strong>
+                        Transaction Code:
+                    </strong>
+
+                    ${escapeHTML(
+                        payment.transaction_code
+                    )}
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Amount:
+                    </strong>
+
+                    KSh
+                    ${escapeHTML(
+                        payment.amount
+                    )}
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Course:
+                    </strong>
+
+                    ${escapeHTML(
+                        payment.course
+                    )}
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Status:
+                    </strong>
+
+                    ${escapeHTML(
+                        payment.status
+                    )}
+
+                </p>
+
+
+                <p>
+
+                    <strong>
+                        Date:
+                    </strong>
+
+                    ${
+                        payment.created_at
+                        ?
+                        new Date(
+                            payment.created_at
+                        ).toLocaleString()
+                        :
+                        "Not available"
+                    }
+
+                </p>
+
+
+                ${actionHTML}
+
             `;
 
-        }
+
+
+            /* =================================
+               APPROVE BUTTON
+            ================================= */
+
+            const approveButton =
+                card.querySelector(
+                    ".approve-button"
+                );
+
+
+            if (approveButton) {
+
+
+                approveButton.addEventListener(
+                    "click",
+                    function() {
+
+
+                        approvePayment(
+
+                            payment.id,
+
+                            payment.user_id,
+
+                            payment.course,
+
+                            approveButton
+
+                        );
+
+                    }
+                );
+
+            }
 
 
 
-        card.innerHTML = `
-
-            <div class="feature-icon">
-                💳
-            </div>
-
-
-            <h3>
-                ${escapeHTML(payment.full_name)}
-            </h3>
-
-
-            <p>
-
-                <strong>
-                    Phone:
-                </strong>
-
-                ${escapeHTML(payment.phone)}
-
-            </p>
-
-
-            <p>
-
-                <strong>
-                    Transaction Code:
-                </strong>
-
-                ${escapeHTML(
-                    payment.transaction_code
-                )}
-
-            </p>
-
-
-            <p>
-
-                <strong>
-                    Amount:
-                </strong>
-
-                KSh ${escapeHTML(
-                    payment.amount
-                )}
-
-            </p>
-
-
-            <p>
-
-                <strong>
-                    Course:
-                </strong>
-
-                ${escapeHTML(payment.course)}
-
-            </p>
-
-
-            <p>
-
-                <strong>
-                    Status:
-                </strong>
-
-                ${escapeHTML(payment.status)}
-
-            </p>
-
-
-            <p>
-
-                <strong>
-                    Date:
-                </strong>
-
-                ${payment.created_at
-                    ? new Date(
-                        payment.created_at
-                      ).toLocaleString()
-                    : "Not available"
-                }
-
-            </p>
-
-
-            ${actionHTML}
-
-        `;
-
-
-
-        /* ================= APPROVE BUTTON ================= */
-
-        const approveButton =
-            card.querySelector(
-                ".approve-button"
-            );
-
-
-        if (approveButton) {
-
-            approveButton.addEventListener(
-                "click",
-                function() {
-
-                    approvePayment(
-                        payment.id,
-                        payment.user_id,
-                        payment.course,
-                        approveButton
-                    );
-
-                }
+            paymentsContainer.appendChild(
+                card
             );
 
         }
-
-
-
-        paymentsContainer.appendChild(
-            card
-        );
-
-    });
+    );
 
 }
 
@@ -596,12 +715,19 @@ async function approvePayment(
 
     const confirmed =
         confirm(
+
             "Have you verified this M-Pesa transaction?\n\n" +
+
             "Click OK only if the payment is genuine."
+
         );
 
 
-    if (!confirmed) return;
+    if (!confirmed) {
+
+        return;
+
+    }
 
 
 
@@ -614,15 +740,20 @@ async function approvePayment(
 
 
 
-    /* ================= UPDATE PAYMENT ================= */
+    /* ==========================================
+       UPDATE PAYMENT
+    ========================================== */
 
     const {
         error: paymentError
     } =
-        await supabaseClient
+    await supabaseClient
         .from("payments")
         .update({
-            status: "approved"
+
+            status:
+                "approved"
+
         })
         .eq(
             "id",
@@ -633,14 +764,19 @@ async function approvePayment(
 
     if (paymentError) {
 
+
         console.error(
+            "Payment update error:",
             paymentError
         );
 
 
         alert(
+
             "Could not approve payment:\n\n" +
+
             paymentError.message
+
         );
 
 
@@ -651,18 +787,21 @@ async function approvePayment(
         button.textContent =
             "Approve Payment ✅";
 
+
         return;
 
     }
 
 
 
-    /* ================= COURSE ACCESS ================= */
+    /* ==========================================
+       CREATE COURSE ACCESS
+    ========================================== */
 
     const {
         error: accessError
     } =
-        await supabaseClient
+    await supabaseClient
         .from("course_access")
         .insert({
 
@@ -681,18 +820,24 @@ async function approvePayment(
 
     if (accessError) {
 
+
         console.error(
+            "Course access error:",
             accessError
         );
 
 
         alert(
+
             "Payment was approved, but course access could not be created:\n\n" +
+
             accessError.message
+
         );
 
 
         loadPayments();
+
 
         return;
 
@@ -700,11 +845,16 @@ async function approvePayment(
 
 
 
-    /* ================= SUCCESS ================= */
+    /* ==========================================
+       SUCCESS
+    ========================================== */
 
     alert(
+
         "Payment approved successfully! 🎉\n\n" +
+
         "Course access has been granted."
+
     );
 
 
@@ -737,7 +887,7 @@ document.getElementById(
 
 
 /* =====================================================
-   START
+   START ADMIN DASHBOARD
 ===================================================== */
 
 loadPayments();

@@ -11,7 +11,10 @@
     <meta name="description"
           content="Student Dashboard | Neema Charo Academy">
 
-    <title>Dashboard | Neema Charo Academy</title>
+    <meta name="author"
+          content="Neema Charo">
+
+    <title>Student Dashboard | Neema Charo Academy</title>
 
     <link rel="stylesheet"
           href="style.css">
@@ -22,11 +25,16 @@
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header class="header">
 
     <nav class="navbar">
+
+
+        <!-- LOGO -->
 
         <a href="index.html"
            class="logo">
@@ -35,6 +43,9 @@
 
         </a>
 
+
+
+        <!-- MOBILE MENU -->
 
         <button
             class="menu-button"
@@ -46,29 +57,108 @@
         </button>
 
 
+
+        <!-- NAVIGATION -->
+
         <ul class="nav-links"
             id="navLinks">
 
+
             <li>
+
                 <a href="index.html">
+
                     Home
+
                 </a>
+
             </li>
 
+
+
             <li>
+
+                <a href="about.html">
+
+                    About
+
+                </a>
+
+            </li>
+
+
+
+            <li>
+
+                <a href="tutorials.html">
+
+                    Tutorials
+
+                </a>
+
+            </li>
+
+
+
+            <li>
+
                 <a href="courses.html">
+
                     Courses
+
                 </a>
+
             </li>
 
+
+
             <li>
+
                 <a href="dashboard.html"
                    class="active">
 
-                    Dashboard
+                    🎓 Student Dashboard
 
                 </a>
+
             </li>
+
+
+
+            <li>
+
+                <a href="portfolio.html">
+
+                    Portfolio
+
+                </a>
+
+            </li>
+
+
+
+            <li>
+
+                <a href="services.html">
+
+                    Services
+
+                </a>
+
+            </li>
+
+
+
+            <li>
+
+                <a href="contact.html">
+
+                    Contact
+
+                </a>
+
+            </li>
+
 
         </ul>
 
@@ -78,23 +168,37 @@
 
 
 
-<!-- ================= DASHBOARD HERO ================= -->
+<!-- =====================================================
+     DASHBOARD HERO
+===================================================== -->
 
 <section class="page-hero">
 
     <div class="container">
 
+
         <p class="section-label">
+
             NEEMA CHARO ACADEMY
+
         </p>
+
+
 
         <h1>
+
             Student Dashboard 🎓
+
         </h1>
 
+
+
         <p id="welcomeMessage">
-            Loading your account...
+
+            Checking your account...
+
         </p>
+
 
     </div>
 
@@ -102,14 +206,16 @@
 
 
 
-<!-- ================= COURSE ================= -->
+<!-- =====================================================
+     DASHBOARD CONTENT
+===================================================== -->
 
 <section class="section">
 
     <div class="container">
 
 
-        <!-- STATUS MESSAGE -->
+        <!-- STATUS -->
 
         <div id="message"
              class="practice-box"
@@ -121,350 +227,412 @@
 
 
 
-        <!-- ================= COURSE CONTENT ================= -->
+        <!-- =================================================
+             STUDENT DASHBOARD MENU
+        ================================================= -->
 
-        <div id="courseContent"
+        <div id="studentMenu"
              style="display:none;">
 
 
             <div class="section-heading">
 
                 <p class="section-label">
-                    COMPLETE COURSE
+
+                    MY ACCOUNT
+
                 </p>
 
+
                 <h2>
-                    Website Development Course
+
+                    Welcome to Your Student Area
+
                 </h2>
 
+
                 <p>
-                    Complete the modules in order,
-                    then take your final assessment.
+
+                    Choose what you would like to do.
+
                 </p>
 
             </div>
 
 
-
-            <!-- ================= MODULES ================= -->
 
             <div class="feature-grid">
 
 
-                <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
+                <!-- ================= MY COURSE ================= -->
 
-                    <h3>Module 01</h3>
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        📚
+
+                    </div>
+
+
+                    <h3>
+
+                        My Course
+
+                    </h3>
+
 
                     <p>
-                        Introduction to Web Development
+
+                        Access your complete
+                        Website Development Course.
+
                     </p>
 
-                    <a href="module1.html"
+
+                    <a href="course-content.html"
                        class="btn primary-btn">
 
-                        Start Module →
+                        Open My Course →
 
                     </a>
+
                 </div>
 
 
 
-                <div class="feature-card">
-                    <div class="feature-icon">📝</div>
+                <!-- ================= MODULES ================= -->
 
-                    <h3>Module 02</h3>
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        📖
+
+                    </div>
+
+
+                    <h3>
+
+                        My Modules
+
+                    </h3>
+
 
                     <p>
-                        HTML — Build Your Website Structure
+
+                        Continue learning through
+                        the course modules.
+
                     </p>
 
-                    <a href="module2.html"
+
+                    <a href="course-content.html"
                        class="btn primary-btn">
 
-                        Start Module →
+                        View Modules →
 
                     </a>
+
                 </div>
 
 
 
-                <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
+                <!-- ================= CERTIFICATE ================= -->
 
-                    <h3>Module 03</h3>
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        🏆
+
+                    </div>
+
+
+                    <h3>
+
+                        My Certificate
+
+                    </h3>
+
 
                     <p>
-                        CSS — Design & Responsive Websites
+
+                        View your certificate after
+                        completing the course.
+
                     </p>
 
-                    <a href="module3.html"
+
+                    <a href="certificate.html"
                        class="btn primary-btn">
 
-                        Start Module →
+                        View Certificate →
 
                     </a>
+
                 </div>
 
 
 
+                <!-- ================= ACCOUNT ================= -->
+
                 <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
 
-                    <h3>Module 04</h3>
+                    <div class="feature-icon">
 
-                    <p>
-                        JavaScript Basics
+                        👤
+
+                    </div>
+
+
+                    <h3>
+
+                        My Account
+
+                    </h3>
+
+
+                    <p id="accountInfo">
+
+                        Student account
+
                     </p>
 
-                    <a href="module4.html"
+
+                    <a href="#account"
                        class="btn primary-btn">
 
-                        Start Module →
+                        Account Details →
 
                     </a>
+
                 </div>
 
 
 
+                <!-- ================= PAYMENT ================= -->
+
                 <div class="feature-card">
-                    <div class="feature-icon">📦</div>
 
-                    <h3>Module 05</h3>
+                    <div class="feature-icon">
 
-                    <p>
-                        JavaScript Arrays & Objects
+                        💳
+
+                    </div>
+
+
+                    <h3>
+
+                        Payment Status
+
+                    </h3>
+
+
+                    <p id="paymentStatus">
+
+                        Checking...
+
                     </p>
 
-                    <a href="module5.html"
+
+                    <a href="courses.html"
                        class="btn primary-btn">
 
-                        Start Module →
+                        View Course →
 
                     </a>
+
                 </div>
 
 
 
-                <div class="feature-card">
-                    <div class="feature-icon">🔄</div>
-
-                    <h3>Module 06</h3>
-
-                    <p>
-                        JavaScript Loops & Functions
-                    </p>
-
-                    <a href="module6.html"
-                       class="btn primary-btn">
-
-                        Start Module →
-
-                    </a>
-                </div>
-
-
+                <!-- ================= LOGOUT ================= -->
 
                 <div class="feature-card">
-                    <div class="feature-icon">📱</div>
 
-                    <h3>Module 07</h3>
+                    <div class="feature-icon">
+
+                        🚪
+
+                    </div>
+
+
+                    <h3>
+
+                        Logout
+
+                    </h3>
+
 
                     <p>
-                        Build a Website Using Your Phone/SPCK
+
+                        Securely sign out of
+                        your student account.
+
                     </p>
 
-                    <a href="module7.html"
-                       class="btn primary-btn">
 
-                        Start Module →
+                    <button
+                        id="logoutButton"
+                        class="btn primary-btn">
 
-                    </a>
-                </div>
+                        Logout →
 
+                    </button>
 
-
-                <div class="feature-card">
-                    <div class="feature-icon">🖼️</div>
-
-                    <h3>Module 08</h3>
-
-                    <p>
-                        Images, Links, Pages & Navigation
-                    </p>
-
-                    <a href="module8.html"
-                       class="btn primary-btn">
-
-                        Start Module →
-
-                    </a>
-                </div>
-
-
-
-                <div class="feature-card">
-                    <div class="feature-icon">✨</div>
-
-                    <h3>Module 09</h3>
-
-                    <p>
-                        Animations & Interactive Features
-                    </p>
-
-                    <a href="module9.html"
-                       class="btn primary-btn">
-
-                        Start Module →
-
-                    </a>
-                </div>
-
-
-
-                <div class="feature-card">
-                    <div class="feature-icon">🐙</div>
-
-                    <h3>Module 10</h3>
-
-                    <p>
-                        GitHub & GitHub Pages
-                    </p>
-
-                    <a href="module10.html"
-                       class="btn primary-btn">
-
-                        Start Module →
-
-                    </a>
-                </div>
-
-
-
-                <div class="feature-card">
-                    <div class="feature-icon">🚀</div>
-
-                    <h3>Module 11</h3>
-
-                    <p>
-                        Publish Your Website
-                    </p>
-
-                    <a href="module11.html"
-                       class="btn primary-btn">
-
-                        Start Module →
-
-                    </a>
-                </div>
-
-
-
-                <div class="feature-card">
-                    <div class="feature-icon">💼</div>
-
-                    <h3>Module 12</h3>
-
-                    <p>
-                        Build Websites for Clients
-                    </p>
-
-                    <a href="module12.html"
-                       class="btn primary-btn">
-
-                        Start Module →
-
-                    </a>
-                </div>
-
-
-
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-
-                    <h3>Module 13</h3>
-
-                    <p>
-                        How to Price & Sell Your Websites
-                    </p>
-
-                    <a href="module13.html"
-                       class="btn primary-btn">
-
-                        Start Module →
-
-                    </a>
-                </div>
-
-
-
-                <div class="feature-card">
-                    <div class="feature-icon">🎓</div>
-
-                    <h3>Module 14</h3>
-
-                    <p>
-                        Final Website Project
-                    </p>
-
-                    <a href="module14.html"
-                       class="btn primary-btn">
-
-                        Start Module →
-
-                    </a>
-                </div>
-
-
-
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-
-                    <h3>Module 15</h3>
-
-                    <p>
-                        Final Assessment & Certificate
-                    </p>
-
-                    <a href="module15.html"
-                       class="btn primary-btn">
-
-                        Start Module →
-
-                    </a>
                 </div>
 
 
             </div>
 
+        </div>
 
 
-            <!-- ================= FINAL ASSESSMENT ================= -->
 
-            <div class="next-lesson"
-                 style="margin-top:50px;">
+        <!-- =================================================
+             LOCKED ACCOUNT
+        ================================================= -->
 
-                <p>
-                    COURSE COMPLETION
-                </p>
+        <div id="lockedArea"
+             style="display:none; text-align:center;">
+
+
+            <div class="practice-box">
+
+
+                <div class="feature-icon">
+
+                    🔒
+
+                </div>
+
 
                 <h2>
-                    Ready for Your Final Assessment?
+
+                    Course Locked
+
                 </h2>
 
+
                 <p>
-                    Complete your learning first,
-                    then take the final assessment.
+
+                    Your account is successfully logged in,
+                    but you do not currently have active
+                    access to the paid course.
+
                 </p>
 
-                <a href="assessment.html"
+
+                <a href="courses.html"
                    class="btn primary-btn">
 
-                    Take Final Assessment 🎓
+                    View Course 💻
 
                 </a>
 
+
             </div>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACCOUNT DETAILS
+===================================================== -->
+
+<section class="section"
+         id="account">
+
+    <div class="container">
+
+
+        <div class="practice-box">
+
+
+            <p class="section-label">
+
+                MY ACCOUNT
+
+            </p>
+
+
+            <h2>
+
+                Account Information 👤
+
+            </h2>
+
+
+            <p>
+
+                <strong>
+
+                    Name:
+
+                </strong>
+
+                <span id="studentName">
+
+                    Loading...
+
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>
+
+                    Email:
+
+                </strong>
+
+                <span id="studentEmail">
+
+                    Loading...
+
+                </span>
+
+            </p>
+
+
+            <p>
+
+                <strong>
+
+                    Course:
+
+                </strong>
+
+                Website Development Course
+
+            </p>
+
+
+            <p>
+
+                <strong>
+
+                    Course Access:
+
+                </strong>
+
+                <span id="courseAccess">
+
+                    Checking...
+
+                </span>
+
+            </p>
 
 
         </div>
@@ -475,22 +643,29 @@
 
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer class="footer">
 
     <div class="container">
+
 
         <div class="footer-bottom">
 
             <p>
 
                 © <span id="year"></span>
-                Neema Charo. All Rights Reserved.
+
+                Neema Charo.
+
+                All Rights Reserved.
 
             </p>
 
         </div>
+
 
     </div>
 
@@ -498,7 +673,9 @@
 
 
 
-<!-- ================= SUPABASE ================= -->
+<!-- =====================================================
+     SUPABASE
+===================================================== -->
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
 </script>
@@ -507,10 +684,11 @@
 <script src="script.js"></script>
 
 
+
 <script>
 
 /* =====================================================
-   SUPABASE
+   SUPABASE CONFIGURATION
 ===================================================== */
 
 const SUPABASE_URL =
@@ -523,8 +701,11 @@ const SUPABASE_ANON_KEY =
 
 const supabaseClient =
     window.supabase.createClient(
+
         SUPABASE_URL,
+
         SUPABASE_ANON_KEY
+
     );
 
 
@@ -537,12 +718,37 @@ const message =
     document.getElementById("message");
 
 
-const courseContent =
-    document.getElementById("courseContent");
+const studentMenu =
+    document.getElementById("studentMenu");
+
+
+const lockedArea =
+    document.getElementById("lockedArea");
 
 
 const welcomeMessage =
     document.getElementById("welcomeMessage");
+
+
+const studentName =
+    document.getElementById("studentName");
+
+
+const studentEmail =
+    document.getElementById("studentEmail");
+
+
+const accountInfo =
+    document.getElementById("accountInfo");
+
+
+const paymentStatus =
+    document.getElementById("paymentStatus");
+
+
+const courseAccess =
+    document.getElementById("courseAccess");
+
 
 
 document.getElementById("year").textContent =
@@ -551,7 +757,7 @@ document.getElementById("year").textContent =
 
 
 /* =====================================================
-   LOAD DASHBOARD
+   LOAD STUDENT DASHBOARD
 ===================================================== */
 
 async function loadDashboard() {
@@ -559,55 +765,97 @@ async function loadDashboard() {
     try {
 
 
-        /* ================= GET LOGGED-IN USER ================= */
+        /* ================================================
+           GET CURRENT USER
+        ================================================ */
 
         const {
-            data: {
-                user
-            },
-            error: userError
+            data,
+            error
         } =
         await supabaseClient.auth.getUser();
 
 
-        if (userError) {
 
-            console.error(
-                "USER ERROR:",
-                userError
-            );
+        /* ================================================
+           LOGIN ERROR
+        ================================================ */
+
+        if (error) {
+
+            console.error(error);
+
 
             message.innerHTML = `
 
                 <h2>
-                    ⚠️ Login Error
+                    ⚠️ Login Required
                 </h2>
 
                 <p>
-                    ${userError.message}
+
+                    Please login to access
+                    your student dashboard.
+
                 </p>
 
                 <a href="login.html"
                    class="btn primary-btn">
 
-                    Login Again
+                    Login / Student Account →
 
                 </a>
 
             `;
 
+
             return;
 
         }
 
 
 
-        /* ================= NOT LOGGED IN ================= */
+        /* ================================================
+           NOT LOGGED IN
+        ================================================ */
+
+        const user =
+            data.user;
+
 
         if (!user) {
 
-            window.location.href =
-                "login.html";
+
+            welcomeMessage.textContent =
+                "Please login to continue.";
+
+
+            message.innerHTML = `
+
+                <h2>
+
+                    🎓 Student Dashboard
+
+                </h2>
+
+
+                <p>
+
+                    Login to access your
+                    student account and course.
+
+                </p>
+
+
+                <a href="login.html"
+                   class="btn primary-btn">
+
+                    Login / Student Account →
+
+                </a>
+
+            `;
+
 
             return;
 
@@ -615,13 +863,19 @@ async function loadDashboard() {
 
 
 
-        /* ================= WELCOME ================= */
+        /* ================================================
+           STUDENT NAME
+        ================================================ */
 
         const name =
             user.user_metadata?.full_name ||
+
             user.user_metadata?.name ||
+
             user.email ||
+
             "Student";
+
 
 
         welcomeMessage.textContent =
@@ -630,10 +884,24 @@ async function loadDashboard() {
             "! 👋";
 
 
+        studentName.textContent =
+            name;
 
-        /* =================================================
+
+        studentEmail.textContent =
+            user.email ||
+            "Not available";
+
+
+        accountInfo.textContent =
+            "Logged in as " +
+            name;
+
+
+
+        /* ================================================
            CHECK COURSE ACCESS
-        ================================================= */
+        ================================================ */
 
         const {
             data: access,
@@ -658,9 +926,12 @@ async function loadDashboard() {
 
 
 
-        /* ================= DATABASE ERROR ================= */
+        /* ================================================
+           DATABASE ERROR
+        ================================================ */
 
         if (accessError) {
+
 
             console.error(
                 "COURSE ACCESS ERROR:",
@@ -671,18 +942,21 @@ async function loadDashboard() {
             message.innerHTML = `
 
                 <h2>
-                    ⚠️ Course Access Error
+
+                    ⚠️ Unable to Check Course
+
                 </h2>
 
-                <p>
-                    We could not check your course access.
-                </p>
 
-                <p style="font-size:13px;">
-                    ${accessError.message}
+                <p>
+
+                    We could not verify your
+                    course access right now.
+
                 </p>
 
             `;
+
 
             return;
 
@@ -690,7 +964,9 @@ async function loadDashboard() {
 
 
 
-        /* ================= ACCESS FOUND ================= */
+        /* ================================================
+           COURSE UNLOCKED
+        ================================================ */
 
         if (
             access &&
@@ -701,23 +977,43 @@ async function loadDashboard() {
             message.innerHTML = `
 
                 <h2>
-                    🎉 Course Unlocked!
+
+                    🎉 Welcome Back!
+
                 </h2>
 
-                <p>
-                    Your payment has been approved.
-                </p>
 
                 <p>
-                    🔓 You now have full access
-                    to the Website Development Course.
+
+                    Your payment has been approved.
+
+                </p>
+
+
+                <p>
+
+                    🔓 Your Website Development
+                    Course is unlocked.
+
                 </p>
 
             `;
 
 
-            courseContent.style.display =
+            paymentStatus.innerHTML =
+                "🎉 <strong>Payment Approved</strong>";
+
+
+            courseAccess.innerHTML =
+                "🔓 <strong>Active</strong>";
+
+
+            studentMenu.style.display =
                 "block";
+
+
+            lockedArea.style.display =
+                "none";
 
 
             return;
@@ -726,33 +1022,24 @@ async function loadDashboard() {
 
 
 
-        /* ================= ACCESS NOT FOUND ================= */
+        /* ================================================
+           COURSE LOCKED
+        ================================================ */
 
-        message.innerHTML = `
+        paymentStatus.innerHTML =
+            "🔒 <strong>Not Approved</strong>";
 
-            <h2>
-                🔒 Course Locked
-            </h2>
 
-            <p>
-                You do not currently have access
-                to the paid course.
-            </p>
+        courseAccess.innerHTML =
+            "🔒 <strong>Course Locked</strong>";
 
-            <p style="font-size:13px;">
-                Your account ID was found, but no
-                active course access was found for
-                Website Development Course.
-            </p>
 
-            <a href="courses.html"
-               class="btn primary-btn">
+        message.style.display =
+            "none";
 
-                View Course 💻
 
-            </a>
-
-        `;
+        lockedArea.style.display =
+            "block";
 
 
     }
@@ -769,11 +1056,16 @@ async function loadDashboard() {
         message.innerHTML = `
 
             <h2>
-                ⚠️ Something went wrong
+
+                ⚠️ Something Went Wrong
+
             </h2>
 
+
             <p>
+
                 ${error.message}
+
             </p>
 
         `;
@@ -785,7 +1077,32 @@ async function loadDashboard() {
 
 
 /* =====================================================
-   START DASHBOARD
+   LOGOUT
+===================================================== */
+
+document.getElementById(
+    "logoutButton"
+).addEventListener(
+
+    "click",
+
+    async function() {
+
+
+        await supabaseClient.auth.signOut();
+
+
+        window.location.href =
+            "login.html";
+
+    }
+
+);
+
+
+
+/* =====================================================
+   START
 ===================================================== */
 
 loadDashboard();
