@@ -837,4 +837,57 @@ transition: none !important;
     transform: none;
 }
 
+}/* ================= CERTIFICATE ================= */
+
+.certificate-box {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 60px 40px;
+    text-align: center;
+    border: 8px double currentColor;
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.certificate-box h1 {
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+
+.certificate-box h2 {
+    margin: 18px 0;
+}
+
+.certificate-details {
+    margin-top: 30px;
+}
+
+.certificate-details p {
+    margin: 8px 0;
+}
+
+
+/* ================= PRINT ================= */
+
+@media print {
+
+    .header,
+    .footer,
+    .menu-button,
+    .btn {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .certificate-box {
+        box-shadow: none;
+        margin: 0;
+        max-width: none;
+        min-height: 90vh;
+    }
+
 }

@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Module 3: Learn CSS, website design and responsive layouts - Neema Charo Academy.">
+
+    <title>Module 03 | CSS | Neema Charo Academy</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html"
+           class="logo">
+
+            Neema<span>Charo</span>
+
+        </a>
+
+
+        <a href="paid-course.html"
+           class="btn primary-btn">
+
+            My Course
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <p class="section-label">
+            MODULE 03
+        </p>
+
+        <h1>
+            🎨 CSS — Design & Responsive Websites
+        </h1>
+
+        <p>
+            Learn how to transform plain HTML into
+            beautiful, professional and mobile-friendly
+            websites.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTENT ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <!-- TOPIC 1 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 01
+            </p>
+
+            <h2>
+                What Is CSS?
+            </h2>
+
+            <p>
+                CSS stands for
+                <strong>Cascading Style Sheets</strong>.
+            </p>
+
+            <p>
+                CSS controls how your HTML website looks.
+                It allows you to change colors, fonts,
+                spacing, layouts, borders, backgrounds
+                and much more.
+            </p>
+
+            <div class="next-lesson">
+
+                <p>
+                    📝 HTML = Structure
+                </p>
+
+                <p>
+                    🎨 CSS = Appearance
+                </p>
+
+                <p>
+                    ⚡ JavaScript = Interaction
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TOPIC 2 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 02
+            </p>
+
+            <h2>
+                How to Add CSS
+            </h2>
+
+            <p>
+                There are three common ways to add CSS.
+                In this course, we will mainly use an
+                external CSS file.
+            </p>
+
+
+            <h3>
+                External CSS
+            </h3>
+
+            <pre><code>&lt;link rel="stylesheet"
+      href="style.css"&gt;</code></pre>
+
+            <p>
+                This connects your HTML page to a file
+                called <strong>style.css</strong>.
+            </p>
+
+            <p>
+                Keeping your CSS in a separate file makes
+                your project easier to organize and maintain.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 3 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 03
+            </p>
+
+            <h2>
+                CSS Selectors
+            </h2>
+
+            <p>
+                A selector tells CSS which HTML element
+                you want to style.
+            </p>
+
+
+            <h3>
+                Element Selector
+            </h3>
+
+            <pre><code>h1 {
+    color: blue;
+}</code></pre>
+
+
+            <h3>
+                Class Selector
+            </h3>
+
+            <pre><code>.title {
+    color: blue;
+}</code></pre>
+
+
+            <h3>
+                ID Selector
+            </h3>
+
+            <pre><code>#main-title {
+    color: blue;
+}</code></pre>
+
+
+            <p>
+                Classes are especially useful when you
+                want to apply the same design to several
+                elements.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 4 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 04
+            </p>
+
+            <h2>
+                Colors
+            </h2>
+
+            <p>
+                CSS allows you to control the color of
+                text, backgrounds and other elements.
+            </p>
+
+
+            <pre><code>body {
+    background-color: white;
+}
+
+h1 {
+    color: black;
+}
+
+p {
+    color: #555;
+}</code></pre>
+
+
+            <p>
+                Colors can be written using names,
+                hexadecimal values, RGB and other formats.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 5 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 05
+            </p>
+
+            <h2>
+                Fonts and Text
+            </h2>
+
+            <p>
+                You can control how your text looks using
+                CSS properties.
+            </p>
+
+
+            <pre><code>h1 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+}</code></pre>
+
+
+            <p>
+                Common text properties include:
+            </p>
+
+            <ul>
+
+                <li>
+                    <strong>font-size</strong>
+                </li>
+
+                <li>
+                    <strong>font-weight</strong>
+                </li>
+
+                <li>
+                    <strong>line-height</strong>
+                </li>
+
+                <li>
+                    <strong>text-align</strong>
+                </li>
+
+                <li>
+                    <strong>letter-spacing</strong>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- TOPIC 6 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 06
+            </p>
+
+            <h2>
+                Spacing
+            </h2>
+
+            <p>
+                Good spacing makes a website easier to
+                read and more professional.
+            </p>
+
+
+            <h3>
+                Margin
+            </h3>
+
+            <p>
+                Margin creates space outside an element.
+            </p>
+
+
+            <pre><code>h1 {
+    margin-bottom: 20px;
+}</code></pre>
+
+
+            <h3>
+                Padding
+            </h3>
+
+            <p>
+                Padding creates space inside an element.
+            </p>
+
+
+            <pre><code>.card {
+    padding: 20px;
+}</code></pre>
+
+
+            <div class="next-lesson">
+
+                <p>
+                    💡 Easy way to remember:
+                </p>
+
+                <p>
+                    <strong>Padding = inside</strong>
+                </p>
+
+                <p>
+                    <strong>Margin = outside</strong>
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TOPIC 7 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 07
+            </p>
+
+            <h2>
+                Width, Height and Borders
+            </h2>
+
+
+            <pre><code>.card {
+    width: 300px;
+    min-height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+}</code></pre>
+
+
+            <p>
+                Borders can help separate sections and
+                create cards, boxes and buttons.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 8 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 08
+            </p>
+
+            <h2>
+                Flexbox
+            </h2>
+
+            <p>
+                Flexbox is one of the most useful CSS
+                layout systems.
+            </p>
+
+            <p>
+                It makes it easier to arrange elements
+                horizontally or vertically.
+            </p>
+
+
+            <pre><code>.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}</code></pre>
+
+
+            <p>
+                You can use Flexbox to create navigation
+                bars, rows, cards and many other layouts.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 9 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 09
+            </p>
+
+            <h2>
+                CSS Grid
+            </h2>
+
+            <p>
+                CSS Grid is useful when you want to create
+                structured rows and columns.
+            </p>
+
+
+            <pre><code>.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    gap: 20px;
+}</code></pre>
+
+
+            <p>
+                Grid is especially useful for portfolios,
+                course cards, product sections and galleries.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 10 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 10
+            </p>
+
+            <h2>
+                Buttons and Cards
+            </h2>
+
+            <p>
+                Professional websites often use cards
+                and buttons to organize information.
+            </p>
+
+
+            <pre><code>.card {
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px
+                rgba(0, 0, 0, 0.08);
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+}</code></pre>
+
+        </div>
+
+
+
+        <!-- TOPIC 11 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 11
+            </p>
+
+            <h2>
+                Responsive Design
+            </h2>
+
+            <p>
+                A responsive website automatically adjusts
+                to different screen sizes.
+            </p>
+
+            <p>
+                This is especially important because many
+                people access websites using smartphones.
+            </p>
+
+
+            <h3>
+                Media Queries
+            </h3>
+
+
+            <pre><code>@media (max-width: 768px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+}</code></pre>
+
+
+            <p>
+                A media query allows you to change your
+                design when the screen becomes smaller.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 12 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 12
+            </p>
+
+            <h2>
+                The CSS Box Model
+            </h2>
+
+            <p>
+                Every HTML element can be thought of as
+                a box.
+            </p>
+
+
+            <div class="next-lesson">
+
+                <p>
+                    📦 Content
+                </p>
+
+                <p>
+                    ↔️ Padding
+                </p>
+
+                <p>
+                    🔲 Border
+                </p>
+
+                <p>
+                    ↔️ Margin
+                </p>
+
+            </div>
+
+
+            <p>
+                Understanding the box model will help you
+                control spacing and layouts much more easily.
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= PRACTICAL PROJECT ================= -->
+
+        <div class="next-lesson reveal">
+
+            <p class="section-label">
+                PRACTICAL PROJECT
+            </p>
+
+            <h2>
+                🛠️ Style Your First Website
+            </h2>
+
+            <p>
+                Take the HTML page you created in Module 02
+                and create a new file called:
+            </p>
+
+
+            <pre><code>style.css</code></pre>
+
+
+            <p>
+                Then connect it to your HTML page:
+            </p>
+
+
+            <pre><code>&lt;link rel="stylesheet"
+      href="style.css"&gt;</code></pre>
+
+
+            <p>
+                Your goal is to:
+            </p>
+
+            <ol>
+
+                <li>
+                    Change the page background.
+                </li>
+
+                <li>
+                    Style your headings.
+                </li>
+
+                <li>
+                    Change paragraph spacing.
+                </li>
+
+                <li>
+                    Create a styled button.
+                </li>
+
+                <li>
+                    Create a card for your information.
+                </li>
+
+                <li>
+                    Make the page comfortable to view
+                    on a phone.
+                </li>
+
+            </ol>
+
+        </div>
+
+
+
+        <!-- ================= COMPLETE EXAMPLE ================= -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                EXAMPLE PROJECT
+            </p>
+
+            <h2>
+                Simple CSS Website
+            </h2>
+
+
+            <p>
+                Try this CSS with the HTML from Module 02:
+            </p>
+
+
+            <pre><code>* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #222;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow:
+        0 5px 20px
+        rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+}</code></pre>
+
+        </div>
+
+
+
+        <!-- ================= EXERCISE ================= -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                MODULE 03 EXERCISE
+            </p>
+
+            <h2>
+                🧠 Test Your Understanding
+            </h2>
+
+            <ol>
+
+                <li>
+                    What does CSS stand for?
+                </li>
+
+                <li>
+                    What is the purpose of CSS?
+                </li>
+
+                <li>
+                    What is the difference between
+                    margin and padding?
+                </li>
+
+                <li>
+                    What is Flexbox useful for?
+                </li>
+
+                <li>
+                    What is CSS Grid useful for?
+                </li>
+
+                <li>
+                    What does responsive design mean?
+                </li>
+
+                <li>
+                    What is a media query?
+                </li>
+
+                <li>
+                    Why is responsive design important
+                    for mobile users?
+                </li>
+
+            </ol>
+
+        </div>
+
+
+
+        <!-- ================= COMPLETION ================= -->
+
+        <div class="next-lesson reveal">
+
+            <h2>
+                🎉 Module 03 Complete!
+            </h2>
+
+            <p>
+                You now understand the foundations of CSS
+                and how to turn a plain HTML page into a
+                designed, responsive website.
+            </p>
+
+            <p>
+                In the next module, we will add something
+                powerful: <strong>JavaScript</strong>.
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <div class="next-lesson reveal"
+             style="display:flex;
+                    flex-wrap:wrap;
+                    gap:15px;
+                    justify-content:space-between;">
+
+            <a href="module-02.html"
+               class="btn primary-btn">
+
+                ← Module 02
+
+            </a>
+
+
+            <a href="paid-course.html"
+               class="btn primary-btn">
+
+                All Modules
+
+            </a>
+
+
+            <a href="module-04.html"
+               class="btn primary-btn">
+
+                Module 04: JavaScript →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © <span id="year"></span>
+                Neema Charo. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

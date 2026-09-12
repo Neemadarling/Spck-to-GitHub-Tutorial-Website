@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Neema Charo Academy Certificate">
+
+    <meta name="author"
+          content="Neema Charo">
+
+    <title>Certificate | Neema Charo Academy</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html"
+           class="logo">
+
+            Neema<span>Charo</span>
+
+        </a>
+
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu">
+
+            ☰
+
+        </button>
+
+
+        <ul class="nav-links"
+            id="navLinks">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="courses.html">
+                    Courses
+                </a>
+            </li>
+
+            <li>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= CERTIFICATE ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="certificate-box"
+             id="certificate">
+
+
+            <p class="section-label">
+                NEEMA CHARO ACADEMY
+            </p>
+
+
+            <div class="feature-icon">
+                🏆
+            </div>
+
+
+            <h1>
+                CERTIFICATE OF COMPLETION
+            </h1>
+
+
+            <p>
+                This certificate is proudly presented to
+            </p>
+
+
+            <h2 id="studentName">
+                Checking student...
+            </h2>
+
+
+            <p>
+                for successfully completing the
+            </p>
+
+
+            <h2>
+                Complete Website Development Course
+            </h2>
+
+
+            <p>
+                covering HTML, CSS, JavaScript,
+                responsive design, SPCK, GitHub
+                and website publishing.
+            </p>
+
+
+            <div class="certificate-details">
+
+                <p>
+                    <strong>Academy:</strong>
+                    Neema Charo Academy
+                </p>
+
+                <p>
+                    <strong>Instructor:</strong>
+                    Neema Charo
+                </p>
+
+                <p>
+                    <strong>Date:</strong>
+                    <span id="certificateDate"></span>
+                </p>
+
+            </div>
+
+
+            <div style="margin-top:30px;">
+
+                <button
+                    class="btn primary-btn"
+                    onclick="window.print()">
+
+                    Print / Save Certificate 🏆
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © <span id="year"></span>
+                Neema Charo. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= SUPABASE ================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="script.js"></script>
+
+
+<script>
+
+/* ================= SUPABASE ================= */
+
+const SUPABASE_URL =
+    "https://evxseeuqsstmgsalaxqi.supabase.co";
+
+const SUPABASE_ANON_KEY =
+    "sb_publishable_eE3XDBtIl6kZY8inetfuuw_MLQGljlA";
+
+
+const supabaseClient =
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+
+
+
+/* ================= ELEMENTS ================= */
+
+const studentName =
+    document.getElementById("studentName");
+
+const certificateDate =
+    document.getElementById("certificateDate");
+
+const year =
+    document.getElementById("year");
+
+
+
+/* ================= DATE ================= */
+
+certificateDate.textContent =
+    new Date().toLocaleDateString(
+        "en-KE",
+        {
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        }
+    );
+
+
+year.textContent =
+    new Date().getFullYear();
+
+
+
+/* ================= CHECK ACCESS ================= */
+
+async function loadCertificate() {
+
+    const {
+        data: {
+            user
+        },
+        error
+    } = await supabaseClient.auth.getUser();
+
+
+    /* NOT LOGGED IN */
+
+    if (error || !user) {
+
+        alert(
+            "Please log in to access your certificate."
+        );
+
+        window.location.href =
+            "login.html";
+
+        return;
+
+    }
+
+
+
+    /* ================= COURSE ACCESS ================= */
+
+    const {
+        data: access,
+        error: accessError
+    } = await supabaseClient
+        .from("course_access")
+        .select("id, course_name, status")
+        .eq("user_id", user.id)
+        .eq("status", "active")
+        .limit(1);
+
+
+    if (accessError) {
+
+        console.error(accessError);
+
+        studentName.textContent =
+            "Unable to verify access.";
+
+        return;
+
+    }
+
+
+
+    /* ================= NO ACCESS ================= */
+
+    if (!access || access.length === 0) {
+
+        alert(
+            "You need active course access to view your certificate."
+        );
+
+        window.location.href =
+            "courses.html";
+
+        return;
+
+    }
+
+
+
+    /* ================= STUDENT NAME ================= */
+
+    const fullName =
+        user.user_metadata?.full_name ||
+        user.user_metadata?.name;
+
+
+    if (fullName) {
+
+        studentName.textContent =
+            fullName;
+
+        return;
+
+    }
+
+
+
+    /* ================= SAVED NAME ================= */
+
+    const savedName =
+        localStorage.getItem("studentName");
+
+
+    if (savedName) {
+
+        studentName.textContent =
+            savedName;
+
+        return;
+
+    }
+
+
+
+    /* ================= ASK NAME ================= */
+
+    const enteredName =
+        prompt(
+            "Enter your full name for your certificate:"
+        );
+
+
+    if (
+        enteredName &&
+        enteredName.trim() !== ""
+    ) {
+
+        const cleanName =
+            enteredName.trim();
+
+
+        studentName.textContent =
+            cleanName;
+
+
+        localStorage.setItem(
+            "studentName",
+            cleanName
+        );
+
+    } else {
+
+        studentName.textContent =
+            "Student";
+
+    }
+
+}
+
+
+
+/* ================= START ================= */
+
+loadCertificate();
+
+</script>
+
+
+</body>
+
+</html>

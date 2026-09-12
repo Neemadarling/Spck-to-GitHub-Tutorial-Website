@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Module 5: Learn JavaScript arrays and objects - Neema Charo Academy.">
+
+    <title>Module 05 | Arrays & Objects | Neema Charo Academy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            Neema<span>Charo</span>
+        </a>
+
+        <a href="paid-course.html" class="btn primary-btn">
+            My Course
+        </a>
+
+    </nav>
+</header>
+
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <p class="section-label">MODULE 05</p>
+
+        <h1>📦 JavaScript Arrays & Objects</h1>
+
+        <p>
+            Learn how to organize and work with multiple
+            pieces of information in JavaScript.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 01</p>
+
+<h2>What Is an Array?</h2>
+
+<p>
+An array is a JavaScript structure used to store
+multiple values in one variable.
+</p>
+
+<pre><code>let fruits = [
+    "Mango",
+    "Banana",
+    "Orange"
+];</code></pre>
+
+<p>
+Instead of creating a separate variable for every fruit,
+we can keep them together in an array.
+</p>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 02</p>
+
+<h2>Accessing Array Items</h2>
+
+<p>
+JavaScript uses an index to access items in an array.
+The first item starts at index 0.
+</p>
+
+<pre><code>let fruits = [
+    "Mango",
+    "Banana",
+    "Orange"
+];
+
+console.log(fruits[0]);
+
+console.log(fruits[1]);</code></pre>
+
+<p>
+The first example displays Mango and the second displays
+Banana.
+</p>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 03</p>
+
+<h2>Adding Items to an Array</h2>
+
+<pre><code>let courses = [
+    "HTML",
+    "CSS"
+];
+
+courses.push("JavaScript");
+
+console.log(courses);</code></pre>
+
+<p>
+The <code>push()</code> method adds an item to the end
+of an array.
+</p>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 04</p>
+
+<h2>Removing Items</h2>
+
+<pre><code>let courses = [
+    "HTML",
+    "CSS",
+    "JavaScript"
+];
+
+courses.pop();
+
+console.log(courses);</code></pre>
+
+<p>
+The <code>pop()</code> method removes the last item.
+</p>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 05</p>
+
+<h2>Array Length</h2>
+
+<pre><code>let courses = [
+    "HTML",
+    "CSS",
+    "JavaScript"
+];
+
+console.log(courses.length);</code></pre>
+
+<p>
+The <code>length</code> property tells you how many
+items are inside an array.
+</p>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 06</p>
+
+<h2>What Is an Object?</h2>
+
+<p>
+An object stores related information using properties
+and values.
+</p>
+
+<pre><code>let student = {
+
+    name: "Amina",
+
+    age: 22,
+
+    course: "Web Development"
+
+};</code></pre>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 07</p>
+
+<h2>Accessing Object Information</h2>
+
+<pre><code>console.log(student.name);
+
+console.log(student.course);</code></pre>
+
+<p>
+You can access an object's property using a dot.
+</p>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 08</p>
+
+<h2>Changing Object Information</h2>
+
+<pre><code>student.age = 23;
+
+console.log(student.age);</code></pre>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 09</p>
+
+<h2>Arrays of Objects</h2>
+
+<p>
+Real websites often need to work with lists of objects.
+</p>
+
+<pre><code>let students = [
+
+    {
+        name: "Amina",
+        course: "HTML"
+    },
+
+    {
+        name: "Brian",
+        course: "CSS"
+    },
+
+    {
+        name: "Jane",
+        course: "JavaScript"
+    }
+
+];</code></pre>
+
+</div>
+
+
+<div class="next-lesson reveal">
+
+<p class="section-label">PRACTICAL PROJECT</p>
+
+<h2>🛠️ Create a Student List</h2>
+
+<p>
+Create an array containing at least three students.
+Each student should have a name and course.
+</p>
+
+<pre><code>let students = [
+    {
+        name: "Student One",
+        course: "HTML"
+    },
+
+    {
+        name: "Student Two",
+        course: "CSS"
+    },
+
+    {
+        name: "Student Three",
+        course: "JavaScript"
+    }
+];
+
+console.log(students);</code></pre>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">MODULE 05 EXERCISE</p>
+
+<h2>🧠 Test Your Understanding</h2>
+
+<ol>
+<li>What is an array?</li>
+<li>What index does an array begin with?</li>
+<li>What does <code>push()</code> do?</li>
+<li>What does <code>pop()</code> do?</li>
+<li>What is an object?</li>
+<li>How do you access an object property?</li>
+<li>What is an array of objects?</li>
+</ol>
+
+</div>
+
+
+<div class="next-lesson reveal">
+
+<h2>🎉 Module 05 Complete!</h2>
+
+<p>
+You can now organize information using arrays and objects.
+</p>
+
+<p>
+Next, we will learn how to repeat tasks and create
+reusable JavaScript code.
+</p>
+
+</div>
+
+
+<div class="next-lesson reveal"
+     style="display:flex;flex-wrap:wrap;gap:15px;justify-content:space-between;">
+
+<a href="module-04.html" class="btn primary-btn">
+← Module 04
+</a>
+
+<a href="paid-course.html" class="btn primary-btn">
+All Modules
+</a>
+
+<a href="module-06.html" class="btn primary-btn">
+Module 06 →
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-bottom">
+
+<p>
+© <span id="year"></span>
+Neema Charo. All Rights Reserved.
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

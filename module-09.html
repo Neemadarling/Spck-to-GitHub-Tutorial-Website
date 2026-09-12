@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Module 09 | Animations | Neema Charo Academy</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+Neema<span>Charo</span>
+</a>
+
+<a href="paid-course.html" class="btn primary-btn">
+My Course
+</a>
+
+</nav>
+
+</header>
+
+
+<section class="page-hero">
+
+<div class="container">
+
+<p class="section-label">MODULE 09</p>
+
+<h1>✨ Animations & Interactive Features</h1>
+
+<p>
+Learn how to make your website feel modern,
+smooth and interactive.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 01</p>
+
+<h2>CSS Transitions</h2>
+
+<pre><code>.button {
+
+    transition: transform 0.3s ease;
+
+}
+
+.button:hover {
+
+    transform: scale(1.05);
+
+}</code></pre>
+
+<p>
+Transitions make changes happen smoothly.
+</p>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 02</p>
+
+<h2>CSS Animations</h2>
+
+<pre><code>@keyframes move {
+
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+
+}
+
+.card {
+
+    animation: move 2s infinite alternate;
+
+}</code></pre>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 03</p>
+
+<h2>Button Interaction</h2>
+
+<pre><code>const button =
+document.getElementById("button");
+
+button.addEventListener(
+"click",
+function() {
+
+    alert("Button clicked!");
+
+});</code></pre>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 04</p>
+
+<h2>Show and Hide Content</h2>
+
+<pre><code>const box =
+document.getElementById("box");
+
+box.style.display = "none";
+
+box.style.display = "block";</code></pre>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 05</p>
+
+<h2>Interactive Navigation</h2>
+
+<p>
+JavaScript can be used to open and close mobile menus.
+</p>
+
+<pre><code>menuButton.addEventListener(
+"click",
+function() {
+
+    navLinks.classList.toggle("open");
+
+});</code></pre>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 06</p>
+
+<h2>Keep Animations Useful</h2>
+
+<p>
+Animations should improve the user experience rather
+than make the website difficult to use.
+</p>
+
+<ul>
+
+<li>Keep them simple.</li>
+
+<li>Do not animate everything.</li>
+
+<li>Make buttons easy to use.</li>
+
+<li>Keep mobile users in mind.</li>
+
+</ul>
+
+</div>
+
+
+<div class="next-lesson reveal">
+
+<p class="section-label">PRACTICAL PROJECT</p>
+
+<h2>🛠️ Create an Interactive Card</h2>
+
+<p>
+Create a card with a button.
+When the button is clicked, JavaScript should change
+the card's message.
+</p>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">MODULE 09 EXERCISE</p>
+
+<h2>🧠 Test Your Understanding</h2>
+
+<ol>
+
+<li>What is a CSS transition?</li>
+
+<li>What is an animation?</li>
+
+<li>How can JavaScript respond to a click?</li>
+
+<li>How can JavaScript show or hide an element?</li>
+
+<li>Why should animations be used carefully?</li>
+
+</ol>
+
+</div>
+
+
+<div class="next-lesson reveal">
+
+<h2>🎉 Module 09 Complete!</h2>
+
+<p>
+Your websites can now have smooth animations and
+interactive features.
+</p>
+
+</div>
+
+
+<div class="next-lesson reveal"
+style="display:flex;flex-wrap:wrap;gap:15px;justify-content:space-between;">
+
+<a href="module-08.html" class="btn primary-btn">
+← Module 08
+</a>
+
+<a href="paid-course.html" class="btn primary-btn">
+All Modules
+</a>
+
+<a href="module-10.html" class="btn primary-btn">
+Module 10 →
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-bottom">
+
+<p>
+© <span id="year"></span>
+Neema Charo. All Rights Reserved.
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

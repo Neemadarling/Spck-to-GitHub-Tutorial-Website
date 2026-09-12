@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Course payment for Neema Charo Academy.">
+
+    <title>Payment | Neema Charo Academy</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html"
+           class="logo">
+
+            Neema<span>Charo</span>
+
+        </a>
+
+
+        <a href="dashboard.html"
+           class="btn primary-btn">
+
+            Dashboard
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= PAYMENT ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="contact-form-box reveal"
+             style="max-width:600px; margin:40px auto;">
+
+
+            <div style="text-align:center;">
+
+                <p class="section-label">
+                    NEEMA CHARO ACADEMY
+                </p>
+
+                <h1>
+                    Course Payment
+                </h1>
+
+                <p>
+                    Submit your payment details below.
+                </p>
+
+            </div>
+
+
+
+            <!-- COURSE -->
+
+            <div class="practice-box"
+                 style="margin-top:25px;">
+
+                <p class="section-label">
+                    SELECTED COURSE
+                </p>
+
+                <h2>
+                    Website Development Course
+                </h2>
+
+                <p>
+                    Full beginner website development course.
+                </p>
+
+                <h2>
+                    KSh 2,500
+                </h2>
+
+            </div>
+
+
+
+            <!-- PAYMENT INSTRUCTIONS -->
+
+            <div class="tip-box">
+
+                <strong>
+                    Payment Instructions
+                </strong>
+
+                <p style="margin-top:8px;">
+
+                    Send <strong>KSh 2,500</strong>
+                    to the payment number provided by
+                    Neema Charo.
+
+                </p>
+
+                <p>
+
+                    After payment, enter your M-Pesa
+                    transaction code below.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= FORM ================= -->
+
+            <form id="paymentForm">
+
+
+                <label for="fullName">
+                    Full Name
+                </label>
+
+                <input
+                    type="text"
+                    id="fullName"
+                    placeholder="Enter your full name"
+                    autocomplete="name"
+                    required>
+
+
+
+                <label for="phone">
+                    M-Pesa Phone Number
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="e.g. 0748933452"
+                    autocomplete="tel"
+                    required>
+
+
+
+                <label for="transactionCode">
+                    M-Pesa Transaction Code
+                </label>
+
+                <input
+                    type="text"
+                    id="transactionCode"
+                    placeholder="e.g. ABC123XYZ"
+                    required>
+
+
+
+                <button
+                    type="submit"
+                    class="btn primary-btn">
+
+                    Submit Payment Details 💳
+
+                </button>
+
+
+            </form>
+
+
+
+            <!-- MESSAGE -->
+
+            <p id="paymentMessage"
+               style="text-align:center;
+                      margin-top:20px;">
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © <span id="year"></span>
+                Neema Charo. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= SUPABASE ================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+/* ================= SUPABASE ================= */
+
+const SUPABASE_URL =
+    "https://evxseeuqsstmgsalaxqi.supabase.co";
+
+
+const SUPABASE_ANON_KEY =
+    "sb_publishable_eE3XDBtIl6kZY8inetfuuw_MLQGljlA";
+
+
+const supabaseClient =
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+
+
+
+/* ================= ELEMENTS ================= */
+
+const paymentForm =
+    document.getElementById("paymentForm");
+
+
+const paymentMessage =
+    document.getElementById("paymentMessage");
+
+
+const year =
+    document.getElementById("year");
+
+
+year.textContent =
+    new Date().getFullYear();
+
+
+
+/* ================= SUBMIT PAYMENT ================= */
+
+paymentForm.addEventListener(
+    "submit",
+    async function(event) {
+
+        event.preventDefault();
+
+
+        paymentMessage.textContent =
+            "Submitting payment details...";
+
+
+        /* ================= CHECK USER ================= */
+
+        const {
+            data: {
+                user
+            },
+            error: userError
+        } =
+            await supabaseClient.auth.getUser();
+
+
+        if (userError || !user) {
+
+            paymentMessage.innerHTML = `
+
+                <strong>
+                    Please login before submitting payment.
+                </strong>
+
+                <br><br>
+
+                <a href="login.html"
+                   class="btn primary-btn">
+
+                    Login
+
+                </a>
+
+            `;
+
+            return;
+
+        }
+
+
+
+        /* ================= GET FORM DATA ================= */
+
+        const fullName =
+            document
+            .getElementById("fullName")
+            .value
+            .trim();
+
+
+        const phone =
+            document
+            .getElementById("phone")
+            .value
+            .trim();
+
+
+        const transactionCode =
+            document
+            .getElementById("transactionCode")
+            .value
+            .trim()
+            .toUpperCase();
+
+
+
+        /* ================= VALIDATION ================= */
+
+        if (
+            !fullName ||
+            !phone ||
+            !transactionCode
+        ) {
+
+            paymentMessage.textContent =
+                "Please fill in all fields.";
+
+            return;
+
+        }
+
+
+
+        /* ================= PAYMENT DATA ================= */
+
+        const paymentData = {
+
+            user_id: user.id,
+
+            full_name: fullName,
+
+            phone: phone,
+
+            transaction_code: transactionCode,
+
+            amount: 2500,
+
+            course:
+                "Website Development Course",
+
+            status:
+                "pending"
+
+        };
+
+
+
+        console.log(
+            "Payment being submitted:",
+            paymentData
+        );
+
+
+
+        /* ================= INSERT ================= */
+
+        const {
+            data,
+            error
+        } =
+            await supabaseClient
+            .from("payments")
+            .insert(paymentData)
+            .select()
+            .single();
+
+
+
+        /* ================= ERROR ================= */
+
+        if (error) {
+
+            console.error(
+                "SUPABASE PAYMENT ERROR:",
+                error
+            );
+
+
+            paymentMessage.innerHTML = `
+
+                <strong>
+                    Payment could not be submitted.
+                </strong>
+
+                <br><br>
+
+                <small>
+                    ${error.message}
+                </small>
+
+            `;
+
+            return;
+
+        }
+
+
+
+        /* ================= SUCCESS ================= */
+
+        console.log(
+            "Payment saved:",
+            data
+        );
+
+
+        paymentMessage.innerHTML = `
+
+            <strong>
+                Payment details submitted successfully! ✅
+            </strong>
+
+            <br><br>
+
+            Your payment is now pending verification.
+
+        `;
+
+
+        paymentForm.reset();
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>

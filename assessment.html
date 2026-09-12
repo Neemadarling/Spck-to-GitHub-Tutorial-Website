@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Neema Charo Academy Final Assessment">
+
+    <meta name="author"
+          content="Neema Charo">
+
+    <title>Final Assessment | Neema Charo Academy</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html"
+           class="logo">
+
+            Neema<span>Charo</span>
+
+        </a>
+
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu">
+
+            ☰
+
+        </button>
+
+
+        <ul class="nav-links"
+            id="navLinks">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="courses.html">
+                    Courses
+                </a>
+            </li>
+
+            <li>
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <p class="section-label">
+            NEEMA CHARO ACADEMY
+        </p>
+
+        <h1>
+            Final Assessment 🎓
+        </h1>
+
+        <p>
+            Test what you have learned throughout
+            the Website Development Course.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= ASSESSMENT ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <p class="section-label">
+                FINAL TEST
+            </p>
+
+            <h2>
+                Website Development Assessment
+            </h2>
+
+            <p>
+                Answer all questions carefully.
+                You need at least
+                <strong>70%</strong>
+                to pass.
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= LOADING ================= -->
+
+        <div id="accessMessage"
+             class="practice-box"
+             style="text-align:center;">
+
+            Checking your course access...
+
+        </div>
+
+
+
+        <!-- ================= FORM ================= -->
+
+        <form id="assessmentForm"
+              class="practice-box"
+              style="display:none;">
+
+
+            <!-- QUESTION 1 -->
+
+            <div class="assessment-question">
+
+                <h3>
+                    1. What language is mainly used
+                    to create the structure of a webpage?
+                </h3>
+
+                <label>
+                    <input type="radio"
+                           name="q1"
+                           value="html"
+                           required>
+
+                    HTML
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q1"
+                           value="css">
+
+                    CSS
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q1"
+                           value="javascript">
+
+                    JavaScript
+                </label>
+
+            </div>
+
+
+
+            <!-- QUESTION 2 -->
+
+            <div class="assessment-question">
+
+                <h3>
+                    2. What is CSS mainly used for?
+                </h3>
+
+                <label>
+                    <input type="radio"
+                           name="q2"
+                           value="design"
+                           required>
+
+                    Designing and styling webpages
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q2"
+                           value="database">
+
+                    Creating databases
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q2"
+                           value="hosting">
+
+                    Hosting websites
+                </label>
+
+            </div>
+
+
+
+            <!-- QUESTION 3 -->
+
+            <div class="assessment-question">
+
+                <h3>
+                    3. Which language is used to
+                    add interactivity to websites?
+                </h3>
+
+                <label>
+                    <input type="radio"
+                           name="q3"
+                           value="html"
+                           required>
+
+                    HTML
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q3"
+                           value="javascript">
+
+                    JavaScript
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q3"
+                           value="css">
+
+                    CSS
+                </label>
+
+            </div>
+
+
+
+            <!-- QUESTION 4 -->
+
+            <div class="assessment-question">
+
+                <h3>
+                    4. Which tool can be used to
+                    write code on a phone?
+                </h3>
+
+                <label>
+                    <input type="radio"
+                           name="q4"
+                           value="spck"
+                           required>
+
+                    SPCK Editor
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q4"
+                           value="whatsapp">
+
+                    WhatsApp
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q4"
+                           value="camera">
+
+                    Camera
+                </label>
+
+            </div>
+
+
+
+            <!-- QUESTION 5 -->
+
+            <div class="assessment-question">
+
+                <h3>
+                    5. What does responsive design mean?
+                </h3>
+
+                <label>
+                    <input type="radio"
+                           name="q5"
+                           value="responsive"
+                           required>
+
+                    A website that adapts to
+                    different screen sizes
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q5"
+                           value="desktop">
+
+                    A website that only works
+                    on computers
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q5"
+                           value="offline">
+
+                    A website that works only offline
+                </label>
+
+            </div>
+
+
+
+            <!-- QUESTION 6 -->
+
+            <div class="assessment-question">
+
+                <h3>
+                    6. Which HTML element creates a link?
+                </h3>
+
+                <label>
+                    <input type="radio"
+                           name="q6"
+                           value="a"
+                           required>
+
+                    &lt;a&gt;
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q6"
+                           value="p">
+
+                    &lt;p&gt;
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q6"
+                           value="h1">
+
+                    &lt;h1&gt;
+                </label>
+
+            </div>
+
+
+
+            <!-- QUESTION 7 -->
+
+            <div class="assessment-question">
+
+                <h3>
+                    7. What is GitHub commonly used for?
+                </h3>
+
+                <label>
+                    <input type="radio"
+                           name="q7"
+                           value="code"
+                           required>
+
+                    Storing and managing code
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q7"
+                           value="music">
+
+                    Listening to music
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q7"
+                           value="camera">
+
+                    Editing photographs only
+                </label>
+
+            </div>
+
+
+
+            <!-- QUESTION 8 -->
+
+            <div class="assessment-question">
+
+                <h3>
+                    8. What can GitHub Pages do?
+                </h3>
+
+                <label>
+                    <input type="radio"
+                           name="q8"
+                           value="publish"
+                           required>
+
+                    Publish a website online
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q8"
+                           value="phone">
+
+                    Repair a phone
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q8"
+                           value="payment">
+
+                    Process M-Pesa payments
+                </label>
+
+            </div>
+
+
+
+            <!-- QUESTION 9 -->
+
+            <div class="assessment-question">
+
+                <h3>
+                    9. What is JavaScript commonly used
+                    for in a website?
+                </h3>
+
+                <label>
+                    <input type="radio"
+                           name="q9"
+                           value="interaction"
+                           required>
+
+                    Interaction and functionality
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q9"
+                           value="structure">
+
+                    Only webpage structure
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q9"
+                           value="images">
+
+                    Only storing images
+                </label>
+
+            </div>
+
+
+
+            <!-- QUESTION 10 -->
+
+            <div class="assessment-question">
+
+                <h3>
+                    10. What is an important step
+                    before delivering a website to a client?
+                </h3>
+
+                <label>
+                    <input type="radio"
+                           name="q10"
+                           value="test"
+                           required>
+
+                    Test the website
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q10"
+                           value="delete">
+
+                    Delete the website
+                </label>
+
+                <label>
+                    <input type="radio"
+                           name="q10"
+                           value="hide">
+
+                    Hide the website
+                </label>
+
+            </div>
+
+
+
+            <!-- SUBMIT -->
+
+            <div style="text-align:center; margin-top:30px;">
+
+                <button
+                    type="submit"
+                    class="btn primary-btn">
+
+                    Submit Final Assessment 🎓
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+
+
+        <!-- ================= RESULT ================= -->
+
+        <div id="result"
+             class="practice-box"
+             style="display:none;
+                    text-align:center;
+                    margin-top:30px;">
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © <span id="year"></span>
+                Neema Charo. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= SUPABASE ================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="script.js"></script>
+
+
+<script>
+
+/* ================= SUPABASE ================= */
+
+const SUPABASE_URL =
+    "https://evxseeuqsstmgsalaxqi.supabase.co";
+
+const SUPABASE_ANON_KEY =
+    "sb_publishable_eE3XDBtIl6kZY8inetfuuw_MLQGljlA";
+
+
+const supabaseClient =
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+
+
+
+/* ================= ELEMENTS ================= */
+
+const accessMessage =
+    document.getElementById("accessMessage");
+
+const assessmentForm =
+    document.getElementById("assessmentForm");
+
+const result =
+    document.getElementById("result");
+
+const year =
+    document.getElementById("year");
+
+
+year.textContent =
+    new Date().getFullYear();
+
+
+
+/* ================= CHECK ACCESS ================= */
+
+async function checkCourseAccess() {
+
+    const {
+        data: {
+            user
+        },
+        error
+    } = await supabaseClient.auth.getUser();
+
+
+    /* NOT LOGGED IN */
+
+    if (error || !user) {
+
+        accessMessage.innerHTML = `
+
+            <h2>🔐 Login Required</h2>
+
+            <p>
+                Please log in to access the
+                Final Assessment.
+            </p>
+
+            <a href="login.html"
+               class="btn primary-btn">
+
+                Login
+
+            </a>
+
+        `;
+
+        return;
+
+    }
+
+
+
+    /* ================= COURSE ACCESS ================= */
+
+    const {
+        data: access,
+        error: accessError
+    } = await supabaseClient
+        .from("course_access")
+        .select("id, course_name, status")
+        .eq("user_id", user.id)
+        .eq("status", "active")
+        .limit(1);
+
+
+    if (accessError) {
+
+        console.error(accessError);
+
+        accessMessage.innerHTML = `
+
+            <h2>⚠️ Error</h2>
+
+            <p>
+                We could not verify your course access.
+            </p>
+
+            <p>
+                Please try again.
+            </p>
+
+        `;
+
+        return;
+
+    }
+
+
+
+    /* ================= NO ACCESS ================= */
+
+    if (!access || access.length === 0) {
+
+        accessMessage.innerHTML = `
+
+            <h2>🔒 Course Locked</h2>
+
+            <p>
+                The Final Assessment is available
+                to paid course students only.
+            </p>
+
+            <a href="courses.html"
+               class="btn primary-btn">
+
+                View Course
+
+            </a>
+
+        `;
+
+        return;
+
+    }
+
+
+
+    /* ================= ACCESS GRANTED ================= */
+
+    accessMessage.innerHTML = `
+
+        <h2>🎓 Final Assessment</h2>
+
+        <p>
+            Your course access has been verified.
+        </p>
+
+        <p>
+            Good luck! 💪
+        </p>
+
+    `;
+
+
+    assessmentForm.style.display =
+        "block";
+
+}
+
+
+
+/* ================= ANSWERS ================= */
+
+const answers = {
+
+    q1: "html",
+
+    q2: "design",
+
+    q3: "javascript",
+
+    q4: "spck",
+
+    q5: "responsive",
+
+    q6: "a",
+
+    q7: "code",
+
+    q8: "publish",
+
+    q9: "interaction",
+
+    q10: "test"
+
+};
+
+
+
+/* ================= SUBMIT ================= */
+
+assessmentForm.addEventListener(
+    "submit",
+    async function(event) {
+
+        event.preventDefault();
+
+
+        let score = 0;
+
+
+        for (
+            const question in answers
+        ) {
+
+            const selected =
+                document.querySelector(
+                    `input[name="${question}"]:checked`
+                );
+
+
+            if (
+                selected &&
+                selected.value ===
+                answers[question]
+            ) {
+
+                score++;
+
+            }
+
+        }
+
+
+
+        const percentage =
+            Math.round(
+                (score / 10) * 100
+            );
+
+
+
+        assessmentForm.style.display =
+            "none";
+
+        result.style.display =
+            "block";
+
+
+
+        /* ================= PASSED ================= */
+
+        if (percentage >= 70) {
+
+            result.innerHTML = `
+
+                <div class="feature-icon">
+                    🏆
+                </div>
+
+                <h2>
+                    Congratulations! 🎉
+                </h2>
+
+                <p>
+                    You passed the Final Assessment.
+                </p>
+
+                <h2>
+                    ${percentage}%
+                </h2>
+
+                <p>
+                    Excellent work!
+                    You have successfully completed
+                    the assessment.
+                </p>
+
+                <a href="certificate.html"
+                   class="btn primary-btn">
+
+                    Get Your Certificate 🏆
+
+                </a>
+
+            `;
+
+        }
+
+
+
+        /* ================= FAILED ================= */
+
+        else {
+
+            result.innerHTML = `
+
+                <div class="feature-icon">
+                    📚
+                </div>
+
+                <h2>
+                    Keep Learning 💪
+                </h2>
+
+                <p>
+                    Your score is:
+                </p>
+
+                <h2>
+                    ${percentage}%
+                </h2>
+
+                <p>
+                    You need at least 70% to pass.
+                    Review your modules and try again.
+                </p>
+
+                <button
+                    class="btn primary-btn"
+                    onclick="location.reload()">
+
+                    Try Again 🔄
+
+                </button>
+
+            `;
+
+        }
+
+    }
+);
+
+
+
+/* ================= START ================= */
+
+checkCourseAccess();
+
+</script>
+
+
+</body>
+
+</html>

@@ -1,730 +1,1010 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 
-<head>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<meta name="description"
+      content="Learn CSS for beginners with practical examples using SPCK Editor. Start learning website design with Neema Charo Tutorial.">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="keywords"
+      content="CSS tutorial, learn CSS, CSS beginners, SPCK CSS, web design">
 
-    <meta name="description"
-          content="Learn CSS for beginners with practical examples using SPCK Editor.">
+<meta name="author"
+      content="Neema Charo">
 
-    <title>CSS Tutorial | Neema Charo</title>
+<title>
+    CSS Tutorial | Neema Charo
+</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+      href="style.css">
 
-</head>
-
-<body>
-
-
-<!-- ================= NAVIGATION ================= -->
-
-<header class="header">
-
-    <nav class="navbar">
-
-        <a href="index.html" class="logo">
-            Neema<span>Charo</span>
-        </a>
-
-        <button class="menu-button"
-                onclick="toggleMenu()">
-            ☰
-        </button>
-
-        <ul class="nav-links" id="navLinks">
-
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-
-            <li>
-                <a href="about.html">About</a>
-            </li>
-
-            <li>
-                <a href="tutorials.html">Tutorials</a>
-            </li>
-
-            <li>
-                <a href="portfolio.html">Portfolio</a>
-            </li>
-
-            <li>
-                <a href="services.html">Services</a>
-            </li>
-
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-</header>
+</head><body><!-- ================= NAVIGATION ================= --><header class="header"><nav class="navbar">
 
 
+    <a href="index.html"
+       class="logo">
 
-<!-- ================= HERO ================= -->
+        Neema<span>Charo</span>
 
-<section class="page-hero">
-
-    <div class="container">
-
-        <p class="section-label">
-            LESSON 03
-        </p>
-
-        <h1>
-            CSS for Beginners
-        </h1>
-
-        <p>
-            Learn how to make your website beautiful,
-            responsive and interactive.
-        </p>
-
-    </div>
-
-</section>
+    </a>
 
 
+    <button class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu">
 
-<!-- ================= LESSON CONTENT ================= -->
+        ☰
 
-<section class="section">
-
-    <div class="container tutorial-content">
+    </button>
 
 
-        <!-- INTRO -->
+    <ul class="nav-links"
+        id="navLinks">
 
-        <div class="lesson-intro reveal">
 
-            <div class="big-lesson-icon">
-                🎨
-            </div>
+        <li>
+            <a href="index.html">
+                Home
+            </a>
+        </li>
 
-            <h2>
-                What is CSS?
-            </h2>
 
-            <p>
-                CSS stands for
-                <strong>Cascading Style Sheets</strong>.
-            </p>
+        <li>
+            <a href="about.html">
+                About
+            </a>
+        </li>
 
-            <p>
-                CSS controls how your HTML website looks.
-                It can control colors, fonts, spacing,
-                layouts, borders, animations and much more.
-            </p>
 
-            <p>
-                If HTML is the skeleton of your website,
-                CSS is the clothes and design.
-            </p>
+        <li>
+            <a href="tutorials.html">
+                Tutorials
+            </a>
+        </li>
 
+
+        <li>
+            <a href="courses.html">
+                Courses
+            </a>
+        </li>
+
+
+        <li>
+            <a href="portfolio.html">
+                Portfolio
+            </a>
+        </li>
+
+
+        <li>
+            <a href="services.html">
+                Services
+            </a>
+        </li>
+
+
+        <li>
+            <a href="contact.html">
+                Contact
+            </a>
+        </li>
+
+
+    </ul>
+
+</nav>
+
+</header><!-- ================= HERO ================= --><section class="page-hero"><div class="container">
+
+
+    <p class="section-label">
+        FREE BEGINNER LESSON • 03
+    </p>
+
+
+    <h1>
+        CSS for Beginners
+    </h1>
+
+
+    <p>
+        Learn how to style your website,
+        create beautiful layouts and make
+        your pages responsive.
+    </p>
+
+
+</div>
+
+</section><!-- ================= LESSON CONTENT ================= --><section class="section"><div class="container tutorial-content">
+
+
+    <!-- INTRO -->
+
+    <div class="lesson-intro reveal">
+
+
+        <div class="big-lesson-icon">
+            🎨
         </div>
 
 
+        <h2>
+            What is CSS?
+        </h2>
 
-        <!-- STEP 1 -->
 
-        <article class="tutorial-step reveal">
+        <p>
+            CSS stands for
+            <strong>Cascading Style Sheets</strong>.
+        </p>
 
-            <div class="step-number">
-                01
-            </div>
 
-            <div>
+        <p>
+            CSS controls how your HTML website looks.
+            It can control colors, fonts, spacing,
+            layouts, borders, animations and much more.
+        </p>
 
-                <h2>
-                    How to Connect CSS
-                </h2>
 
-                <p>
-                    Create a file called:
-                </p>
+        <p>
+            If HTML is the skeleton of your website,
+            CSS is the design that makes it look
+            attractive and professional.
+        </p>
 
-                <pre><code>style.css</code></pre>
 
-                <p>
-                    Then connect it to your HTML:
-                </p>
-
-                <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
-
-                <p>
-                    Put this inside the
-                    <code>&lt;head&gt;</code> section.
-                </p>
-
-            </div>
-
-        </article>
+    </div>
 
 
 
-        <!-- STEP 2 -->
+    <!-- STEP 1 -->
 
-        <article class="tutorial-step reveal">
+    <article class="tutorial-step reveal">
 
-            <div class="step-number">
-                02
-            </div>
 
-            <div>
+        <div class="step-number">
+            01
+        </div>
 
-                <h2>
-                    Change Text Color
-                </h2>
 
-                <p>
-                    CSS can change the color of text.
-                </p>
+        <div>
 
-                <pre><code>h1 {
-    color: purple;
+
+            <h2>
+                How to Connect CSS
+            </h2>
+
+
+            <p>
+                Create a file called:
+            </p>
+
+
+            <pre><code>style.css</code></pre>
+
+
+            <p>
+                Then connect it to your HTML:
+            </p>
+
+
+            <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+
+
+            <p>
+                Put this inside the
+                <code>&lt;head&gt;</code> section.
+            </p>
+
+
+        </div>
+
+    </article>
+
+
+
+    <!-- STEP 2 -->
+
+    <article class="tutorial-step reveal">
+
+
+        <div class="step-number">
+            02
+        </div>
+
+
+        <div>
+
+
+            <h2>
+                Change Text Color
+            </h2>
+
+
+            <p>
+                CSS can change the color of text.
+            </p>
+
+
+            <pre><code>h1 {
+color: purple;
+
 }</code></pre>
 
-                <p>
-                    You can use color names, HEX values,
-                    RGB and other CSS color formats.
-                </p>
-
-            </div>
-
-        </article>
+            <p>
+                You can use color names, HEX values,
+                RGB and other CSS color formats.
+            </p>
 
 
+        </div>
 
-        <!-- STEP 3 -->
+    </article>
 
-        <article class="tutorial-step reveal">
 
-            <div class="step-number">
-                03
-            </div>
 
-            <div>
+    <!-- STEP 3 -->
 
-                <h2>
-                    Change Background Color
-                </h2>
+    <article class="tutorial-step reveal">
 
-                <pre><code>body {
-    background-color: white;
+
+        <div class="step-number">
+            03
+        </div>
+
+
+        <div>
+
+
+            <h2>
+                Change Background Color
+            </h2>
+
+
+            <pre><code>body {
+background-color: white;
+
 }
 
 .hero {
-    background-color: black;
+background-color: black;
 }</code></pre>
 
-                <p>
-                    The background can belong to the entire
-                    page or to a specific section.
-                </p>
-
-            </div>
-
-        </article>
+            <p>
+                The background can belong to the entire
+                page or to a specific section.
+            </p>
 
 
+        </div>
 
-        <!-- STEP 4 -->
+    </article>
 
-        <article class="tutorial-step reveal">
 
-            <div class="step-number">
-                04
-            </div>
 
-            <div>
+    <!-- STEP 4 -->
 
-                <h2>
-                    Change Font Size
-                </h2>
+    <article class="tutorial-step reveal">
 
-                <pre><code>h1 {
-    font-size: 50px;
+
+        <div class="step-number">
+            04
+        </div>
+
+
+        <div>
+
+
+            <h2>
+                Change Font Size
+            </h2>
+
+
+            <pre><code>h1 {
+font-size: 50px;
+
 }
 
 p {
-    font-size: 18px;
+font-size: 18px;
 }</code></pre>
 
-                <p>
-                    Font size determines how large or small
-                    your text appears.
-                </p>
-
-            </div>
-
-        </article>
+            <p>
+                Font size determines how large or small
+                your text appears.
+            </p>
 
 
+        </div>
 
-        <!-- STEP 5 -->
+    </article>
 
-        <article class="tutorial-step reveal">
 
-            <div class="step-number">
-                05
-            </div>
 
-            <div>
+    <!-- STEP 5 -->
 
-                <h2>
-                    Margin and Padding
-                </h2>
+    <article class="tutorial-step reveal">
 
-                <p>
-                    These properties are very important
-                    when designing websites.
-                </p>
 
-                <pre><code>.card {
-    margin: 20px;
-    padding: 30px;
+        <div class="step-number">
+            05
+        </div>
+
+
+        <div>
+
+
+            <h2>
+                Margin and Padding
+            </h2>
+
+
+            <p>
+                These properties are very important
+                when designing websites.
+            </p>
+
+
+            <pre><code>.card {
+margin: 20px;
+padding: 30px;
+
 }</code></pre>
 
-                <p>
-                    <strong>Margin</strong> creates space
-                    outside an element.
-                </p>
-
-                <p>
-                    <strong>Padding</strong> creates space
-                    inside an element.
-                </p>
-
-            </div>
-
-        </article>
+            <p>
+                <strong>Margin</strong> creates space
+                outside an element.
+            </p>
 
 
+            <p>
+                <strong>Padding</strong> creates space
+                inside an element.
+            </p>
 
-        <!-- STEP 6 -->
 
-        <article class="tutorial-step reveal">
+        </div>
 
-            <div class="step-number">
-                06
-            </div>
+    </article>
 
-            <div>
 
-                <h2>
-                    Borders and Rounded Corners
-                </h2>
 
-                <pre><code>.card {
-    border: 1px solid #dddddd;
-    border-radius: 20px;
+    <!-- STEP 6 -->
+
+    <article class="tutorial-step reveal">
+
+
+        <div class="step-number">
+            06
+        </div>
+
+
+        <div>
+
+
+            <h2>
+                Borders and Rounded Corners
+            </h2>
+
+
+            <pre><code>.card {
+border: 1px solid #dddddd;
+border-radius: 20px;
+
 }</code></pre>
 
-                <p>
-                    <code>border-radius</code> is useful for
-                    creating modern rounded cards and buttons.
-                </p>
-
-            </div>
-
-        </article>
+            <p>
+                <code>border-radius</code> is useful
+                for creating modern rounded cards
+                and buttons.
+            </p>
 
 
+        </div>
 
-        <!-- STEP 7 -->
+    </article>
 
-        <article class="tutorial-step reveal">
 
-            <div class="step-number">
-                07
-            </div>
 
-            <div>
+    <!-- STEP 7 -->
 
-                <h2>
-                    Box Shadow
-                </h2>
+    <article class="tutorial-step reveal">
 
-                <p>
-                    Box shadows can give cards depth.
-                </p>
 
-                <pre><code>.card {
-    box-shadow:
-        0 10px 30px
-        rgba(0, 0, 0, 0.10);
+        <div class="step-number">
+            07
+        </div>
+
+
+        <div>
+
+
+            <h2>
+                Box Shadow
+            </h2>
+
+
+            <p>
+                Box shadows can give cards depth.
+            </p>
+
+
+            <pre><code>.card {
+box-shadow:
+    0 10px 30px
+    rgba(0, 0, 0, 0.10);
+
 }</code></pre>
 
-            </div>
+        </div>
 
-        </article>
+    </article>
 
 
 
-        <!-- STEP 8 -->
+    <!-- STEP 8 -->
 
-        <article class="tutorial-step reveal">
+    <article class="tutorial-step reveal">
 
-            <div class="step-number">
-                08
-            </div>
 
-            <div>
+        <div class="step-number">
+            08
+        </div>
 
-                <h2>
-                    Flexbox
-                </h2>
 
-                <p>
-                    Flexbox is useful for arranging elements
-                    in rows or columns.
-                </p>
+        <div>
 
-                <pre><code>.container {
-    display: flex;
 
-    justify-content: center;
+            <h2>
+                Flexbox
+            </h2>
 
-    align-items: center;
 
-    gap: 20px;
+            <p>
+                Flexbox is useful for arranging
+                elements in rows or columns.
+            </p>
+
+
+            <pre><code>.container {
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+
+gap: 20px;
+
 }</code></pre>
 
-                <p>
-                    Flexbox is especially useful for navigation
-                    bars, buttons and simple layouts.
-                </p>
-
-            </div>
-
-        </article>
+            <p>
+                Flexbox is especially useful for
+                navigation bars, buttons and layouts.
+            </p>
 
 
+        </div>
 
-        <!-- STEP 9 -->
+    </article>
 
-        <article class="tutorial-step reveal">
 
-            <div class="step-number">
-                09
-            </div>
 
-            <div>
+    <!-- STEP 9 -->
 
-                <h2>
-                    CSS Grid
-                </h2>
+    <article class="tutorial-step reveal">
 
-                <p>
-                    Grid is excellent for creating rows and
-                    columns of cards.
-                </p>
 
-                <pre><code>.cards {
-    display: grid;
+        <div class="step-number">
+            09
+        </div>
 
-    grid-template-columns:
-        repeat(3, 1fr);
 
-    gap: 20px;
+        <div>
+
+
+            <h2>
+                CSS Grid
+            </h2>
+
+
+            <p>
+                Grid is excellent for creating
+                rows and columns of cards.
+            </p>
+
+
+            <pre><code>.cards {
+display: grid;
+
+grid-template-columns:
+    repeat(3, 1fr);
+
+gap: 20px;
+
 }</code></pre>
 
-                <p>
-                    This technique is used throughout this
-                    Neema Charo Tutorial website.
-                </p>
-
-            </div>
-
-        </article>
+            <p>
+                This technique is useful for
+                modern responsive layouts.
+            </p>
 
 
+        </div>
 
-        <!-- STEP 10 -->
+    </article>
 
-        <article class="tutorial-step reveal">
 
-            <div class="step-number">
-                10
-            </div>
 
-            <div>
+    <!-- STEP 10 -->
 
-                <h2>
-                    Hover Effects
-                </h2>
+    <article class="tutorial-step reveal">
 
-                <p>
-                    CSS can make an element change when
-                    someone places their pointer over it.
-                </p>
 
-                <pre><code>.card {
-    transition: 0.3s;
+        <div class="step-number">
+            10
+        </div>
+
+
+        <div>
+
+
+            <h2>
+                Hover Effects
+            </h2>
+
+
+            <p>
+                CSS can make an element change
+                when someone places their pointer
+                over it.
+            </p>
+
+
+            <pre><code>.card {
+transition: 0.3s;
+
 }
 
 .card:hover {
-    transform: translateY(-8px);
+transform: translateY(-8px);
 }</code></pre>
 
-                <p>
-                    Hover effects can make a website feel
-                    more interactive.
-                </p>
-
-            </div>
-
-        </article>
+            <p>
+                Hover effects can make a website
+                feel more interactive.
+            </p>
 
 
+        </div>
 
-        <!-- STEP 11 -->
+    </article>
 
-        <article class="tutorial-step reveal">
 
-            <div class="step-number">
-                11
-            </div>
 
-            <div>
+    <!-- STEP 11 -->
 
-                <h2>
-                    CSS Animations
-                </h2>
+    <article class="tutorial-step reveal">
 
-                <p>
-                    CSS can also create animations.
-                </p>
 
-                <pre><code>@keyframes float {
+        <div class="step-number">
+            11
+        </div>
 
-    0% {
-        transform: translateY(0);
-    }
 
-    50% {
-        transform: translateY(-10px);
-    }
+        <div>
 
-    100% {
-        transform: translateY(0);
-    }
+
+            <h2>
+                CSS Animations
+            </h2>
+
+
+            <p>
+                CSS can also create animations.
+            </p>
+
+
+            <pre><code>@keyframes float {
+
+0% {
+    transform: translateY(0);
+}
+
+50% {
+    transform: translateY(-10px);
+}
+
+100% {
+    transform: translateY(0);
+}
 
 }
 
 .box {
-    animation:
-        float 3s infinite;
+animation:
+float 3s infinite;
 }</code></pre>
-
-                <p>
-                    Animations can be used for subtle movement,
-                    entrances and visual effects.
-                </p>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- STEP 12 -->
-
-        <article class="tutorial-step reveal">
-
-            <div class="step-number">
-                12
-            </div>
-
-            <div>
-
-                <h2>
-                    Responsive Design
-                </h2>
-
-                <p>
-                    A responsive website adjusts to different
-                    screen sizes such as phones, tablets and
-                    computers.
-                </p>
-
-                <pre><code>@media (max-width: 600px) {
-
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    h1 {
-        font-size: 35px;
-    }
-
-}</code></pre>
-
-                <div class="tip-box">
-
-                    📱 <strong>Important:</strong>
-
-                    Always test your website on a phone
-                    because many visitors may access it
-                    from mobile devices.
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- CSS SELECTORS -->
-
-        <article class="tutorial-step reveal">
-
-            <div class="step-number">
-                13
-            </div>
-
-            <div>
-
-                <h2>
-                    CSS Classes and IDs
-                </h2>
-
-                <p>
-                    A class can be reused on multiple elements.
-                </p>
-
-                <pre><code>.card {
-    padding: 20px;
-}</code></pre>
-
-                <p>
-                    An ID normally identifies one specific element.
-                </p>
-
-                <pre><code>#main-title {
-    font-size: 50px;
-}</code></pre>
-
-            </div>
-
-        </article>
-
-
-
-        <!-- PRACTICE PROJECT -->
-
-        <div class="practice-box reveal">
-
-            <p class="section-label">
-                PRACTICE PROJECT
-            </p>
-
-            <h2>
-                Design Your First Card
-            </h2>
 
             <p>
-                Create an HTML card and style it with CSS.
-                Your card should have:
+                Animations can be used for subtle
+                movement, entrances and visual effects.
             </p>
 
-            <ul>
 
-                <li>
-                    A heading
-                </li>
+        </div>
 
-                <li>
-                    A paragraph
-                </li>
+    </article>
 
-                <li>
-                    A button
-                </li>
 
-                <li>
-                    Rounded corners
-                </li>
 
-                <li>
-                    Padding
-                </li>
+    <!-- STEP 12 -->
 
-                <li>
-                    A box shadow
-                </li>
+    <article class="tutorial-step reveal">
 
-                <li>
-                    A hover effect
-                </li>
 
-            </ul>
+        <div class="step-number">
+            12
+        </div>
+
+
+        <div>
+
+
+            <h2>
+                Responsive Design
+            </h2>
+
+
+            <p>
+                A responsive website adjusts to
+                different screen sizes such as
+                phones, tablets and computers.
+            </p>
+
+
+            <pre><code>@media (max-width: 600px) {
+
+.cards {
+    grid-template-columns: 1fr;
+}
+
+h1 {
+    font-size: 35px;
+}
+
+}</code></pre>
+
+            <div class="tip-box">
+
+                📱 <strong>Important:</strong>
+
+                Always test your website on a phone
+                because many visitors may access it
+                from mobile devices.
+
+            </div>
+
+
+        </div>
+
+    </article>
+
+
+
+    <!-- STEP 13 -->
+
+    <article class="tutorial-step reveal">
+
+
+        <div class="step-number">
+            13
+        </div>
+
+
+        <div>
+
+
+            <h2>
+                CSS Classes and IDs
+            </h2>
+
+
+            <p>
+                A class can be reused on multiple
+                elements.
+            </p>
+
+
+            <pre><code>.card {
+padding: 20px;
+
+}</code></pre>
+
+            <p>
+                An ID normally identifies one
+                specific element.
+            </p>
+
+
+            <pre><code>#main-title {
+font-size: 50px;
+
+}</code></pre>
+
+        </div>
+
+    </article>
+
+
+
+    <!-- PRACTICE -->
+
+    <div class="practice-box reveal">
+
+
+        <p class="section-label">
+            PRACTICE PROJECT
+        </p>
+
+
+        <h2>
+            Design Your First Card
+        </h2>
+
+
+        <p>
+            Create an HTML card and style it
+            with CSS.
+        </p>
+
+
+        <ul>
+
+            <li>
+                A heading
+            </li>
+
+            <li>
+                A paragraph
+            </li>
+
+            <li>
+                A button
+            </li>
+
+            <li>
+                Rounded corners
+            </li>
+
+            <li>
+                Padding
+            </li>
+
+            <li>
+                A box shadow
+            </li>
+
+            <li>
+                A hover effect
+            </li>
+
+        </ul>
+
+
+    </div>
+
+
+
+    <!-- CHALLENGE -->
+
+    <div class="code-challenge reveal">
+
+
+        <p class="section-label">
+            BEGINNER CHALLENGE
+        </p>
+
+
+        <h2>
+            Can You Build This?
+        </h2>
+
+
+        <pre><code>&lt;div class="card"&gt;
+
+&lt;h2&gt;
+    My Website
+&lt;/h2&gt;
+
+&lt;p&gt;
+    I am learning web development.
+&lt;/p&gt;
+
+&lt;button&gt;
+    Learn More
+&lt;/button&gt;
+
+</div></code></pre>
+
+        <p>
+            Now use CSS to make your card
+            look professional.
+        </p>
+
+
+    </div>
+
+
+
+    <!-- COURSE CTA -->
+
+    <div class="practice-box reveal">
+
+
+        <p class="section-label">
+            WANT TO GO FURTHER?
+        </p>
+
+
+        <h2>
+            Unlock the Full Course 🔐
+        </h2>
+
+
+        <p>
+            Continue beyond the beginner lessons
+            with the complete Website Development
+            Course.
+        </p>
+
+
+        <p>
+            <strong>Full Course: KSh 2,500</strong>
+        </p>
+
+
+        <a href="courses.html"
+           class="btn primary-btn">
+
+            View Full Course
+
+        </a>
+
+
+    </div>
+
+
+
+    <!-- NEXT LESSON -->
+
+    <div class="next-lesson reveal">
+
+
+        <p>
+            NEXT FREE LESSON
+        </p>
+
+
+        <h2>
+            Learn JavaScript →
+        </h2>
+
+
+        <a href="javascript-tutorial.html"
+           class="btn primary-btn">
+
+            Start JavaScript Tutorial
+
+        </a>
+
+
+    </div>
+
+
+</div>
+
+</section><!-- ================= FOOTER ================= --><footer class="footer"><div class="container">
+
+
+    <div class="footer-grid">
+
+
+        <div>
+
+            <h2 class="footer-logo">
+                Neema<span>Charo</span>
+            </h2>
+
+
+            <p>
+                Learn • Create • Publish
+            </p>
+
+
+            <p>
+                Practical website creation
+                tutorials for beginners.
+            </p>
 
         </div>
 
 
 
-        <!-- CHALLENGE -->
+        <div>
 
-        <div class="code-challenge reveal">
+            <h3>
+                Learning
+            </h3>
 
-            <p class="section-label">
-                BEGINNER CHALLENGE
-            </p>
 
-            <h2>
-                Can You Build This?
-            </h2>
+            <a href="tutorials.html">
+                Free Tutorials
+            </a>
 
-            <pre><code>&lt;div class="card"&gt;
 
-    &lt;h2&gt;
-        My Website
-    &lt;/h2&gt;
+            <a href="courses.html">
+                Full Course 🔐
+            </a>
 
-    &lt;p&gt;
-        I am learning web development.
-    &lt;/p&gt;
 
-    &lt;button&gt;
-        Learn More
-    &lt;/button&gt;
+            <a href="spck.html">
+                SPCK Editor
+            </a>
 
-&lt;/div&gt;</code></pre>
 
-            <p>
-                Now use CSS to make your card look professional.
-            </p>
+            <a href="html-tutorial.html">
+                HTML
+            </a>
+
+
+            <a href="css-tutorial.html">
+                CSS
+            </a>
+
+
+            <a href="javascript-tutorial.html">
+                JavaScript
+            </a>
+
+
+            <a href="github.html">
+                GitHub
+            </a>
+
+
+            <a href="spck-to-github.html">
+                SPCK → GitHub
+            </a>
 
         </div>
 
 
 
-        <!-- NEXT LESSON -->
+        <div>
 
-        <div class="next-lesson reveal">
+            <h3>
+                Contact
+            </h3>
 
-            <p>
-                NEXT LESSON
-            </p>
 
-            <h2>
-                Learn JavaScript →
-            </h2>
+            <a href="tel:0748933452">
+                📱 0748933452
+            </a>
 
-            <a href="javascript-tutorial.html"
-               class="btn primary-btn">
 
-                Start JavaScript Tutorial
+            <a href="mailto:charoneema6@gmail.com">
+                📧 charoneema6@gmail.com
+            </a>
+
+
+            <a href="https://wa.me/254748933452"
+               target="_blank"
+               rel="noopener">
+
+                💬 WhatsApp
 
             </a>
 
@@ -733,110 +1013,25 @@ p {
 
     </div>
 
-</section>
 
+    <div class="footer-bottom">
 
-
-<!-- ================= FOOTER ================= -->
-
-<footer class="footer">
-
-    <div class="container">
-
-        <div class="footer-grid">
-
-            <div>
-
-                <h2 class="footer-logo">
-                    Neema<span>Charo</span>
-                </h2>
-
-                <p>
-                    Learn • Create • Publish
-                </p>
-
-                <p>
-                    Website creation tutorials for beginners.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h3>
-                    Tutorials
-                </h3>
-
-                <a href="spck.html">
-                    SPCK Editor
-                </a>
-
-                <a href="html-tutorial.html">
-                    HTML
-                </a>
-
-                <a href="css-tutorial.html">
-                    CSS
-                </a>
-
-                <a href="javascript-tutorial.html">
-                    JavaScript
-                </a>
-
-                <a href="github.html">
-                    GitHub
-                </a>
-
-            </div>
-
-
-            <div>
-
-                <h3>
-                    Contact
-                </h3>
-
-                <a href="tel:0748933452">
-                    📱 0748933452
-                </a>
-
-                <a href="mailto:charoneema6@gmail.com">
-                    📧 charoneema6@gmail.com
-                </a>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
-
-            <p>
-                © <span id="year"></span>
-                Neema Charo. All Rights Reserved.
-            </p>
-
-        </div>
+        <p>
+            © <span id="year"></span>
+            Neema Charo. All Rights Reserved.
+        </p>
 
     </div>
 
-</footer>
 
+</div>
 
-<!-- WHATSAPP -->
+</footer><!-- WHATSAPP --><a href="https://wa.me/254748933452"
+class="whatsapp-button"
+target="_blank"
+rel="noopener"
+aria-label="Chat with Neema Charo on WhatsApp">
 
-<a href="https://wa.me/254748933452"
-   class="whatsapp-button"
-   target="_blank">
+💬
 
-    💬
-
-</a>
-
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+</a><script src="script.js"></script></body></html>

@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Module 4: Learn JavaScript basics and website interaction - Neema Charo Academy.">
+
+    <title>Module 04 | JavaScript | Neema Charo Academy</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html"
+           class="logo">
+
+            Neema<span>Charo</span>
+
+        </a>
+
+
+        <a href="paid-course.html"
+           class="btn primary-btn">
+
+            My Course
+
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <p class="section-label">
+            MODULE 04
+        </p>
+
+        <h1>
+            ⚡ JavaScript Basics
+        </h1>
+
+        <p>
+            Learn how to make your website interactive
+            and respond to what visitors do.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CONTENT ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <!-- TOPIC 1 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 01
+            </p>
+
+            <h2>
+                What Is JavaScript?
+            </h2>
+
+            <p>
+                JavaScript is a programming language used
+                to add interaction and behavior to websites.
+            </p>
+
+            <p>
+                HTML creates the structure, CSS controls
+                the design, and JavaScript can make the
+                website respond to visitors.
+            </p>
+
+            <div class="next-lesson">
+
+                <p>
+                    📝 HTML = Structure
+                </p>
+
+                <p>
+                    🎨 CSS = Design
+                </p>
+
+                <p>
+                    ⚡ JavaScript = Interaction
+                </p>
+
+            </div>
+
+            <p>
+                For example, JavaScript can make a button
+                display a message when someone clicks it.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 2 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 02
+            </p>
+
+            <h2>
+                Connecting JavaScript to HTML
+            </h2>
+
+            <p>
+                We normally connect an external JavaScript
+                file to our HTML page using the
+                <code>&lt;script&gt;</code> element.
+            </p>
+
+
+            <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+
+
+            <p>
+                This tells the browser to load the JavaScript
+                code from a file called
+                <strong>script.js</strong>.
+            </p>
+
+            <p>
+                In your SPCK project, keep your HTML,
+                CSS and JavaScript files organized.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 3 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 03
+            </p>
+
+            <h2>
+                Variables
+            </h2>
+
+            <p>
+                A variable is a named place where JavaScript
+                can store information.
+            </p>
+
+
+            <pre><code>let name = "Neema";
+
+let age = 25;
+
+const course = "Web Development";</code></pre>
+
+
+            <p>
+                <strong>let</strong> is commonly used when
+                a value may change.
+            </p>
+
+            <p>
+                <strong>const</strong> is commonly used when
+                the variable should not be reassigned.
+            </p>
+
+            <div class="next-lesson">
+
+                <p>
+                    💡 Variable example:
+                </p>
+
+                <p>
+                    <code>let studentName = "Amina";</code>
+                </p>
+
+                <p>
+                    The variable
+                    <strong>studentName</strong>
+                    stores the text "Amina".
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TOPIC 4 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 04
+            </p>
+
+            <h2>
+                JavaScript Data Types
+            </h2>
+
+            <p>
+                JavaScript can work with different types
+                of information.
+            </p>
+
+
+            <h3>
+                Text — String
+            </h3>
+
+            <pre><code>let name = "Neema";</code></pre>
+
+
+            <h3>
+                Number
+            </h3>
+
+            <pre><code>let price = 2500;</code></pre>
+
+
+            <h3>
+                Boolean
+            </h3>
+
+            <pre><code>let isStudent = true;</code></pre>
+
+
+            <h3>
+                Array
+            </h3>
+
+            <pre><code>let courses = [
+    "HTML",
+    "CSS",
+    "JavaScript"
+];</code></pre>
+
+
+            <p>
+                You will learn more about arrays and objects
+                later in the course.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 5 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 05
+            </p>
+
+            <h2>
+                Operators
+            </h2>
+
+            <p>
+                Operators allow JavaScript to perform
+                calculations and comparisons.
+            </p>
+
+
+            <pre><code>let total = 100 + 50;
+
+let difference = 100 - 50;
+
+let product = 10 * 5;
+
+let division = 100 / 2;</code></pre>
+
+
+            <p>
+                You can also compare values:
+            </p>
+
+
+            <pre><code>10 > 5
+
+10 < 20
+
+10 === 10
+
+10 !== 5</code></pre>
+
+        </div>
+
+
+
+        <!-- TOPIC 6 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 06
+            </p>
+
+            <h2>
+                if and else
+            </h2>
+
+            <p>
+                JavaScript can make decisions using
+                <strong>if</strong> and
+                <strong>else</strong>.
+            </p>
+
+
+            <pre><code>let age = 20;
+
+if (age >= 18) {
+
+    console.log("You are an adult.");
+
+} else {
+
+    console.log("You are under 18.");
+
+}</code></pre>
+
+
+            <p>
+                The browser checks the condition and runs
+                the appropriate block of code.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 7 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 07
+            </p>
+
+            <h2>
+                Functions
+            </h2>
+
+            <p>
+                A function is a reusable block of code
+                designed to perform a particular task.
+            </p>
+
+
+            <pre><code>function sayHello() {
+
+    console.log("Hello!");
+
+}
+
+sayHello();</code></pre>
+
+
+            <p>
+                You can call the function whenever you
+                need it.
+            </p>
+
+
+            <h3>
+                Function with a parameter
+            </h3>
+
+
+            <pre><code>function greet(name) {
+
+    console.log("Hello " + name);
+
+}
+
+greet("Neema");</code></pre>
+
+        </div>
+
+
+
+        <!-- TOPIC 8 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 08
+            </p>
+
+            <h2>
+                Events
+            </h2>
+
+            <p>
+                An event happens when a visitor interacts
+                with a webpage.
+            </p>
+
+            <p>
+                Examples include:
+            </p>
+
+            <ul>
+
+                <li>
+                    🖱️ Clicking a button
+                </li>
+
+                <li>
+                    ⌨️ Typing into an input
+                </li>
+
+                <li>
+                    📱 Touching an element
+                </li>
+
+                <li>
+                    🖱️ Moving the mouse
+                </li>
+
+            </ul>
+
+
+            <p>
+                JavaScript can listen for these events
+                and respond to them.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 9 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 09
+            </p>
+
+            <h2>
+                Making a Button Interactive
+            </h2>
+
+            <p>
+                First create a button in HTML:
+            </p>
+
+
+            <pre><code>&lt;button id="helloButton"&gt;
+    Click Me
+&lt;/button&gt;</code></pre>
+
+
+            <p>
+                Then JavaScript can respond to the click:
+            </p>
+
+
+            <pre><code>const button =
+    document.getElementById("helloButton");
+
+button.addEventListener(
+    "click",
+    function() {
+
+        alert("Hello! Welcome to my website.");
+
+    }
+);</code></pre>
+
+
+            <p>
+                Now the button performs an action when
+                the visitor clicks it.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 10 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 10
+            </p>
+
+            <h2>
+                Changing Website Content
+            </h2>
+
+            <p>
+                JavaScript can change HTML content after
+                the webpage has loaded.
+            </p>
+
+
+            <p>
+                HTML:
+            </p>
+
+
+            <pre><code>&lt;h2 id="message"&gt;
+    Welcome!
+&lt;/h2&gt;</code></pre>
+
+
+            <p>
+                JavaScript:
+            </p>
+
+
+            <pre><code>const message =
+    document.getElementById("message");
+
+message.textContent =
+    "Welcome to Neema Charo Academy!";</code></pre>
+
+
+            <p>
+                This is one of the most important ideas
+                in beginner JavaScript:
+                <strong>JavaScript can interact with HTML.</strong>
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 11 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 11
+            </p>
+
+            <h2>
+                Getting Information From an Input
+            </h2>
+
+            <p>
+                JavaScript can read information that a
+                visitor enters into a form.
+            </p>
+
+
+            <pre><code>const nameInput =
+    document.getElementById("name");
+
+const name =
+    nameInput.value;</code></pre>
+
+
+            <p>
+                This allows you to build interactive forms,
+                calculators, quizzes and other web features.
+            </p>
+
+        </div>
+
+
+
+        <!-- TOPIC 12 -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                TOPIC 12
+            </p>
+
+            <h2>
+                Console.log()
+            </h2>
+
+            <p>
+                The console is a useful place to test and
+                debug JavaScript.
+            </p>
+
+
+            <pre><code>console.log("Hello World!");
+
+console.log(10 + 20);</code></pre>
+
+
+            <p>
+                When you open your browser's developer tools,
+                you can see these messages in the console.
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= PRACTICAL PROJECT ================= -->
+
+        <div class="next-lesson reveal">
+
+            <p class="section-label">
+                PRACTICAL PROJECT
+            </p>
+
+            <h2>
+                🛠️ Build a Simple Interactive Page
+            </h2>
+
+            <p>
+                Create a new HTML file called:
+            </p>
+
+
+            <pre><code>javascript-practice.html</code></pre>
+
+
+            <p>
+                Add:
+            </p>
+
+            <ol>
+
+                <li>
+                    A heading saying "My JavaScript Page"
+                </li>
+
+                <li>
+                    A button
+                </li>
+
+                <li>
+                    A paragraph with an ID
+                </li>
+
+                <li>
+                    An input where the visitor can enter
+                    their name
+                </li>
+
+            </ol>
+
+            <p>
+                Then create a JavaScript file called:
+            </p>
+
+
+            <pre><code>javascript-practice.js</code></pre>
+
+
+            <p>
+                Make the button display a welcome message
+                using the visitor's name.
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= COMPLETE EXAMPLE ================= -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                COMPLETE EXAMPLE
+            </p>
+
+            <h2>
+                Simple Interactive JavaScript Project
+            </h2>
+
+
+            <h3>
+                HTML
+            </h3>
+
+
+            <pre><code>&lt;input
+    id="nameInput"
+    type="text"
+    placeholder="Enter your name"&gt;
+
+&lt;button id="welcomeButton"&gt;
+    Say Hello
+&lt;/button&gt;
+
+&lt;p id="message"&gt;&lt;/p&gt;</code></pre>
+
+
+            <h3>
+                JavaScript
+            </h3>
+
+
+            <pre><code>const input =
+    document.getElementById("nameInput");
+
+const button =
+    document.getElementById("welcomeButton");
+
+const message =
+    document.getElementById("message");
+
+
+button.addEventListener(
+    "click",
+    function() {
+
+        const name = input.value.trim();
+
+        if (name === "") {
+
+            message.textContent =
+                "Please enter your name.";
+
+            return;
+
+        }
+
+        message.textContent =
+            "Hello " + name +
+            "! Welcome to Neema Charo Academy.";
+
+    }
+);</code></pre>
+
+
+            <p>
+                This small project demonstrates several
+                important JavaScript skills:
+            </p>
+
+            <ul>
+
+                <li>
+                    Selecting HTML elements
+                </li>
+
+                <li>
+                    Reading input values
+                </li>
+
+                <li>
+                    Responding to a click
+                </li>
+
+                <li>
+                    Using a condition
+                </li>
+
+                <li>
+                    Changing webpage content
+                </li>
+
+            </ul>
+
+        </div>
+
+
+
+        <!-- ================= EXERCISE ================= -->
+
+        <div class="practice-box reveal">
+
+            <p class="section-label">
+                MODULE 04 EXERCISE
+            </p>
+
+            <h2>
+                🧠 Test Your Understanding
+            </h2>
+
+            <ol>
+
+                <li>
+                    What is JavaScript used for?
+                </li>
+
+                <li>
+                    How do you connect an external
+                    JavaScript file to HTML?
+                </li>
+
+                <li>
+                    What is a variable?
+                </li>
+
+                <li>
+                    What is the difference between
+                    <code>let</code> and
+                    <code>const</code>?
+                </li>
+
+                <li>
+                    What is a function?
+                </li>
+
+                <li>
+                    What is an event?
+                </li>
+
+                <li>
+                    What does
+                    <code>document.getElementById()</code>
+                    do?
+                </li>
+
+                <li>
+                    What is
+                    <code>console.log()</code>
+                    useful for?
+                </li>
+
+            </ol>
+
+        </div>
+
+
+
+        <!-- ================= COMPLETION ================= -->
+
+        <div class="next-lesson reveal">
+
+            <h2>
+                🎉 Module 04 Complete!
+            </h2>
+
+            <p>
+                You have learned the foundations of
+                JavaScript and how it can make your
+                website interactive.
+            </p>
+
+            <p>
+                In the next module, we will learn how to
+                organize information using
+                <strong>JavaScript Arrays & Objects</strong>.
+            </p>
+
+        </div>
+
+
+
+        <!-- ================= NAVIGATION ================= -->
+
+        <div class="next-lesson reveal"
+             style="display:flex;
+                    flex-wrap:wrap;
+                    gap:15px;
+                    justify-content:space-between;">
+
+            <a href="module-03.html"
+               class="btn primary-btn">
+
+                ← Module 03
+
+            </a>
+
+
+            <a href="paid-course.html"
+               class="btn primary-btn">
+
+                All Modules
+
+            </a>
+
+
+            <a href="module-05.html"
+               class="btn primary-btn">
+
+                Module 05: Arrays & Objects →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © <span id="year"></span>
+                Neema Charo. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

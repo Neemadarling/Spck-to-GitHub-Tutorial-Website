@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Module 06 | Loops & Functions | Neema Charo Academy</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="header">
+
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+Neema<span>Charo</span>
+</a>
+
+<a href="paid-course.html" class="btn primary-btn">
+My Course
+</a>
+
+</nav>
+
+</header>
+
+
+<section class="page-hero">
+
+<div class="container">
+
+<p class="section-label">MODULE 06</p>
+
+<h1>🔄 JavaScript Loops & Functions</h1>
+
+<p>
+Learn how to repeat tasks and create reusable
+JavaScript code.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="container">
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 01</p>
+
+<h2>Why Do We Need Loops?</h2>
+
+<p>
+Sometimes a program needs to perform the same action
+many times. A loop helps us avoid writing the same
+code repeatedly.
+</p>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 02</p>
+
+<h2>The for Loop</h2>
+
+<pre><code>for (let i = 1; i <= 5; i++) {
+
+    console.log(i);
+
+}</code></pre>
+
+<p>
+This example prints numbers from 1 to 5.
+</p>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 03</p>
+
+<h2>Looping Through an Array</h2>
+
+<pre><code>let courses = [
+    "HTML",
+    "CSS",
+    "JavaScript"
+];
+
+for (let i = 0; i < courses.length; i++) {
+
+    console.log(courses[i]);
+
+}</code></pre>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 04</p>
+
+<h2>for...of</h2>
+
+<pre><code>let courses = [
+    "HTML",
+    "CSS",
+    "JavaScript"
+];
+
+for (let course of courses) {
+
+    console.log(course);
+
+}</code></pre>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 05</p>
+
+<h2>Functions Review</h2>
+
+<pre><code>function welcome() {
+
+    console.log("Welcome to my website!");
+
+}
+
+welcome();</code></pre>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 06</p>
+
+<h2>Functions With Parameters</h2>
+
+<pre><code>function greet(name) {
+
+    console.log("Hello " + name);
+
+}
+
+greet("Neema");</code></pre>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 07</p>
+
+<h2>Returning a Value</h2>
+
+<pre><code>function add(a, b) {
+
+    return a + b;
+
+}
+
+let result = add(10, 20);
+
+console.log(result);</code></pre>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">TOPIC 08</p>
+
+<h2>Combining Functions and Loops</h2>
+
+<pre><code>function showCourses(courses) {
+
+    for (let course of courses) {
+
+        console.log(course);
+
+    }
+
+}
+
+showCourses([
+    "HTML",
+    "CSS",
+    "JavaScript"
+]);</code></pre>
+
+</div>
+
+
+<div class="next-lesson reveal">
+
+<p class="section-label">PRACTICAL PROJECT</p>
+
+<h2>🛠️ Build a Course List</h2>
+
+<p>
+Create a function that receives an array of courses
+and displays every course in the console.
+</p>
+
+</div>
+
+
+<div class="practice-box reveal">
+
+<p class="section-label">MODULE 06 EXERCISE</p>
+
+<h2>🧠 Test Your Understanding</h2>
+
+<ol>
+
+<li>Why are loops useful?</li>
+
+<li>What does a for loop do?</li>
+
+<li>What is a function?</li>
+
+<li>What is a parameter?</li>
+
+<li>What does return do?</li>
+
+<li>How can a loop work with an array?</li>
+
+</ol>
+
+</div>
+
+
+<div class="next-lesson reveal">
+
+<h2>🎉 Module 06 Complete!</h2>
+
+<p>
+You now know how to repeat tasks and create reusable
+JavaScript functions.
+</p>
+
+</div>
+
+
+<div class="next-lesson reveal"
+style="display:flex;flex-wrap:wrap;gap:15px;justify-content:space-between;">
+
+<a href="module-05.html" class="btn primary-btn">
+← Module 05
+</a>
+
+<a href="paid-course.html" class="btn primary-btn">
+All Modules
+</a>
+
+<a href="module-07.html" class="btn primary-btn">
+Module 07 →
+</a>
+
+</div>
+
+</div>
+</section>
+
+
+<footer class="footer">
+
+<div class="container">
+
+<div class="footer-bottom">
+
+<p>
+© <span id="year"></span>
+Neema Charo. All Rights Reserved.
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

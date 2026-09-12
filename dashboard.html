@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Student Dashboard | Neema Charo Academy">
+
+    <title>Dashboard | Neema Charo Academy</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <nav class="navbar">
+
+        <a href="index.html"
+           class="logo">
+
+            Neema<span>Charo</span>
+
+        </a>
+
+
+        <button
+            class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu">
+
+            ☰
+
+        </button>
+
+
+        <ul class="nav-links"
+            id="navLinks">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="courses.html">
+                    Courses
+                </a>
+            </li>
+
+            <li>
+                <a href="dashboard.html"
+                   class="active">
+
+                    Dashboard
+
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= DASHBOARD HERO ================= -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <p class="section-label">
+            NEEMA CHARO ACADEMY
+        </p>
+
+        <h1>
+            Student Dashboard 🎓
+        </h1>
+
+        <p id="welcomeMessage">
+            Loading your account...
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= COURSE ================= -->
+
+<section class="section">
+
+    <div class="container">
+
+
+        <!-- STATUS MESSAGE -->
+
+        <div id="message"
+             class="practice-box"
+             style="text-align:center;">
+
+            Checking your course access...
+
+        </div>
+
+
+
+        <!-- ================= COURSE CONTENT ================= -->
+
+        <div id="courseContent"
+             style="display:none;">
+
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    COMPLETE COURSE
+                </p>
+
+                <h2>
+                    Website Development Course
+                </h2>
+
+                <p>
+                    Complete the modules in order,
+                    then take your final assessment.
+                </p>
+
+            </div>
+
+
+
+            <!-- ================= MODULES ================= -->
+
+            <div class="feature-grid">
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+
+                    <h3>Module 01</h3>
+
+                    <p>
+                        Introduction to Web Development
+                    </p>
+
+                    <a href="module1.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+
+                    <h3>Module 02</h3>
+
+                    <p>
+                        HTML — Build Your Website Structure
+                    </p>
+
+                    <a href="module2.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+
+                    <h3>Module 03</h3>
+
+                    <p>
+                        CSS — Design & Responsive Websites
+                    </p>
+
+                    <a href="module3.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+
+                    <h3>Module 04</h3>
+
+                    <p>
+                        JavaScript Basics
+                    </p>
+
+                    <a href="module4.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+
+                    <h3>Module 05</h3>
+
+                    <p>
+                        JavaScript Arrays & Objects
+                    </p>
+
+                    <a href="module5.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+
+                    <h3>Module 06</h3>
+
+                    <p>
+                        JavaScript Loops & Functions
+                    </p>
+
+                    <a href="module6.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+
+                    <h3>Module 07</h3>
+
+                    <p>
+                        Build a Website Using Your Phone/SPCK
+                    </p>
+
+                    <a href="module7.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">🖼️</div>
+
+                    <h3>Module 08</h3>
+
+                    <p>
+                        Images, Links, Pages & Navigation
+                    </p>
+
+                    <a href="module8.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+
+                    <h3>Module 09</h3>
+
+                    <p>
+                        Animations & Interactive Features
+                    </p>
+
+                    <a href="module9.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">🐙</div>
+
+                    <h3>Module 10</h3>
+
+                    <p>
+                        GitHub & GitHub Pages
+                    </p>
+
+                    <a href="module10.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+
+                    <h3>Module 11</h3>
+
+                    <p>
+                        Publish Your Website
+                    </p>
+
+                    <a href="module11.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">💼</div>
+
+                    <h3>Module 12</h3>
+
+                    <p>
+                        Build Websites for Clients
+                    </p>
+
+                    <a href="module12.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+
+                    <h3>Module 13</h3>
+
+                    <p>
+                        How to Price & Sell Your Websites
+                    </p>
+
+                    <a href="module13.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎓</div>
+
+                    <h3>Module 14</h3>
+
+                    <p>
+                        Final Website Project
+                    </p>
+
+                    <a href="module14.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+
+                <div class="feature-card">
+                    <div class="feature-icon">🏆</div>
+
+                    <h3>Module 15</h3>
+
+                    <p>
+                        Final Assessment & Certificate
+                    </p>
+
+                    <a href="module15.html"
+                       class="btn primary-btn">
+
+                        Start Module →
+
+                    </a>
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ================= FINAL ASSESSMENT ================= -->
+
+            <div class="next-lesson"
+                 style="margin-top:50px;">
+
+                <p>
+                    COURSE COMPLETION
+                </p>
+
+                <h2>
+                    Ready for Your Final Assessment?
+                </h2>
+
+                <p>
+                    Complete your learning first,
+                    then take the final assessment.
+                </p>
+
+                <a href="assessment.html"
+                   class="btn primary-btn">
+
+                    Take Final Assessment 🎓
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-bottom">
+
+            <p>
+
+                © <span id="year"></span>
+                Neema Charo. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= SUPABASE ================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2">
+</script>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+/* =====================================================
+   SUPABASE
+===================================================== */
+
+const SUPABASE_URL =
+    "https://evxseeuqsstmgsalaxqi.supabase.co";
+
+
+const SUPABASE_ANON_KEY =
+    "sb_publishable_eE3XDBtIl6kZY8inetfuuw_MLQGljlA";
+
+
+const supabaseClient =
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+
+
+
+/* =====================================================
+   ELEMENTS
+===================================================== */
+
+const message =
+    document.getElementById("message");
+
+
+const courseContent =
+    document.getElementById("courseContent");
+
+
+const welcomeMessage =
+    document.getElementById("welcomeMessage");
+
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+
+/* =====================================================
+   LOAD DASHBOARD
+===================================================== */
+
+async function loadDashboard() {
+
+    try {
+
+
+        /* ================= GET LOGGED-IN USER ================= */
+
+        const {
+            data: {
+                user
+            },
+            error: userError
+        } =
+        await supabaseClient.auth.getUser();
+
+
+        if (userError) {
+
+            console.error(
+                "USER ERROR:",
+                userError
+            );
+
+            message.innerHTML = `
+
+                <h2>
+                    ⚠️ Login Error
+                </h2>
+
+                <p>
+                    ${userError.message}
+                </p>
+
+                <a href="login.html"
+                   class="btn primary-btn">
+
+                    Login Again
+
+                </a>
+
+            `;
+
+            return;
+
+        }
+
+
+
+        /* ================= NOT LOGGED IN ================= */
+
+        if (!user) {
+
+            window.location.href =
+                "login.html";
+
+            return;
+
+        }
+
+
+
+        /* ================= WELCOME ================= */
+
+        const name =
+            user.user_metadata?.full_name ||
+            user.user_metadata?.name ||
+            user.email ||
+            "Student";
+
+
+        welcomeMessage.textContent =
+            "Welcome, " +
+            name +
+            "! 👋";
+
+
+
+        /* =================================================
+           CHECK COURSE ACCESS
+        ================================================= */
+
+        const {
+            data: access,
+            error: accessError
+        } =
+        await supabaseClient
+            .from("course_access")
+            .select("*")
+            .eq(
+                "user_id",
+                user.id
+            )
+            .eq(
+                "course_name",
+                "Website Development Course"
+            )
+            .eq(
+                "status",
+                "active"
+            )
+            .limit(1);
+
+
+
+        /* ================= DATABASE ERROR ================= */
+
+        if (accessError) {
+
+            console.error(
+                "COURSE ACCESS ERROR:",
+                accessError
+            );
+
+
+            message.innerHTML = `
+
+                <h2>
+                    ⚠️ Course Access Error
+                </h2>
+
+                <p>
+                    We could not check your course access.
+                </p>
+
+                <p style="font-size:13px;">
+                    ${accessError.message}
+                </p>
+
+            `;
+
+            return;
+
+        }
+
+
+
+        /* ================= ACCESS FOUND ================= */
+
+        if (
+            access &&
+            access.length > 0
+        ) {
+
+
+            message.innerHTML = `
+
+                <h2>
+                    🎉 Course Unlocked!
+                </h2>
+
+                <p>
+                    Your payment has been approved.
+                </p>
+
+                <p>
+                    🔓 You now have full access
+                    to the Website Development Course.
+                </p>
+
+            `;
+
+
+            courseContent.style.display =
+                "block";
+
+
+            return;
+
+        }
+
+
+
+        /* ================= ACCESS NOT FOUND ================= */
+
+        message.innerHTML = `
+
+            <h2>
+                🔒 Course Locked
+            </h2>
+
+            <p>
+                You do not currently have access
+                to the paid course.
+            </p>
+
+            <p style="font-size:13px;">
+                Your account ID was found, but no
+                active course access was found for
+                Website Development Course.
+            </p>
+
+            <a href="courses.html"
+               class="btn primary-btn">
+
+                View Course 💻
+
+            </a>
+
+        `;
+
+
+    }
+
+    catch (error) {
+
+
+        console.error(
+            "DASHBOARD ERROR:",
+            error
+        );
+
+
+        message.innerHTML = `
+
+            <h2>
+                ⚠️ Something went wrong
+            </h2>
+
+            <p>
+                ${error.message}
+            </p>
+
+        `;
+
+    }
+
+}
+
+
+
+/* =====================================================
+   START DASHBOARD
+===================================================== */
+
+loadDashboard();
+
+</script>
+
+
+</body>
+
+</html>

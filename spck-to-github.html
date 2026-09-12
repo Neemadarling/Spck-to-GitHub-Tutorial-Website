@@ -928,4 +928,203 @@ ABOUT.html</code></pre>
 
             <h2>
                 You Can Create Websites From Your Phone 🚀
-           
+                       </h2>
+
+            <p>
+                Every website you build makes you better.
+                Keep learning, keep practicing and keep creating.
+            </p>
+
+            <a href="tutorials.html" class="btn">
+                ← Back to Tutorials
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div class="footer-brand">
+
+            <a href="index.html" class="logo">
+                Neema<span>Charo</span>
+            </a>
+
+            <p>
+                Learn website development using your phone.
+                Build. Practice. Publish.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="tutorials.html">
+                Tutorials
+            </a>
+
+            <a href="portfolio.html">
+                Portfolio
+            </a>
+
+            <a href="services.html">
+                Services
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>
+                Learn
+            </h3>
+
+            <a href="spck.html">
+                SPCK Tutorial
+            </a>
+
+            <a href="html-tutorial.html">
+                HTML Tutorial
+            </a>
+
+            <a href="css-tutorial.html">
+                CSS Tutorial
+            </a>
+
+            <a href="javascript-tutorial.html">
+                JavaScript Tutorial
+            </a>
+
+            <a href="github.html">
+                GitHub Tutorial
+            </a>
+
+            <a href="spck-to-github.html">
+                SPCK → GitHub
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="currentYear"></span>
+            Neema Charo Tutorial.
+            All rights reserved.
+        </p>
+
+        <p>
+            Built with ❤️ using a phone.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- ================= BACK TO TOP ================= -->
+
+<button id="backToTop"
+        class="back-to-top"
+        aria-label="Back to top">
+
+    ↑
+
+</button>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script src="script.js"></script>
+
+
+<script>
+
+    /* ================= CURRENT YEAR ================= */
+
+    const yearElement =
+        document.getElementById("currentYear");
+
+    if (yearElement) {
+
+        yearElement.textContent =
+            new Date().getFullYear();
+
+    }
+
+
+
+    /* ================= BACK TO TOP ================= */
+
+    const backToTop =
+        document.getElementById("backToTop");
+
+    if (backToTop) {
+
+        window.addEventListener("scroll", function () {
+
+            if (window.scrollY > 400) {
+
+                backToTop.classList.add("show");
+
+            } else {
+
+                backToTop.classList.remove("show");
+
+            }
+
+        });
+
+
+        backToTop.addEventListener("click", function () {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        });
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

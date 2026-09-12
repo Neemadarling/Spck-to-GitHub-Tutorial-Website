@@ -1,715 +1,995 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
 
-<head>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<meta name="description"
+      content="Neema Charo Tutorial - Learn website development from your phone using SPCK, HTML, CSS, JavaScript and GitHub. Start free and advance to the complete website development course.">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+<meta name="keywords"
+      content="Neema Charo Tutorial, website development, SPCK, HTML, CSS, JavaScript, GitHub, learn coding">
 
-    <meta name="description"
-          content="Neema Charo Tutorial - Learn how to create websites using SPCK, HTML, CSS, JavaScript and GitHub.">
+<meta name="author"
+      content="Neema Charo">
 
-    <title>Neema Charo Tutorial | Learn Website Design</title>
+<title>
+    Neema Charo Tutorial | Learn Website Development
+</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+      href="style.css">
 
-</head>
-
-
-<body>
-
-
-<!-- =====================================
+</head><body><!-- =====================================
      NAVIGATION
-===================================== -->
+===================================== --><header class="header"><nav class="navbar">
 
-<header class="header">
+    <a href="index.html"
+       class="logo">
 
-    <nav class="navbar">
+        Neema<span>Charo</span>
 
-        <a href="index.html" class="logo">
-            Neema<span>Charo</span>
-        </a>
-
-
-        <button class="menu-button"
-                onclick="toggleMenu()">
-
-            ☰
-
-        </button>
+    </a>
 
 
-        <ul class="nav-links" id="navLinks">
+    <button class="menu-button"
+            onclick="toggleMenu()"
+            aria-label="Open navigation menu">
 
-            <li>
-                <a href="index.html">
-                    Home
-                </a>
-            </li>
+        ☰
 
-            <li>
-                <a href="about.html">
-                    About
-                </a>
-            </li>
-
-            <li>
-                <a href="tutorials.html">
-                    Tutorials
-                </a>
-            </li>
-
-            <li>
-                <a href="portfolio.html">
-                    Portfolio
-                </a>
-            </li>
-
-            <li>
-                <a href="services.html">
-                    Services
-                </a>
-            </li>
-
-            <li>
-                <a href="contact.html">
-                    Contact
-                </a>
-            </li>
-
-        </ul>
-
-    </nav>
-
-</header>
+    </button>
 
 
+    <ul class="nav-links"
+        id="navLinks">
 
-<!-- =====================================
-     HOME HERO
-===================================== -->
+        <li>
+            <a href="index.html"
+               class="active">
 
-<section class="home-hero">
-
-    <!--
-        BACKGROUND PHOTO
-
-        Replace:
-        images/background.jpg
-
-        with your own background photo.
-    -->
-
-
-    <div class="hero-overlay"></div>
-
-
-    <div class="container hero-content">
-
-
-        <!-- PROFILE PHOTO -->
-
-        <div class="profile-photo-container">
-
-            <!--
-                YOUR PHOTO GOES HERE
-
-                Replace:
-                images/neema-photo.jpg
-
-                with your photo.
-            -->
-
-            <img src="images/4.png"
-                 alt="Neema Charo"
-                 class="profile-photo">
-
-        </div>
-
-
-
-        <p class="hero-small-text">
-
-            WELCOME TO MY WEBSITE
-
-        </p>
-
-
-        <h1>
-
-            Hi, I'm
-            <span>Neema Charo</span>
-
-        </h1>
-
-
-        <h2>
-
-            Learn • Create • Publish
-
-        </h2>
-
-
-        <p class="hero-description">
-
-            I am building my website design skills and
-            sharing beginner-friendly tutorials to help
-            others learn how to create websites using
-            a phone, SPCK Editor and GitHub.
-
-        </p>
-
-
-        <div class="hero-buttons">
-
-            <a href="tutorials.html"
-               class="btn primary-btn">
-
-                Start Learning 🚀
+                Home
 
             </a>
+        </li>
 
 
-            <a href="about.html"
-               class="btn secondary-btn">
+        <li>
+            <a href="about.html">
 
-                About Me
+                About
 
             </a>
+        </li>
 
-        </div>
 
+        <li>
+            <a href="tutorials.html">
+
+                Tutorials
+
+            </a>
+        </li>
+
+
+        <li>
+            <a href="courses.html">
+
+                Courses
+
+            </a>
+        </li>
+
+
+        <li>
+            <a href="portfolio.html">
+
+                Portfolio
+
+            </a>
+        </li>
+
+
+        <li>
+            <a href="services.html">
+
+                Services
+
+            </a>
+        </li>
+
+
+        <li>
+            <a href="contact.html">
+
+                Contact
+
+            </a>
+        </li>
+
+    </ul>
+
+</nav>
+
+</header><!-- =====================================
+     HERO
+===================================== --><section class="home-hero"><div class="hero-overlay"></div>
+
+
+<div class="container hero-content">
+
+
+    <!-- PROFILE PHOTO -->
+
+    <div class="profile-photo-container">
+
+        <img src="images/4.png"
+             alt="Neema Charo"
+             class="profile-photo">
 
     </div>
 
-</section>
 
+    <p class="hero-small-text">
 
+        WELCOME TO NEEMA CHARO TUTORIAL
 
-<!-- =====================================
-     INTRODUCTION
-===================================== -->
+    </p>
 
-<section class="section">
 
-    <div class="container">
+    <h1>
 
+        Learn Website Development
+        <span>From Your Phone</span>
 
-        <div class="section-heading reveal">
+    </h1>
 
-            <p class="section-label">
-                MY MISSION
-            </p>
 
-            <h2>
-                Learn Website Creation From Your Phone
-            </h2>
+    <h2>
 
-            <p>
+        Learn • Create • Publish
 
-                You don't need to start with expensive equipment
-                to begin learning. With practice, patience and
-                the right tools, you can start creating websites
-                from your phone.
+    </h2>
 
-            </p>
 
-        </div>
+    <p class="hero-description">
 
+        Learn how to create real websites using
+        your phone, SPCK Editor, HTML, CSS,
+        JavaScript and GitHub.
 
+        Start with free beginner lessons and
+        continue into the complete website
+        development course.
 
-        <div class="feature-grid">
+    </p>
 
 
-            <div class="feature-card reveal">
-
-                <div class="feature-icon">
-                    📱
-                </div>
-
-                <h3>
-                    Learn With SPCK
-                </h3>
-
-                <p>
-
-                    Learn how to create and edit website files
-                    using SPCK Editor on your phone.
-
-                </p>
-
-                <a href="spck.html">
-                    Learn SPCK →
-                </a>
-
-            </div>
-
-
-
-            <div class="feature-card reveal">
-
-                <div class="feature-icon">
-                    🧱
-                </div>
-
-                <h3>
-                    Learn HTML
-                </h3>
-
-                <p>
-
-                    Understand the structure of a website
-                    and create your first web pages.
-
-                </p>
-
-                <a href="html-tutorial.html">
-                    Learn HTML →
-                </a>
-
-            </div>
-
-
-
-            <div class="feature-card reveal">
-
-                <div class="feature-icon">
-                    🎨
-                </div>
-
-                <h3>
-                    Learn CSS
-                </h3>
-
-                <p>
-
-                    Style your website with layouts,
-                    fonts, spacing, effects and animations.
-
-                </p>
-
-                <a href="css-tutorial.html">
-                    Learn CSS →
-                </a>
-
-            </div>
-
-
-
-            <div class="feature-card reveal">
-
-                <div class="feature-icon">
-                    ⚡
-                </div>
-
-                <h3>
-                    Learn JavaScript
-                </h3>
-
-                <p>
-
-                    Add interactions and make your website
-                    respond to visitors.
-
-                </p>
-
-                <a href="javascript-tutorial.html">
-                    Learn JavaScript →
-                </a>
-
-            </div>
-
-
-
-            <div class="feature-card reveal">
-
-                <div class="feature-icon">
-                    🐙
-                </div>
-
-                <h3>
-                    Learn GitHub
-                </h3>
-
-                <p>
-
-                    Learn how to store your website files
-                    and publish your project online.
-
-                </p>
-
-                <a href="github.html">
-                    Learn GitHub →
-                </a>
-
-            </div>
-
-
-
-            <div class="feature-card reveal">
-
-                <div class="feature-icon">
-                    🚀
-                </div>
-
-                <h3>
-                    Publish Your Website
-                </h3>
-
-                <p>
-
-                    Follow the complete guide for moving
-                    your website from SPCK to GitHub Pages.
-
-                </p>
-
-                <a href="spck-to-github.html">
-                    Publish Website →
-                </a>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================
-     LEARNING PATH
-===================================== -->
-
-<section class="section learning-section">
-
-    <div class="container">
-
-
-        <div class="section-heading reveal">
-
-            <p class="section-label">
-                LEARNING PATH
-            </p>
-
-            <h2>
-                Your Journey Starts Here
-            </h2>
-
-        </div>
-
-
-
-        <div class="learning-path">
-
-
-            <div class="path-item reveal">
-
-                <span>
-                    01
-                </span>
-
-                <div>
-
-                    <h3>
-                        Start With SPCK
-                    </h3>
-
-                    <p>
-                        Learn how to create files and projects
-                        using your phone.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="path-item reveal">
-
-                <span>
-                    02
-                </span>
-
-                <div>
-
-                    <h3>
-                        Learn HTML
-                    </h3>
-
-                    <p>
-                        Build the structure of your website.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="path-item reveal">
-
-                <span>
-                    03
-                </span>
-
-                <div>
-
-                    <h3>
-                        Learn CSS
-                    </h3>
-
-                    <p>
-                        Make your website beautiful and responsive.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="path-item reveal">
-
-                <span>
-                    04
-                </span>
-
-                <div>
-
-                    <h3>
-                        Learn JavaScript
-                    </h3>
-
-                    <p>
-                        Add interaction and functionality.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="path-item reveal">
-
-                <span>
-                    05
-                </span>
-
-                <div>
-
-                    <h3>
-                        Learn GitHub
-                    </h3>
-
-                    <p>
-                        Store your website project online.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="path-item reveal">
-
-                <span>
-                    06
-                </span>
-
-                <div>
-
-                    <h3>
-                        Publish
-                    </h3>
-
-                    <p>
-                        Put your website online with GitHub Pages.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-
-<!-- =====================================
-     CALL TO ACTION
-===================================== -->
-
-<section class="cta-section">
-
-    <div class="container cta-content reveal">
-
-        <p class="section-label">
-            READY?
-        </p>
-
-        <h2>
-            Start Creating Your Website Today.
-        </h2>
-
-        <p>
-
-            Follow the lessons step by step and build
-            your own website from your phone.
-
-        </p>
+    <div class="hero-buttons">
 
 
         <a href="tutorials.html"
            class="btn primary-btn">
 
-            Explore Tutorials 🚀
+            Start Free 🚀
+
+        </a>
+
+
+        <a href="courses.html"
+           class="btn secondary-btn">
+
+            View Full Course 🔐
 
         </a>
 
     </div>
 
-</section>
+
+</div>
+
+</section><!-- =====================================
+     WELCOME
+===================================== --><section class="section"><div class="container">
+
+
+    <div class="section-heading reveal">
+
+        <p class="section-label">
+
+            WELCOME
+
+        </p>
+
+
+        <h2>
+
+            From Beginner to Website Creator
+
+        </h2>
+
+
+        <p>
+
+            You don't need to own a computer to
+            start learning website development.
+            This platform teaches you practical
+            skills step by step using tools that
+            you can access from your phone.
+
+        </p>
+
+    </div>
 
 
 
-<!-- =====================================
-     FOOTER
-===================================== -->
-
-<footer class="footer">
-
-    <div class="container">
+    <div class="feature-grid">
 
 
-        <div class="footer-grid">
+        <!-- SPCK -->
 
+        <div class="feature-card reveal">
 
-            <div>
+            <div class="feature-icon">
 
-                <h2 class="footer-logo">
-
-                    Neema<span>Charo</span>
-
-                </h2>
-
-                <p>
-                    Learn • Create • Publish
-                </p>
-
-                <p>
-
-                    Beginner-friendly website creation
-                    tutorials.
-
-                </p>
-
-            </div>
-
-
-
-            <div>
-
-                <h3>
-                    Tutorials
-                </h3>
-
-                <a href="spck.html">
-                    SPCK Editor
-                </a>
-
-                <a href="html-tutorial.html">
-                    HTML
-                </a>
-
-                <a href="css-tutorial.html">
-                    CSS
-                </a>
-
-                <a href="javascript-tutorial.html">
-                    JavaScript
-                </a>
-
-                <a href="github.html">
-                    GitHub
-                </a>
-
-                <a href="spck-to-github.html">
-                    SPCK → GitHub
-                </a>
+                📱
 
             </div>
 
 
+            <h3>
 
-            <div>
+                SPCK Editor
 
-                <h3>
-                    Contact
-                </h3>
+            </h3>
 
-                <a href="tel:0748933452">
-                    📱 0748933452
-                </a>
 
-                <a href="mailto:charoneema6@gmail.com">
-                    📧 charoneema6@gmail.com
-                </a>
+            <p>
 
-            </div>
+                Learn how to create and edit
+                website files directly from
+                your phone.
 
+            </p>
+
+
+            <a href="spck.html">
+
+                Learn SPCK →
+
+            </a>
 
         </div>
 
 
 
-        <div class="footer-bottom">
+        <!-- HTML -->
+
+        <div class="feature-card reveal">
+
+            <div class="feature-icon">
+
+                🧱
+
+            </div>
+
+
+            <h3>
+
+                HTML
+
+            </h3>
+
 
             <p>
 
-                © <span id="year"></span>
-                Neema Charo.
-                All Rights Reserved.
+                Learn the building blocks and
+                structure of webpages.
+
+            </p>
+
+
+            <a href="html-tutorial.html">
+
+                Learn HTML →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- CSS -->
+
+        <div class="feature-card reveal">
+
+            <div class="feature-icon">
+
+                🎨
+
+            </div>
+
+
+            <h3>
+
+                CSS
+
+            </h3>
+
+
+            <p>
+
+                Learn how to create beautiful,
+                responsive website designs.
+
+            </p>
+
+
+            <a href="css-tutorial.html">
+
+                Learn CSS →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- JAVASCRIPT -->
+
+        <div class="feature-card reveal">
+
+            <div class="feature-icon">
+
+                ⚡
+
+            </div>
+
+
+            <h3>
+
+                JavaScript
+
+            </h3>
+
+
+            <p>
+
+                Add interactions and useful
+                functionality to your websites.
+
+            </p>
+
+
+            <a href="javascript-tutorial.html">
+
+                Learn JavaScript →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- GITHUB -->
+
+        <div class="feature-card reveal">
+
+            <div class="feature-icon">
+
+                🐙
+
+            </div>
+
+
+            <h3>
+
+                GitHub
+
+            </h3>
+
+
+            <p>
+
+                Learn how to store your projects
+                and publish websites online.
+
+            </p>
+
+
+            <a href="github.html">
+
+                Learn GitHub →
+
+            </a>
+
+        </div>
+
+
+
+        <!-- PUBLISH -->
+
+        <div class="feature-card reveal">
+
+            <div class="feature-icon">
+
+                🌍
+
+            </div>
+
+
+            <h3>
+
+                Publish Worldwide
+
+            </h3>
+
+
+            <p>
+
+                Learn how to take your website
+                from SPCK to the internet.
+
+            </p>
+
+
+            <a href="spck-to-github.html">
+
+                Publish Website →
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section><!-- =====================================
+     FREE COURSE
+===================================== --><section class="section"><div class="container">
+
+
+    <div class="section-heading reveal">
+
+        <p class="section-label">
+
+            START FOR FREE
+
+        </p>
+
+
+        <h2>
+
+            Beginner Course
+
+        </h2>
+
+
+        <p>
+
+            New to website development?
+            Start here. No payment required.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="feature-grid">
+
+
+        <div class="feature-card reveal">
+
+            <div class="feature-icon">
+
+                🆓
+
+            </div>
+
+
+            <h3>
+
+                Free Beginner Course
+
+            </h3>
+
+
+            <p>
+
+                Learn the basics of website
+                creation step by step.
+
+            </p>
+
+
+            <p>
+
+                ✓ Introduction to websites<br>
+                ✓ HTML basics<br>
+                ✓ CSS basics<br>
+                ✓ JavaScript introduction<br>
+                ✓ SPCK Editor<br>
+                ✓ GitHub basics<br>
+                ✓ Publish your first website
+
+            </p>
+
+
+            <a href="tutorials.html"
+               class="btn primary-btn">
+
+                Start Free Course
+
+            </a>
+
+        </div>
+
+
+
+        <!-- PAID COURSE -->
+
+        <div class="feature-card reveal">
+
+            <div class="feature-icon">
+
+                🔐
+
+            </div>
+
+
+            <h3>
+
+                Full Website Development Course
+
+            </h3>
+
+
+            <p>
+
+                Take your skills further with the
+                complete practical course.
+
+            </p>
+
+
+            <p>
+
+                ✓ Complete HTML<br>
+                ✓ Complete CSS<br>
+                ✓ JavaScript<br>
+                ✓ Responsive design<br>
+                ✓ Animations<br>
+                ✓ Multi-page websites<br>
+                ✓ SPCK + GitHub<br>
+                ✓ Professional projects<br>
+                ✓ Building websites for clients
+
+            </p>
+
+
+            <h3>
+
+                KSh 2,500
+
+            </h3>
+
+
+            <a href="courses.html"
+               class="btn secondary-btn">
+
+                View Full Course 🔒
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section><!-- =====================================
+     LEARNING PATH
+===================================== --><section class="section learning-section"><div class="container">
+
+
+    <div class="section-heading reveal">
+
+        <p class="section-label">
+
+            LEARNING PATH
+
+        </p>
+
+
+        <h2>
+
+            Your Journey Starts Here
+
+        </h2>
+
+    </div>
+
+
+
+    <div class="learning-path">
+
+
+        <div class="path-item reveal">
+
+            <span>
+                01
+            </span>
+
+
+            <div>
+
+                <h3>
+                    Start With SPCK
+                </h3>
+
+
+                <p>
+                    Learn how to create website
+                    projects using your phone.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="path-item reveal">
+
+            <span>
+                02
+            </span>
+
+
+            <div>
+
+                <h3>
+                    Learn HTML
+                </h3>
+
+
+                <p>
+                    Build the structure of your website.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="path-item reveal">
+
+            <span>
+                03
+            </span>
+
+
+            <div>
+
+                <h3>
+                    Learn CSS
+                </h3>
+
+
+                <p>
+                    Design beautiful and responsive
+                    websites.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="path-item reveal">
+
+            <span>
+                04
+            </span>
+
+
+            <div>
+
+                <h3>
+                    Learn JavaScript
+                </h3>
+
+
+                <p>
+                    Add interaction and functionality.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="path-item reveal">
+
+            <span>
+                05
+            </span>
+
+
+            <div>
+
+                <h3>
+                    Learn GitHub
+                </h3>
+
+
+                <p>
+                    Store your projects online.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="path-item reveal">
+
+            <span>
+                06
+            </span>
+
+
+            <div>
+
+                <h3>
+                    Publish Worldwide
+                </h3>
+
+
+                <p>
+                    Put your website online and
+                    share it with the world.
+                </p>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+</section><!-- =====================================
+     PAID COURSE CTA
+===================================== --><section class="cta-section"><div class="container cta-content reveal">
+
+
+    <p class="section-label">
+
+        READY TO GO FURTHER?
+
+    </p>
+
+
+    <h2>
+
+        Become a Website Creator
+
+    </h2>
+
+
+    <p>
+
+        Start with the free beginner lessons.
+        When you're ready, join the complete
+        Website Development Course for
+        <strong>KSh 2,500.</strong>
+
+    </p>
+
+
+    <div class="cta-buttons">
+
+
+        <a href="tutorials.html"
+           class="btn primary-btn">
+
+            Start Free 🚀
+
+        </a>
+
+
+        <a href="courses.html"
+           class="btn secondary-btn">
+
+            View Full Course 🔐
+
+        </a>
+
+
+    </div>
+
+
+</div>
+
+</section><!-- =====================================
+     FOOTER
+===================================== --><footer class="footer"><div class="container">
+
+
+    <div class="footer-grid">
+
+
+        <!-- BRAND -->
+
+        <div>
+
+            <h2 class="footer-logo">
+
+                Neema<span>Charo</span>
+
+            </h2>
+
+
+            <p>
+
+                Learn • Create • Publish
+
+            </p>
+
+
+            <p>
+
+                Beginner-friendly website
+                development education.
 
             </p>
 
         </div>
 
 
+
+        <!-- LEARNING -->
+
+        <div>
+
+            <h3>
+
+                Learning
+
+            </h3>
+
+
+            <a href="tutorials.html">
+
+                Free Tutorials
+
+            </a>
+
+
+            <a href="courses.html">
+
+                Full Course 🔐
+
+            </a>
+
+
+            <a href="spck.html">
+
+                SPCK Editor
+
+            </a>
+
+
+            <a href="html-tutorial.html">
+
+                HTML
+
+            </a>
+
+
+            <a href="css-tutorial.html">
+
+                CSS
+
+            </a>
+
+
+            <a href="javascript-tutorial.html">
+
+                JavaScript
+
+            </a>
+
+
+            <a href="github.html">
+
+                GitHub
+
+            </a>
+
+
+            <a href="spck-to-github.html">
+
+                SPCK → GitHub
+
+            </a>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div>
+
+            <h3>
+
+                Contact
+
+            </h3>
+
+
+            <a href="tel:0748933452">
+
+                📱 0748933452
+
+            </a>
+
+
+            <a href="mailto:charoneema6@gmail.com">
+
+                📧 charoneema6@gmail.com
+
+            </a>
+
+
+            <a href="https://wa.me/254748933452"
+               target="_blank"
+               rel="noopener">
+
+                💬 WhatsApp
+
+            </a>
+
+        </div>
+
+
     </div>
 
-</footer>
 
 
+    <div class="footer-bottom">
 
-<!-- =====================================
+        <p>
+
+            © <span id="year"></span>
+            Neema Charo.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+
+</div>
+
+</footer><!-- =====================================
      WHATSAPP
-===================================== -->
+===================================== --><a href="https://wa.me/254748933452"
+class="whatsapp-button"
+target="_blank"
+rel="noopener"
+aria-label="Chat with Neema on WhatsApp">
 
-<a href="https://wa.me/254748933452"
-   class="whatsapp-button"
-   target="_blank"
-   aria-label="Chat with Neema on WhatsApp">
+💬
 
-    💬
-
-</a>
-
-
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
+</a><script src="script.js"></script></body></html>

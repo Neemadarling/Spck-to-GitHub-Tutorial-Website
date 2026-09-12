@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+      content="Create your Neema Charo Academy student account.">
+
+<title>Create Account | Neema Charo Academy</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head><body><header class="header"><nav class="navbar">
+
+    <a href="index.html" class="logo">
+        Neema<span>Charo</span>
+    </a>
+
+    <a href="login.html" class="btn primary-btn">
+        Login
+    </a>
+
+</nav>
+
+</header><section class="section"><div class="container">
+
+    <div class="contact-form-box reveal"
+         style="max-width: 550px; margin: 40px auto;">
+
+        <div style="text-align:center;">
+
+            <p class="section-label">
+                NEEMA CHARO ACADEMY
+            </p>
+
+            <h1 style="margin: 10px 0 15px;">
+                Create Your Account
+            </h1>
+
+            <p style="color: var(--text);">
+                Create your student account to access
+                your courses and learning dashboard.
+            </p>
+
+        </div>
+
+
+        <form id="registerForm">
+
+            <label for="fullName">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="fullName"
+                placeholder="Enter your full name"
+                autocomplete="name"
+                required>
+
+
+            <label for="email">
+                Email Address
+            </label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+                autocomplete="email"
+                required>
+
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Create a password"
+                autocomplete="new-password"
+                minlength="6"
+                required>
+
+
+            <label for="confirmPassword">
+                Confirm Password
+            </label>
+
+            <input
+                type="password"
+                id="confirmPassword"
+                placeholder="Repeat your password"
+                autocomplete="new-password"
+                minlength="6"
+                required>
+
+
+            <button
+                type="submit"
+                class="btn primary-btn">
+
+                Create Account 🚀
+
+            </button>
+
+        </form>
+
+
+        <p id="registerMessage"
+           style="margin-top:20px; text-align:center;">
+        </p>
+
+
+        <div style="text-align:center; margin-top:25px;">
+
+            <p>
+                Already have an account?
+                <a href="login.html"
+                   style="color:var(--primary); font-weight:700;">
+                    Login here
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section><footer class="footer"><div class="container">
+
+    <div class="footer-bottom">
+
+        <p>
+            © <span id="year"></span>
+            Neema Charo. All Rights Reserved.
+        </p>
+
+    </div>
+
+</div>
+
+</footer><script src="script.js"></script><!-- Supabase --><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script>
+
+const SUPABASE_URL = "https://evxseeuqsstmgsalaxqi.supabase.co";
+
+const SUPABASE_ANON_KEY = "sb_publishable_eE3XDBtIl6kZY8inetfuuw_MLQGljlA";
+
+const supabaseClient =
+    window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+
+
+const registerForm =
+    document.getElementById("registerForm");
+
+const registerMessage =
+    document.getElementById("registerMessage");
+
+
+registerForm.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+
+    const fullName =
+        document.getElementById("fullName")
+        .value
+        .trim();
+
+
+    const email =
+        document.getElementById("email")
+        .value
+        .trim();
+
+
+    const password =
+        document.getElementById("password")
+        .value;
+
+
+    const confirmPassword =
+        document.getElementById("confirmPassword")
+        .value;
+
+
+    if (password !== confirmPassword) {
+
+        registerMessage.textContent =
+            "Passwords do not match.";
+
+        return;
+
+    }
+
+
+    registerMessage.textContent =
+        "Creating your account...";
+
+
+    const { data, error } =
+        await supabaseClient.auth.signUp({
+
+            email: email,
+
+            password: password,
+
+            options: {
+
+                data: {
+                    full_name: fullName
+                },
+
+                emailRedirectTo:
+                    window.location.origin +
+                    "/login.html"
+
+            }
+
+        });
+
+
+    if (error) {
+
+        registerMessage.textContent =
+            error.message;
+
+        return;
+
+    }
+
+
+    registerMessage.textContent =
+        "Account created successfully! Check your email to confirm your account.";
+
+});
+
+</script></body></html>
