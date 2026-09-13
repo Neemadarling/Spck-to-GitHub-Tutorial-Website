@@ -44,7 +44,6 @@
         </a>
 
 
-
         <!-- MOBILE MENU -->
 
         <button
@@ -57,8 +56,7 @@
         </button>
 
 
-
-        <!-- NAVIGATION -->
+        <!-- PUBLIC NAVIGATION -->
 
         <ul class="nav-links"
             id="navLinks">
@@ -67,94 +65,61 @@
             <li>
 
                 <a href="index.html">
-
                     Home
-
                 </a>
 
             </li>
-
 
 
             <li>
 
                 <a href="about.html">
-
                     About
-
                 </a>
 
             </li>
-
 
 
             <li>
 
                 <a href="tutorials.html">
-
                     Tutorials
-
                 </a>
 
             </li>
-
 
 
             <li>
 
                 <a href="courses.html">
-
                     Courses
-
                 </a>
 
             </li>
-
-
-
-            <li>
-
-                <a href="dashboard.html"
-                   class="active">
-
-                    🎓 Student Dashboard
-
-                </a>
-
-            </li>
-
 
 
             <li>
 
                 <a href="portfolio.html">
-
                     Portfolio
-
                 </a>
 
             </li>
-
 
 
             <li>
 
                 <a href="services.html">
-
                     Services
-
                 </a>
 
             </li>
 
 
-
             <li>
 
                 <a href="contact.html">
-
                     Contact
-
                 </a>
 
             </li>
@@ -184,13 +149,11 @@
         </p>
 
 
-
         <h1>
 
             Student Dashboard 🎓
 
         </h1>
-
 
 
         <p id="welcomeMessage">
@@ -215,7 +178,7 @@
     <div class="container">
 
 
-        <!-- STATUS -->
+        <!-- STATUS MESSAGE -->
 
         <div id="message"
              class="practice-box"
@@ -237,6 +200,7 @@
 
             <div class="section-heading">
 
+
                 <p class="section-label">
 
                     MY ACCOUNT
@@ -257,6 +221,7 @@
 
                 </p>
 
+
             </div>
 
 
@@ -267,6 +232,7 @@
                 <!-- ================= MY COURSE ================= -->
 
                 <div class="feature-card">
+
 
                     <div class="feature-icon">
 
@@ -297,6 +263,7 @@
 
                     </a>
 
+
                 </div>
 
 
@@ -304,6 +271,7 @@
                 <!-- ================= MODULES ================= -->
 
                 <div class="feature-card">
+
 
                     <div class="feature-icon">
 
@@ -334,6 +302,7 @@
 
                     </a>
 
+
                 </div>
 
 
@@ -341,6 +310,7 @@
                 <!-- ================= CERTIFICATE ================= -->
 
                 <div class="feature-card">
+
 
                     <div class="feature-icon">
 
@@ -371,6 +341,7 @@
 
                     </a>
 
+
                 </div>
 
 
@@ -378,6 +349,7 @@
                 <!-- ================= ACCOUNT ================= -->
 
                 <div class="feature-card">
+
 
                     <div class="feature-icon">
 
@@ -407,6 +379,7 @@
 
                     </a>
 
+
                 </div>
 
 
@@ -414,6 +387,7 @@
                 <!-- ================= PAYMENT ================= -->
 
                 <div class="feature-card">
+
 
                     <div class="feature-icon">
 
@@ -443,6 +417,7 @@
 
                     </a>
 
+
                 </div>
 
 
@@ -450,6 +425,7 @@
                 <!-- ================= LOGOUT ================= -->
 
                 <div class="feature-card">
+
 
                     <div class="feature-icon">
 
@@ -480,6 +456,7 @@
                         Logout →
 
                     </button>
+
 
                 </div>
 
@@ -573,11 +550,7 @@
 
             <p>
 
-                <strong>
-
-                    Name:
-
-                </strong>
+                <strong>Name:</strong>
 
                 <span id="studentName">
 
@@ -590,11 +563,7 @@
 
             <p>
 
-                <strong>
-
-                    Email:
-
-                </strong>
+                <strong>Email:</strong>
 
                 <span id="studentEmail">
 
@@ -607,11 +576,7 @@
 
             <p>
 
-                <strong>
-
-                    Course:
-
-                </strong>
+                <strong>Course:</strong>
 
                 Website Development Course
 
@@ -620,11 +585,7 @@
 
             <p>
 
-                <strong>
-
-                    Course Access:
-
-                </strong>
+                <strong>Course Access:</strong>
 
                 <span id="courseAccess">
 
@@ -654,6 +615,7 @@
 
         <div class="footer-bottom">
 
+
             <p>
 
                 © <span id="year"></span>
@@ -663,6 +625,7 @@
                 All Rights Reserved.
 
             </p>
+
 
         </div>
 
@@ -684,7 +647,6 @@
 <script src="script.js"></script>
 
 
-
 <script>
 
 /* =====================================================
@@ -701,11 +663,8 @@ const SUPABASE_ANON_KEY =
 
 const supabaseClient =
     window.supabase.createClient(
-
         SUPABASE_URL,
-
         SUPABASE_ANON_KEY
-
     );
 
 
@@ -750,9 +709,20 @@ const courseAccess =
     document.getElementById("courseAccess");
 
 
+const logoutButton =
+    document.getElementById("logoutButton");
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+
+const year =
+    document.getElementById("year");
+
+
+if (year) {
+
+    year.textContent =
+        new Date().getFullYear();
+
+}
 
 
 
@@ -793,21 +763,18 @@ async function loadDashboard() {
                 </h2>
 
                 <p>
-
                     Please login to access
-                    your student dashboard.
-
+                    your student account.
                 </p>
 
                 <a href="login.html"
                    class="btn primary-btn">
 
-                    Login / Student Account →
+                    Login →
 
                 </a>
 
             `;
-
 
             return;
 
@@ -816,12 +783,17 @@ async function loadDashboard() {
 
 
         /* ================================================
-           NOT LOGGED IN
+           GET USER
         ================================================ */
 
         const user =
             data.user;
 
+
+
+        /* ================================================
+           NOT LOGGED IN
+        ================================================ */
 
         if (!user) {
 
@@ -833,24 +805,18 @@ async function loadDashboard() {
             message.innerHTML = `
 
                 <h2>
-
-                    🎓 Student Dashboard
-
+                    🎓 Student Account
                 </h2>
 
-
                 <p>
-
-                    Login to access your
-                    student account and course.
-
+                    Please login to access
+                    your student account.
                 </p>
-
 
                 <a href="login.html"
                    class="btn primary-btn">
 
-                    Login / Student Account →
+                    Student Login →
 
                 </a>
 
@@ -869,11 +835,8 @@ async function loadDashboard() {
 
         const name =
             user.user_metadata?.full_name ||
-
             user.user_metadata?.name ||
-
             user.email ||
-
             "Student";
 
 
@@ -942,17 +905,12 @@ async function loadDashboard() {
             message.innerHTML = `
 
                 <h2>
-
                     ⚠️ Unable to Check Course
-
                 </h2>
 
-
                 <p>
-
                     We could not verify your
                     course access right now.
-
                 </p>
 
             `;
@@ -977,24 +935,16 @@ async function loadDashboard() {
             message.innerHTML = `
 
                 <h2>
-
                     🎉 Welcome Back!
-
                 </h2>
 
-
                 <p>
-
                     Your payment has been approved.
-
                 </p>
 
-
                 <p>
-
                     🔓 Your Website Development
                     Course is unlocked.
-
                 </p>
 
             `;
@@ -1056,16 +1006,11 @@ async function loadDashboard() {
         message.innerHTML = `
 
             <h2>
-
                 ⚠️ Something Went Wrong
-
             </h2>
 
-
             <p>
-
                 ${error.message}
-
             </p>
 
         `;
@@ -1080,29 +1025,28 @@ async function loadDashboard() {
    LOGOUT
 ===================================================== */
 
-document.getElementById(
-    "logoutButton"
-).addEventListener(
+if (logoutButton) {
 
-    "click",
-
-    async function() {
+    logoutButton.addEventListener(
+        "click",
+        async function() {
 
 
-        await supabaseClient.auth.signOut();
+            await supabaseClient.auth.signOut();
 
 
-        window.location.href =
-            "login.html";
+            window.location.href =
+                "login.html";
 
-    }
+        }
+    );
 
-);
+}
 
 
 
 /* =====================================================
-   START
+   START DASHBOARD
 ===================================================== */
 
 loadDashboard();
